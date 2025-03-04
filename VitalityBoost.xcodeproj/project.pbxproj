@@ -16,6 +16,23 @@
 		3F01EAAB2D74FA6B00726A1A /* VitalityBoostTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F01EAAA2D74FA6B00726A1A /* VitalityBoostTests.swift */; };
 		3F01EAB52D74FA6B00726A1A /* VitalityBoostUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F01EAB42D74FA6B00726A1A /* VitalityBoostUITests.swift */; };
 		3F01EAB72D74FA6B00726A1A /* VitalityBoostUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F01EAB62D74FA6B00726A1A /* VitalityBoostUITestsLaunchTests.swift */; };
+		3F01EACB2D74FAD500726A1A /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F01EACA2D74FAD500726A1A /* LoginController.swift */; };
+		3F01EACD2D74FAF700726A1A /* AccountController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F01EACC2D74FAF700726A1A /* AccountController.swift */; };
+		3F01EACF2D74FB0C00726A1A /* GoalsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F01EACE2D74FB0C00726A1A /* GoalsController.swift */; };
+		3F01EAD12D74FB1E00726A1A /* AddGoalController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F01EAD02D74FB1E00726A1A /* AddGoalController.swift */; };
+		3F01EAD32D74FB3800726A1A /* CreateAccountController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F01EAD22D74FB3800726A1A /* CreateAccountController.swift */; };
+		3F01EAD52D74FB5000726A1A /* JournalController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F01EAD42D74FB5000726A1A /* JournalController.swift */; };
+		3F01EAD72D74FB6100726A1A /* JournalEntriesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F01EAD62D74FB6100726A1A /* JournalEntriesController.swift */; };
+		3F01EAD92D74FB7700726A1A /* MentalHealthResourcesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F01EAD82D74FB7700726A1A /* MentalHealthResourcesController.swift */; };
+		3F01EADB2D74FB9400726A1A /* FitnessController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F01EADA2D74FB9400726A1A /* FitnessController.swift */; };
+		3F01EADD2D74FBA300726A1A /* PersonalResearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F01EADC2D74FBA300726A1A /* PersonalResearchController.swift */; };
+		3F01EADF2D74FBC000726A1A /* AffordableOptionsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F01EADE2D74FBC000726A1A /* AffordableOptionsController.swift */; };
+		3F01EAE12D74FBD700726A1A /* CalendarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F01EAE02D74FBD700726A1A /* CalendarController.swift */; };
+		3F01EAE32D74FBE700726A1A /* OrganizationAssistanceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F01EAE22D74FBE700726A1A /* OrganizationAssistanceController.swift */; };
+		3F01EAE52D74FBFB00726A1A /* WorkoutsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F01EAE42D74FBFB00726A1A /* WorkoutsController.swift */; };
+		3F01EAE72D74FC0A00726A1A /* SupplementsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F01EAE62D74FC0A00726A1A /* SupplementsController.swift */; };
+		3F01EAE92D74FC1E00726A1A /* RecipesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F01EAE82D74FC1E00726A1A /* RecipesController.swift */; };
+		3F01EAEB2D74FC2B00726A1A /* RecipesSearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F01EAEA2D74FC2B00726A1A /* RecipesSearchController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +66,23 @@
 		3F01EAB02D74FA6B00726A1A /* VitalityBoostUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VitalityBoostUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F01EAB42D74FA6B00726A1A /* VitalityBoostUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VitalityBoostUITests.swift; sourceTree = "<group>"; };
 		3F01EAB62D74FA6B00726A1A /* VitalityBoostUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VitalityBoostUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		3F01EACA2D74FAD500726A1A /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
+		3F01EACC2D74FAF700726A1A /* AccountController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountController.swift; sourceTree = "<group>"; };
+		3F01EACE2D74FB0C00726A1A /* GoalsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalsController.swift; sourceTree = "<group>"; };
+		3F01EAD02D74FB1E00726A1A /* AddGoalController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddGoalController.swift; sourceTree = "<group>"; };
+		3F01EAD22D74FB3800726A1A /* CreateAccountController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountController.swift; sourceTree = "<group>"; };
+		3F01EAD42D74FB5000726A1A /* JournalController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalController.swift; sourceTree = "<group>"; };
+		3F01EAD62D74FB6100726A1A /* JournalEntriesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalEntriesController.swift; sourceTree = "<group>"; };
+		3F01EAD82D74FB7700726A1A /* MentalHealthResourcesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MentalHealthResourcesController.swift; sourceTree = "<group>"; };
+		3F01EADA2D74FB9400726A1A /* FitnessController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FitnessController.swift; sourceTree = "<group>"; };
+		3F01EADC2D74FBA300726A1A /* PersonalResearchController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalResearchController.swift; sourceTree = "<group>"; };
+		3F01EADE2D74FBC000726A1A /* AffordableOptionsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AffordableOptionsController.swift; sourceTree = "<group>"; };
+		3F01EAE02D74FBD700726A1A /* CalendarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarController.swift; sourceTree = "<group>"; };
+		3F01EAE22D74FBE700726A1A /* OrganizationAssistanceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrganizationAssistanceController.swift; sourceTree = "<group>"; };
+		3F01EAE42D74FBFB00726A1A /* WorkoutsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutsController.swift; sourceTree = "<group>"; };
+		3F01EAE62D74FC0A00726A1A /* SupplementsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupplementsController.swift; sourceTree = "<group>"; };
+		3F01EAE82D74FC1E00726A1A /* RecipesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesController.swift; sourceTree = "<group>"; };
+		3F01EAEA2D74FC2B00726A1A /* RecipesSearchController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesSearchController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,9 +133,15 @@
 		3F01EA922D74FA6800726A1A /* VitalityBoost */ = {
 			isa = PBXGroup;
 			children = (
+				3F01EAC92D74FAB100726A1A /* account */,
+				3F01EAC82D74FAAB00726A1A /* mentality */,
+				3F01EAC72D74FAA500726A1A /* resources */,
+				3F01EAC62D74FA9E00726A1A /* timeManagement */,
+				3F01EAC52D74FA9700726A1A /* physicalWellbeing */,
+				3F01EAC42D74FA9100726A1A /* nutrition */,
+				3F01EAC32D74FA8A00726A1A /* menu */,
 				3F01EA932D74FA6800726A1A /* AppDelegate.swift */,
 				3F01EA952D74FA6800726A1A /* SceneDelegate.swift */,
-				3F01EA972D74FA6800726A1A /* ViewController.swift */,
 				3F01EA992D74FA6800726A1A /* Main.storyboard */,
 				3F01EA9C2D74FA6B00726A1A /* Assets.xcassets */,
 				3F01EA9E2D74FA6B00726A1A /* LaunchScreen.storyboard */,
@@ -125,6 +165,73 @@
 				3F01EAB62D74FA6B00726A1A /* VitalityBoostUITestsLaunchTests.swift */,
 			);
 			path = VitalityBoostUITests;
+			sourceTree = "<group>";
+		};
+		3F01EAC32D74FA8A00726A1A /* menu */ = {
+			isa = PBXGroup;
+			children = (
+				3F01EA972D74FA6800726A1A /* ViewController.swift */,
+			);
+			path = menu;
+			sourceTree = "<group>";
+		};
+		3F01EAC42D74FA9100726A1A /* nutrition */ = {
+			isa = PBXGroup;
+			children = (
+				3F01EAE82D74FC1E00726A1A /* RecipesController.swift */,
+				3F01EAEA2D74FC2B00726A1A /* RecipesSearchController.swift */,
+			);
+			path = nutrition;
+			sourceTree = "<group>";
+		};
+		3F01EAC52D74FA9700726A1A /* physicalWellbeing */ = {
+			isa = PBXGroup;
+			children = (
+				3F01EAE42D74FBFB00726A1A /* WorkoutsController.swift */,
+				3F01EAE62D74FC0A00726A1A /* SupplementsController.swift */,
+			);
+			path = physicalWellbeing;
+			sourceTree = "<group>";
+		};
+		3F01EAC62D74FA9E00726A1A /* timeManagement */ = {
+			isa = PBXGroup;
+			children = (
+				3F01EAE02D74FBD700726A1A /* CalendarController.swift */,
+				3F01EAE22D74FBE700726A1A /* OrganizationAssistanceController.swift */,
+			);
+			path = timeManagement;
+			sourceTree = "<group>";
+		};
+		3F01EAC72D74FAA500726A1A /* resources */ = {
+			isa = PBXGroup;
+			children = (
+				3F01EADA2D74FB9400726A1A /* FitnessController.swift */,
+				3F01EADC2D74FBA300726A1A /* PersonalResearchController.swift */,
+				3F01EADE2D74FBC000726A1A /* AffordableOptionsController.swift */,
+			);
+			path = resources;
+			sourceTree = "<group>";
+		};
+		3F01EAC82D74FAAB00726A1A /* mentality */ = {
+			isa = PBXGroup;
+			children = (
+				3F01EAD42D74FB5000726A1A /* JournalController.swift */,
+				3F01EAD62D74FB6100726A1A /* JournalEntriesController.swift */,
+				3F01EAD82D74FB7700726A1A /* MentalHealthResourcesController.swift */,
+			);
+			path = mentality;
+			sourceTree = "<group>";
+		};
+		3F01EAC92D74FAB100726A1A /* account */ = {
+			isa = PBXGroup;
+			children = (
+				3F01EACA2D74FAD500726A1A /* LoginController.swift */,
+				3F01EACC2D74FAF700726A1A /* AccountController.swift */,
+				3F01EACE2D74FB0C00726A1A /* GoalsController.swift */,
+				3F01EAD02D74FB1E00726A1A /* AddGoalController.swift */,
+				3F01EAD22D74FB3800726A1A /* CreateAccountController.swift */,
+			);
+			path = account;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,9 +365,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F01EAD12D74FB1E00726A1A /* AddGoalController.swift in Sources */,
+				3F01EAD92D74FB7700726A1A /* MentalHealthResourcesController.swift in Sources */,
+				3F01EADF2D74FBC000726A1A /* AffordableOptionsController.swift in Sources */,
+				3F01EAD52D74FB5000726A1A /* JournalController.swift in Sources */,
+				3F01EACF2D74FB0C00726A1A /* GoalsController.swift in Sources */,
 				3F01EA982D74FA6800726A1A /* ViewController.swift in Sources */,
+				3F01EAE92D74FC1E00726A1A /* RecipesController.swift in Sources */,
+				3F01EACD2D74FAF700726A1A /* AccountController.swift in Sources */,
+				3F01EAE12D74FBD700726A1A /* CalendarController.swift in Sources */,
+				3F01EAE32D74FBE700726A1A /* OrganizationAssistanceController.swift in Sources */,
+				3F01EADB2D74FB9400726A1A /* FitnessController.swift in Sources */,
+				3F01EACB2D74FAD500726A1A /* LoginController.swift in Sources */,
+				3F01EAD72D74FB6100726A1A /* JournalEntriesController.swift in Sources */,
+				3F01EAD32D74FB3800726A1A /* CreateAccountController.swift in Sources */,
 				3F01EA942D74FA6800726A1A /* AppDelegate.swift in Sources */,
 				3F01EA962D74FA6800726A1A /* SceneDelegate.swift in Sources */,
+				3F01EADD2D74FBA300726A1A /* PersonalResearchController.swift in Sources */,
+				3F01EAEB2D74FC2B00726A1A /* RecipesSearchController.swift in Sources */,
+				3F01EAE72D74FC0A00726A1A /* SupplementsController.swift in Sources */,
+				3F01EAE52D74FBFB00726A1A /* WorkoutsController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,24 +1,1687 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="xTt-eE-o2Y">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Tab Bar Controller-->
+        <scene sceneID="sgI-tU-tQr">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tabBarController id="xTt-eE-o2Y" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="NTv-nf-X0d">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="R9E-AM-iGD" kind="relationship" relationship="viewControllers" id="P2N-Ws-m76"/>
+                        <segue destination="rb9-Yi-gZF" kind="relationship" relationship="viewControllers" id="t0z-b5-xll"/>
+                        <segue destination="2i1-go-VpJ" kind="relationship" relationship="viewControllers" id="krL-ew-FNW"/>
+                        <segue destination="TYO-px-tBt" kind="relationship" relationship="viewControllers" id="5Kd-ux-gGR"/>
+                        <segue destination="6Pb-Kd-kaL" kind="relationship" relationship="viewControllers" id="8ny-da-aVT"/>
+                        <segue destination="RjW-F5-l3A" kind="relationship" relationship="viewControllers" id="IiE-a8-HwM"/>
+                        <segue destination="lPl-1H-fE1" kind="relationship" relationship="viewControllers" id="fDF-Bu-8lb"/>
+                        <segue destination="tIX-9E-1dD" kind="relationship" relationship="viewControllers" id="2Pk-Qk-hOF"/>
+                        <segue destination="dbD-rv-pMu" kind="relationship" relationship="viewControllers" id="30B-mf-pqb"/>
+                        <segue destination="Kke-xN-zFm" kind="relationship" relationship="viewControllers" id="MKW-Ri-MX8"/>
+                        <segue destination="jb1-BG-J3A" kind="relationship" relationship="viewControllers" id="4aY-JD-dQS"/>
+                        <segue destination="PIe-pf-bMv" kind="relationship" relationship="viewControllers" id="BPa-HY-cLV"/>
+                        <segue destination="IwD-tx-Q6B" kind="relationship" relationship="viewControllers" id="sOK-pM-Ie3"/>
+                        <segue destination="owF-n1-hys" kind="relationship" relationship="viewControllers" id="Oj2-gX-l74"/>
+                        <segue destination="cWD-XT-nTa" kind="relationship" relationship="viewControllers" id="Eg5-bZ-NlH"/>
+                        <segue destination="UxL-fg-8GU" kind="relationship" relationship="viewControllers" id="Lv7-nY-HiS"/>
+                        <segue destination="aSb-wR-FFO" kind="relationship" relationship="viewControllers" id="HTE-KT-VGY"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dW9-kZ-dg0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-692" y="-35"/>
+        </scene>
+        <!--Home-->
+        <scene sceneID="ERo-i1-b0P">
+            <objects>
+                <viewController id="GlA-Jj-pNd" userLabel="Home" customClass="ViewController" customModule="VitalityBoost" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ryi-r7-ZXz">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="2095"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uYB-ij-YOC">
+                                <rect key="frame" x="0.0" y="87" width="393" height="1886"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4ye-xu-XGx" userLabel="Content View">
+                                        <rect key="frame" x="0.0" y="0.0" width="922.33333333333337" height="1963"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="login-7103076_1280" translatesAutoresizingMaskIntoConstraints="NO" id="Zgv-JN-Ci2">
+                                                <rect key="frame" x="20" y="484" width="353" height="91"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ai-generated-8266786_1280" translatesAutoresizingMaskIntoConstraints="NO" id="MVJ-Ep-R3s">
+                                                <rect key="frame" x="20" y="934" width="353" height="91"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="dumbbells-2465478_1280" translatesAutoresizingMaskIntoConstraints="NO" id="Vzx-ef-1tm">
+                                                <rect key="frame" x="20" y="1159" width="353" height="91"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="calendar-7544098_1280" translatesAutoresizingMaskIntoConstraints="NO" id="7O0-CH-IGm">
+                                                <rect key="frame" x="20" y="1384" width="353" height="91"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="logbook-154730_1280" translatesAutoresizingMaskIntoConstraints="NO" id="AFa-TN-AkE">
+                                                <rect key="frame" x="20" y="1609" width="353" height="91"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="vegetables-1529726_1280" translatesAutoresizingMaskIntoConstraints="NO" id="L1L-Lh-Ufm">
+                                                <rect key="frame" x="20" y="709" width="353" height="91"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="yoga-8385447_1280" translatesAutoresizingMaskIntoConstraints="NO" id="sNP-dQ-0vO">
+                                                <rect key="frame" x="20" y="134" width="353" height="175"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Create an Account to store your personal information, concerns, goals, saved items and progress throughout your health journey." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MWF-fN-zYv">
+                                                <rect key="frame" x="20" y="583" width="353" height="118"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6xz-lq-ram">
+                                                <rect key="frame" x="20" y="808" width="353" height="118"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <string key="text">Find recipes and nutrition facts to help guide you in your health journey. You can search by common health concerns or perform your own research.</string>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Find resources to help you achieve your health goals through our saved resources or researching through our Resource Search." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="osh-ES-UkS">
+                                                <rect key="frame" x="20" y="1033" width="353" height="118"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T50-tU-TW5">
+                                                <rect key="frame" x="20" y="1258" width="353" height="118"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <string key="text">Find workouts, fitness plans and more through our Physical Wellbeing page. Including fitness supplements and centers in your area.</string>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O0p-yd-qi6">
+                                                <rect key="frame" x="20" y="1483" width="353" height="118"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <string key="text">Use the built in Calendar to help you plan out your days to ensure you can include time for yourself and your health goals, along with resources to help you along the way.</string>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Journal about your health journey, save journal entries to reflect upon later. Improve your mentality through self relflection." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JWN-iv-zGE">
+                                                <rect key="frame" x="20" y="1708" width="353" height="118"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Explore the below resources to find what you need. Happy Health Journey!" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fdB-uX-AnY">
+                                                <rect key="frame" x="20" y="317" width="353" height="159"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="The answer to living your best life based on your Personal Needs! Mentality, Physicality and Nutrition all in one place!" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tqW-ZA-nkm">
+                                                <rect key="frame" x="20" y="0.0" width="353" height="106"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    </view>
+                                </subviews>
+                                <viewLayoutGuide key="contentLayoutGuide" id="7Ai-HE-dap"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="mfL-tm-Dcs"/>
+                            </scrollView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="eBu-YX-YW8"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <accessibility key="accessibilityConfiguration">
+                            <bool key="isElement" value="YES"/>
+                        </accessibility>
+                    </view>
+                    <navigationItem key="navigationItem" title="Vitality Boost" id="K1O-Dg-ym4">
+                        <centerItemGroups>
+                            <barButtonItemGroup customizationDisposition="fixed" id="1YU-01-Le6">
+                                <barButtonItems>
+                                    <barButtonItem title="Home" id="UyM-Bg-zNc">
+                                        <connections>
+                                            <segue destination="R9E-AM-iGD" kind="show" id="we6-7J-gp9"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="Account" id="J95-0s-mLr">
+                                        <connections>
+                                            <segue destination="TYO-px-tBt" kind="show" id="69W-4L-ZUf"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="Resources" id="rhW-q9-qCt">
+                                        <connections>
+                                            <segue destination="6Pb-Kd-kaL" kind="show" id="GCc-lX-Fz6"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="Physcial Wellbeing" id="AHY-1L-Zac">
+                                        <connections>
+                                            <segue destination="RjW-F5-l3A" kind="show" id="RNW-kQ-3lY"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="Nutrition" id="Cxc-AQ-hF2">
+                                        <connections>
+                                            <segue destination="lPl-1H-fE1" kind="show" id="GsG-MC-EmQ"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="Time Management" id="kh2-Ib-guJ">
+                                        <connections>
+                                            <segue destination="2i1-go-VpJ" kind="show" id="PZG-Kb-9Y7"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="Mentality" id="nwh-Sf-Mdo">
+                                        <connections>
+                                            <segue destination="tIX-9E-1dD" kind="show" id="gBV-GA-xKm"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </barButtonItems>
+                            </barButtonItemGroup>
+                        </centerItemGroups>
+                    </navigationItem>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <size key="freeformSize" width="393" height="2105"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uWp-yP-8R1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1385" y="405"/>
+        </scene>
+        <!--Login-->
+        <scene sceneID="DKS-3z-cLb">
+            <objects>
+                <viewController id="Fr2-LV-0cp" customClass="LoginController" customModule="VitalityBoost" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="TMK-gj-uLn">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VTh-Co-Mfj">
+                                <rect key="frame" x="16" y="183" width="150" height="47"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1SG-pK-naL">
+                                <rect key="frame" x="16" y="238" width="150" height="47"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="j9K-S7-WSy">
+                                <rect key="frame" x="174" y="189" width="203" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5ng-c1-Yoc">
+                                <rect key="frame" x="174" y="244" width="203" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dq7-Ie-cC7">
+                                <rect key="frame" x="191" y="300" width="169" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="gray" title="Login"/>
+                                <connections>
+                                    <segue destination="cWD-XT-nTa" kind="show" id="caB-IP-r3X"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b05-Vd-J9L">
+                                <rect key="frame" x="191" y="356" width="169" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="gray" title="Create Account"/>
+                                <connections>
+                                    <segue destination="aSb-wR-FFO" kind="show" id="YGl-SK-72g"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Nls-3U-tOB"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Login" id="yca-2k-Gei">
+                        <centerItemGroups>
+                            <barButtonItemGroup customizationDisposition="fixed" id="gfH-je-7vI">
+                                <barButtonItems>
+                                    <barButtonItem title="Home" id="HFw-b1-SPb"/>
+                                    <barButtonItem title="Account" id="U2I-CR-H27"/>
+                                    <barButtonItem title="Resources" id="RsM-W7-GSz"/>
+                                    <barButtonItem title="Physical Wellbeing" id="EwH-9s-uq6"/>
+                                    <barButtonItem title="Nutrition" id="PIV-L4-LPW"/>
+                                    <barButtonItem title="Time Management" id="hNR-8N-KiQ"/>
+                                    <barButtonItem title="Mentatlity" id="Tkw-Ki-vVB"/>
+                                </barButtonItems>
+                            </barButtonItemGroup>
+                        </centerItemGroups>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5Uu-bj-QJO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1385" y="-770"/>
+        </scene>
+        <!--Create Account-->
+        <scene sceneID="HVM-BI-PeI">
+            <objects>
+                <viewController id="aSb-wR-FFO" customClass="CreateAccountController" customModule="VitalityBoost" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="oTF-2Y-tPg">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gyw-y3-sLi">
+                                <rect key="frame" x="16" y="129" width="151" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rdQ-eD-XH7">
+                                <rect key="frame" x="16" y="181" width="151" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="First Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="78R-fi-Ais">
+                                <rect key="frame" x="16" y="233" width="151" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Last Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jsj-7h-7aL">
+                                <rect key="frame" x="16" y="285" width="151" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ArT-Wv-QyB">
+                                <rect key="frame" x="16" y="337" width="151" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Phone" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Anh-wQ-2Wy">
+                                <rect key="frame" x="16" y="389" width="151" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Address" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Spm-K3-GZa">
+                                <rect key="frame" x="16" y="441" width="151" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7Qa-55-N7t">
+                                <rect key="frame" x="175" y="134" width="202" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="guB-Jl-csu">
+                                <rect key="frame" x="175" y="238" width="202" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8gt-cW-vXS">
+                                <rect key="frame" x="175" y="290" width="202" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vO9-xn-KFo">
+                                <rect key="frame" x="175" y="342" width="202" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7Ir-lJ-Yaj">
+                                <rect key="frame" x="175" y="394" width="202" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ave-HH-waq">
+                                <rect key="frame" x="175" y="446" width="202" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gza-ec-tWQ">
+                                <rect key="frame" x="125" y="535" width="143" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="gray" title="Create Account"/>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WqO-97-4IH">
+                                <rect key="frame" x="175" y="186" width="202" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="xRS-Km-GeQ"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Create Account" image="plus" catalog="system" id="fOF-xG-PtC"/>
+                    <navigationItem key="navigationItem" title="Create Account" id="i9P-KB-H9g">
+                        <centerItemGroups>
+                            <barButtonItemGroup customizationDisposition="fixed" id="Q0Y-Jb-uoD">
+                                <barButtonItems>
+                                    <barButtonItem title="Home" id="f1Q-le-OL1"/>
+                                    <barButtonItem title="Account" id="weJ-TW-WVU"/>
+                                    <barButtonItem title="Resources" id="ieC-Ll-Htc"/>
+                                    <barButtonItem title="Physical Wellbeing" id="9iC-z1-br1"/>
+                                    <barButtonItem title="Nutrition" id="nHC-Wd-YtZ"/>
+                                    <barButtonItem title="Time Management" id="8BH-dt-uTP"/>
+                                    <barButtonItem title="Mentatlity" id="j8r-ez-HTP"/>
+                                </barButtonItems>
+                            </barButtonItemGroup>
+                        </centerItemGroups>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="K7O-2Y-CQw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1384" y="-1482"/>
+        </scene>
+        <!--Account-->
+        <scene sceneID="8fK-8K-ODo">
+            <objects>
+                <viewController id="cWD-XT-nTa" customClass="AccountController" customModule="VitalityBoost" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="uG5-gd-WU4">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pUU-BE-Wdn">
+                                <rect key="frame" x="49" y="129" width="118" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Contact Info"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bf4-Jb-Qa9">
+                                <rect key="frame" x="269" y="129" width="68" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Goals"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zUk-0N-Ech">
+                                <rect key="frame" x="16" y="197" width="151" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zi1-7i-JnU">
+                                <rect key="frame" x="16" y="249" width="151" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="First Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Roc-UC-1mH">
+                                <rect key="frame" x="16" y="301" width="151" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Last Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tnr-xO-D1G">
+                                <rect key="frame" x="16" y="353" width="151" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PVp-Vp-pUE">
+                                <rect key="frame" x="16" y="405" width="151" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Phone" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y8a-0B-fCB">
+                                <rect key="frame" x="16" y="457" width="151" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Address" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JCH-Tr-Qzl">
+                                <rect key="frame" x="16" y="509" width="151" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uOi-gi-Gqm">
+                                <rect key="frame" x="175" y="202" width="202" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VEf-Yr-1xx">
+                                <rect key="frame" x="175" y="306" width="202" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lcQ-nG-cDA">
+                                <rect key="frame" x="175" y="358" width="202" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rxm-7j-2qG">
+                                <rect key="frame" x="175" y="410" width="202" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="H3u-M8-Wg3">
+                                <rect key="frame" x="175" y="462" width="202" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cev-4E-D0V">
+                                <rect key="frame" x="175" y="514" width="202" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jZN-UM-zF1">
+                                <rect key="frame" x="175" y="254" width="202" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ig7-kT-fLw">
+                                <rect key="frame" x="102" y="783" width="189" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="gray" title="Save/Update Account"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="_________________________________________" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sAC-Be-Awj">
+                                <rect key="frame" x="16" y="155" width="363" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="0Xi-iy-eNa"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Account Info" image="person.fill" catalog="system" id="xIo-r0-9Me"/>
+                    <navigationItem key="navigationItem" title="Account" id="AJW-3W-MMo">
+                        <centerItemGroups>
+                            <barButtonItemGroup customizationDisposition="fixed" id="0JA-Du-fao">
+                                <barButtonItems>
+                                    <barButtonItem title="Home" id="eXM-Bh-dwA"/>
+                                    <barButtonItem title="Account" id="vGa-JG-uWw"/>
+                                    <barButtonItem title="Resources" id="VMc-MV-utD"/>
+                                    <barButtonItem title="Physical Wellbeing" id="fzW-uB-1wx"/>
+                                    <barButtonItem title="Nutrition" id="aKm-xa-fvu"/>
+                                    <barButtonItem title="Time Management" id="hMW-Td-sny"/>
+                                    <barButtonItem title="Mentatlity" id="qlQ-hz-xNa"/>
+                                </barButtonItems>
+                            </barButtonItemGroup>
+                        </centerItemGroups>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hLG-fE-jjp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="638.93129770992368" y="-770.4225352112677"/>
+        </scene>
+        <!--Goals-->
+        <scene sceneID="rni-z2-JDd">
+            <objects>
+                <viewController id="UxL-fg-8GU" customClass="GoalsController" customModule="VitalityBoost" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="k0F-D6-rN7">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="769"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Account" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dwV-4v-6r2">
+                                <rect key="frame" x="0.0" y="59" width="393" height="62"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YDI-Qt-aoW">
+                                <rect key="frame" x="47" y="129" width="118" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Contact Info"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xpz-eV-LlH">
+                                <rect key="frame" x="267" y="129" width="68" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Goals"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="_________________________________________" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dFb-jT-brR">
+                                <rect key="frame" x="14" y="155" width="363" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mtP-gc-j2i">
+                                <rect key="frame" x="129" y="783" width="133" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="gray" title="Add New Goal"/>
+                                <connections>
+                                    <segue destination="CcN-gf-sCR" kind="show" id="cmk-wX-WMN"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="ATT-ue-Onc"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Goals" id="U7Y-vh-3gO"/>
+                    <navigationItem key="navigationItem" title="Goals" id="W4T-Px-3ad">
+                        <centerItemGroups>
+                            <barButtonItemGroup customizationDisposition="fixed" id="ISw-xr-Rbs">
+                                <barButtonItems>
+                                    <barButtonItem title="Home" id="XlF-Lb-bJ0"/>
+                                    <barButtonItem title="Account" id="zsA-7b-GAF"/>
+                                    <barButtonItem title="Resources" id="WwN-F5-3ct"/>
+                                    <barButtonItem title="Physical Wellbeing" id="84k-Lq-Qgi"/>
+                                    <barButtonItem title="Nutrition" id="Su8-Eb-YXy"/>
+                                    <barButtonItem title="Time Management" id="MJJ-s8-Ijo"/>
+                                    <barButtonItem title="Mentatlity" id="msF-A3-g4G"/>
+                                </barButtonItems>
+                            </barButtonItemGroup>
+                        </centerItemGroups>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Vuu-8Q-NNF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="639" y="-1482"/>
+        </scene>
+        <!--Add Goal-->
+        <scene sceneID="51x-gZ-bgq">
+            <objects>
+                <viewController id="CcN-gf-sCR" customClass="AddGoalController" customModule="VitalityBoost" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Lnq-Is-rgN">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Add Goal" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ub3-e8-jwY">
+                                <rect key="frame" x="0.0" y="59" width="393" height="62"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Goal Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bGY-Ar-pwT">
+                                <rect key="frame" x="16" y="129" width="145" height="53"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Goal Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6U9-jr-73z">
+                                <rect key="frame" x="16" y="190" width="145" height="53"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BzP-3B-NDc">
+                                <rect key="frame" x="169" y="138" width="208" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="UHY-dt-fQQ">
+                                <rect key="frame" x="169" y="190" width="208" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <accessibility key="accessibilityConfiguration" hint="Enter New Goal Description Here"/>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gb7-R2-wAR">
+                                <rect key="frame" x="160" y="357" width="94" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="gray" title="Add Goal"/>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6fs-UK-6XM"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="5W2-4v-H8R"/>
+                    <navigationItem key="navigationItem" title="Add Goal" id="DGX-dJ-pFI">
+                        <centerItemGroups>
+                            <barButtonItemGroup customizationDisposition="fixed" id="Tdf-va-sTy">
+                                <barButtonItems>
+                                    <barButtonItem title="Home" id="eJq-1X-aL3"/>
+                                    <barButtonItem title="Account" id="8Up-uH-bar"/>
+                                    <barButtonItem title="Resources" id="3Bf-dc-Xm4"/>
+                                    <barButtonItem title="Physical Wellbeing" id="WEG-mi-cwH"/>
+                                    <barButtonItem title="Nutrition" id="DDd-Yn-5dY"/>
+                                    <barButtonItem title="Time Management" id="xHC-TN-TkK"/>
+                                    <barButtonItem title="Mentatlity" id="4H3-6P-xOh"/>
+                                </barButtonItems>
+                            </barButtonItemGroup>
+                        </centerItemGroups>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kCN-Un-GtJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="638.93129770992368" y="-2168.3098591549297"/>
+        </scene>
+        <!--Fitness-->
+        <scene sceneID="WDg-qf-s4j">
+            <objects>
+                <viewController title="Fitness" id="dqU-S4-ZMo" customClass="FitnessController" customModule="VitalityBoost" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="7xc-bd-4Of">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b6y-jL-ilj">
+                                <rect key="frame" x="16" y="101" width="79" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Fitness"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OaL-cC-zQx">
+                                <rect key="frame" x="299" y="101" width="78" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Search"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="_________________________________________" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SkV-Go-zb1">
+                                <rect key="frame" x="16" y="129" width="363" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aee-UZ-HvZ">
+                                <rect key="frame" x="113" y="101" width="168" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Affordable Options"/>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="wnR-fX-oei"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Resources" id="J2h-lO-pLU">
+                        <centerItemGroups>
+                            <barButtonItemGroup customizationDisposition="fixed" id="ze8-Q3-vkC">
+                                <barButtonItems>
+                                    <barButtonItem title="Home" id="sK5-Mq-6TV"/>
+                                    <barButtonItem title="Account" id="5dc-Uh-J0W"/>
+                                    <barButtonItem title="Resources" id="zmI-2J-Xy4"/>
+                                    <barButtonItem title="Physical Wellbeing" id="WX8-24-vuz"/>
+                                    <barButtonItem title="Nutrition" id="kSR-jC-hcu"/>
+                                    <barButtonItem title="Time Management" id="xC7-ek-lnL"/>
+                                    <barButtonItem title="Mentatlity" id="QeH-y7-oji"/>
+                                </barButtonItems>
+                            </barButtonItemGroup>
+                        </centerItemGroups>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nR1-UC-Nhm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2523" y="-35"/>
+        </scene>
+        <!--Personal Research-->
+        <scene sceneID="guV-Sl-xTv">
+            <objects>
+                <viewController title="Personal Research" id="rb9-Yi-gZF" customClass="PersonalResearchController" customModule="VitalityBoost" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="r9e-D8-OeU">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mQe-P9-R0W">
+                                <rect key="frame" x="299" y="101" width="78" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Search"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="34H-V4-y9Y">
+                                <rect key="frame" x="113" y="101" width="168" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Affordable Options"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="_________________________________________" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fnu-wm-0A6">
+                                <rect key="frame" x="16" y="131" width="363" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t04-zD-RH0">
+                                <rect key="frame" x="16" y="101" width="79" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Fitness"/>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="25h-LN-icU"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Explore" image="magnifyingglass" catalog="system" id="vAJ-5a-bf4"/>
+                    <navigationItem key="navigationItem" title="Resources" id="w5d-9h-hkg">
+                        <centerItemGroups>
+                            <barButtonItemGroup customizationDisposition="fixed" id="TJG-jS-Omb">
+                                <barButtonItems>
+                                    <barButtonItem title="Home" id="oXA-Nf-JwW"/>
+                                    <barButtonItem title="Account" id="Cpr-fE-bhY"/>
+                                    <barButtonItem title="Resources" id="uST-ve-ptf"/>
+                                    <barButtonItem title="Physical Wellbeing" id="afw-KN-blE"/>
+                                    <barButtonItem title="Nutrition" id="Y9P-5L-uZn"/>
+                                    <barButtonItem title="Time Management" id="0Gp-53-8Ba"/>
+                                    <barButtonItem title="Mentatlity" id="FvJ-th-tRF"/>
+                                </barButtonItems>
+                            </barButtonItemGroup>
+                        </centerItemGroups>
+                    </navigationItem>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zD0-db-tdI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2926" y="-770"/>
+        </scene>
+        <!--Affordable Options-->
+        <scene sceneID="Pvw-kK-Eni">
+            <objects>
+                <viewController title="Affordable Options" id="dbD-rv-pMu" customClass="AffordableOptionsController" customModule="VitalityBoost" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bwJ-5I-OS5">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="769"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mwq-SG-hqv">
+                                <rect key="frame" x="16" y="101" width="79" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Fitness"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TkM-Dx-LGL">
+                                <rect key="frame" x="299" y="101" width="78" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Search"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vdw-LE-jS9">
+                                <rect key="frame" x="113" y="101" width="168" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Affordable Options"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="_________________________________________" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qSH-6l-0Zj">
+                                <rect key="frame" x="16" y="131" width="363" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="J2F-80-aZ9"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Affordable Options" id="G4i-FJ-WmQ"/>
+                    <navigationItem key="navigationItem" title="Resources" id="eIT-X8-IRE">
+                        <centerItemGroups>
+                            <barButtonItemGroup customizationDisposition="fixed" id="F7R-V3-uB9">
+                                <barButtonItems>
+                                    <barButtonItem title="Home" id="Njj-ho-in7"/>
+                                    <barButtonItem title="Account" id="T6E-ly-3vB"/>
+                                    <barButtonItem title="Resources" id="Khq-FV-1Pk"/>
+                                    <barButtonItem title="Physical Wellbeing" id="5bC-dF-tIO"/>
+                                    <barButtonItem title="Nutrition" id="dKv-Y2-9mE"/>
+                                    <barButtonItem title="Time Management" id="72b-nG-pwJ"/>
+                                    <barButtonItem title="Mentatlity" id="GJj-sH-gEg"/>
+                                </barButtonItems>
+                            </barButtonItemGroup>
+                        </centerItemGroups>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XqI-Uf-4uT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2208" y="-770"/>
+        </scene>
+        <!--Workouts-->
+        <scene sceneID="E08-qz-OCj">
+            <objects>
+                <viewController title="Workouts" id="vlF-sI-XGK" customClass="WorkoutsController" customModule="VitalityBoost" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="RzS-np-z4m">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jn6-aU-sAD">
+                                <rect key="frame" x="52" y="101" width="97" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Workouts"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="_________________________________________" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fac-nj-tUN">
+                                <rect key="frame" x="15" y="131" width="363" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z2r-Pz-OIg">
+                                <rect key="frame" x="217" y="101" width="125" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Supplements"/>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="7WX-Z6-qSJ"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Physical Wellbeing" id="Get-fW-Rl0">
+                        <centerItemGroups>
+                            <barButtonItemGroup customizationDisposition="fixed" id="JW9-kc-7W1">
+                                <barButtonItems>
+                                    <barButtonItem title="Home" id="Kb3-oC-LV4"/>
+                                    <barButtonItem title="Account" id="Oq0-kU-gaw"/>
+                                    <barButtonItem title="Resources" id="HmM-AL-izq"/>
+                                    <barButtonItem title="Physical Wellbeing" id="jMl-76-jwh"/>
+                                    <barButtonItem title="Nutrition" id="haU-SS-FoQ"/>
+                                    <barButtonItem title="Time Management" id="6DI-EX-20j"/>
+                                    <barButtonItem title="Mentatlity" id="Lh3-ap-zL6"/>
+                                </barButtonItems>
+                            </barButtonItemGroup>
+                        </centerItemGroups>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SRr-U1-A29" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3926" y="-35"/>
+        </scene>
+        <!--Supplements-->
+        <scene sceneID="kxi-zH-P3H">
+            <objects>
+                <viewController title="Supplements" id="Kke-xN-zFm" customClass="SupplementsController" customModule="VitalityBoost" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="W6Q-o8-Dxw">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="769"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0H8-Tx-iUE">
+                                <rect key="frame" x="217" y="101" width="125" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Supplements"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I5R-w3-QMw">
+                                <rect key="frame" x="52" y="101" width="97" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Workouts"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="_________________________________________" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RYz-5u-mHh">
+                                <rect key="frame" x="15" y="131" width="363" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="rAB-Uq-bDe"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Supplements" id="Xec-ek-gQl"/>
+                    <navigationItem key="navigationItem" title="Physical Wellbeing" id="dUJ-fP-lMy">
+                        <centerItemGroups>
+                            <barButtonItemGroup customizationDisposition="fixed" id="NI8-y3-jZv">
+                                <barButtonItems>
+                                    <barButtonItem title="Home" id="0yx-Kd-P5p"/>
+                                    <barButtonItem title="Account" id="GFO-YJ-mwI"/>
+                                    <barButtonItem title="Resources" id="sgh-25-AqB"/>
+                                    <barButtonItem title="Physical Wellbeing" id="tI4-LO-tPp"/>
+                                    <barButtonItem title="Nutrition" id="Af3-u4-F3C"/>
+                                    <barButtonItem title="Time Management" id="g5z-N9-cE0"/>
+                                    <barButtonItem title="Mentatlity" id="HXL-OQ-ZbN"/>
+                                </barButtonItems>
+                            </barButtonItemGroup>
+                        </centerItemGroups>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="J6z-nB-rCE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3926" y="-770"/>
+        </scene>
+        <!--Recipes-->
+        <scene sceneID="KKI-bE-NAU">
+            <objects>
+                <viewController title="Recipes" id="mEW-Z7-KrK" customClass="RecipesController" customModule="VitalityBoost" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="9yB-0R-tjg">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GQu-dB-0q2">
+                                <rect key="frame" x="213" y="101" width="134" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Recipe Search"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UTM-SJ-Dco">
+                                <rect key="frame" x="58" y="101" width="85" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Recipes"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="_________________________________________" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uwg-RA-QRk">
+                                <rect key="frame" x="15" y="131" width="363" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="ve6-bY-zBl"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Nutrition" id="SsR-5M-FOB">
+                        <centerItemGroups>
+                            <barButtonItemGroup customizationDisposition="fixed" id="EvK-id-SOj">
+                                <barButtonItems>
+                                    <barButtonItem title="Home" id="XKL-ed-fX5"/>
+                                    <barButtonItem title="Account" id="Ak1-8H-W7g"/>
+                                    <barButtonItem title="Resources" id="fRo-34-22A"/>
+                                    <barButtonItem title="Physical Wellbeing" id="1PR-a5-G61"/>
+                                    <barButtonItem title="Nutrition" id="duH-Yy-TMD"/>
+                                    <barButtonItem title="Time Management" id="czq-ZZ-aBZ"/>
+                                    <barButtonItem title="Mentatlity" id="Vux-wp-s5q"/>
+                                </barButtonItems>
+                            </barButtonItemGroup>
+                        </centerItemGroups>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0Ne-QY-hB0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5184" y="-35"/>
+        </scene>
+        <!--Recipes Search-->
+        <scene sceneID="iQU-Vt-wAn">
+            <objects>
+                <viewController title="Recipes Search" id="jb1-BG-J3A" customClass="RecipesSearchController" customModule="VitalityBoost" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="0Ln-zv-yDf">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="769"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q4G-E3-xNr">
+                                <rect key="frame" x="213" y="101" width="134" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Recipe Search"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xic-Ec-5qR">
+                                <rect key="frame" x="58" y="101" width="85" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Recipes"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="_________________________________________" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FVP-GR-O6g">
+                                <rect key="frame" x="15" y="131" width="363" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="BW7-2h-e45"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Recipe Search" id="gwB-1s-IlF"/>
+                    <navigationItem key="navigationItem" title="Nutrition" id="4XZ-4l-NeV">
+                        <centerItemGroups>
+                            <barButtonItemGroup customizationDisposition="fixed" id="LoE-ez-DBR">
+                                <barButtonItems>
+                                    <barButtonItem title="Home" id="goB-UN-xHW"/>
+                                    <barButtonItem title="Account" id="gbq-xh-7xB"/>
+                                    <barButtonItem title="Resources" id="sv2-j6-C1U"/>
+                                    <barButtonItem title="Physical Wellbeing" id="Vwb-ct-3Ra"/>
+                                    <barButtonItem title="Nutrition" id="09m-We-Jai"/>
+                                    <barButtonItem title="Time Management" id="YUE-Pb-dLR"/>
+                                    <barButtonItem title="Mentatlity" id="gEh-Bn-72E"/>
+                                </barButtonItems>
+                            </barButtonItemGroup>
+                        </centerItemGroups>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Hoy-WD-t9C" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5184" y="-770"/>
+        </scene>
+        <!--Calendar-->
+        <scene sceneID="lc8-i4-VWP">
+            <objects>
+                <viewController title="Calendar" id="BCz-m1-V4c" customClass="CalendarController" customModule="VitalityBoost" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ekx-Ms-v9m">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uf5-nP-5jD">
+                                <rect key="frame" x="156" y="101" width="208" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Organization Assistance"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wMF-Ki-959">
+                                <rect key="frame" x="35" y="101" width="93" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Calendar"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="_________________________________________" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Amz-C3-IPM">
+                                <rect key="frame" x="16" y="131" width="363" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="DUC-Wq-S2Z"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Time Management" id="boY-ZZ-qrW">
+                        <centerItemGroups>
+                            <barButtonItemGroup customizationDisposition="fixed" id="1eX-lc-Nxn">
+                                <barButtonItems>
+                                    <barButtonItem title="Home" id="8CO-cz-aox"/>
+                                    <barButtonItem title="Account" id="dzi-Mu-ppN"/>
+                                    <barButtonItem title="Resources" id="uAp-dO-BNU"/>
+                                    <barButtonItem title="Physical Wellbeing" id="7ET-19-kq2"/>
+                                    <barButtonItem title="Nutrition" id="ZDK-jA-IS1"/>
+                                    <barButtonItem title="Time Management" id="4gf-hN-SY3"/>
+                                    <barButtonItem title="Mentatlity" id="OYL-s5-zxQ"/>
+                                </barButtonItems>
+                            </barButtonItemGroup>
+                        </centerItemGroups>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XO4-IX-1DC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6302" y="-35"/>
+        </scene>
+        <!--Organization Assistance-->
+        <scene sceneID="4aL-D6-Wug">
+            <objects>
+                <viewController title="Organization Assistance" id="PIe-pf-bMv" customClass="OrganizationAssistanceController" customModule="VitalityBoost" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ZK9-XV-Ooz">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="769"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1ro-pn-50Z">
+                                <rect key="frame" x="156" y="101" width="208" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Organization Assistance"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="_________________________________________" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Hd-ry-TXB">
+                                <rect key="frame" x="16" y="131" width="363" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="91Q-1B-oyj">
+                                <rect key="frame" x="35" y="101" width="93" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Calendar"/>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Zzx-hs-1Ke"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Organization Assistance" id="87I-42-VeT"/>
+                    <navigationItem key="navigationItem" title="Time Management" id="5Wf-In-duN">
+                        <centerItemGroups>
+                            <barButtonItemGroup customizationDisposition="fixed" id="vzi-rw-MJQ">
+                                <barButtonItems>
+                                    <barButtonItem title="Home" id="6dx-v0-Hc6"/>
+                                    <barButtonItem title="Account" id="ffD-um-guG"/>
+                                    <barButtonItem title="Resources" id="vIu-WK-Z9X"/>
+                                    <barButtonItem title="Physical Wellbeing" id="nzq-BM-Ym8"/>
+                                    <barButtonItem title="Nutrition" id="dMx-nR-aPZ"/>
+                                    <barButtonItem title="Time Management" id="JVY-Zy-5tH"/>
+                                    <barButtonItem title="Mentatlity" id="GMd-kg-ktN"/>
+                                </barButtonItems>
+                            </barButtonItemGroup>
+                        </centerItemGroups>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0Tk-3e-kAp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6302" y="-770"/>
+        </scene>
+        <!--Journal-->
+        <scene sceneID="96I-lq-Mq9">
+            <objects>
+                <viewController title="Journal" id="ikE-pL-l31" customClass="JournalController" customModule="VitalityBoost" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="KT2-Ho-qht">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g5m-RQ-AhL">
+                                <rect key="frame" x="179" y="101" width="214" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Mental Health Resources"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y2T-ju-63k">
+                                <rect key="frame" x="0.0" y="101" width="81" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Journal"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="_________________________________________" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L6u-eU-rAr">
+                                <rect key="frame" x="16" y="131" width="363" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XU2-Mw-1jT">
+                                <rect key="frame" x="89" y="101" width="77" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Entries"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Entry Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sP8-v3-Jiq">
+                                <rect key="frame" x="16" y="160" width="114" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Entry Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oDD-hn-IFy">
+                                <rect key="frame" x="16" y="212" width="114" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="0hk-eP-Wd5">
+                                <rect key="frame" x="138" y="156" width="239" height="52"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            </datePicker>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RHs-oe-Of8">
+                                <rect key="frame" x="138" y="217" width="239" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="rOf-xa-AMb">
+                                <rect key="frame" x="16" y="264" width="361" height="448"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
+                                <accessibility key="accessibilityConfiguration" hint="Start Typing..."/>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Oud-pg-kjE">
+                                <rect key="frame" x="316" y="720" width="61" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="gray" title="Save"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ac5-vY-vBh">
+                                <rect key="frame" x="13" y="720" width="82" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="gray" title="Discard"/>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="FRK-Be-Ckb"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Mentality" id="AwA-VN-hdR">
+                        <centerItemGroups>
+                            <barButtonItemGroup customizationDisposition="fixed" id="jvb-LL-gGH">
+                                <barButtonItems>
+                                    <barButtonItem title="Home" id="mxi-Ov-gW9"/>
+                                    <barButtonItem title="Account" id="0Qs-DY-FVX"/>
+                                    <barButtonItem title="Resources" id="zxa-pt-3u0"/>
+                                    <barButtonItem title="Physical Wellbeing" id="6fU-Zj-4ph"/>
+                                    <barButtonItem title="Nutrition" id="xmH-XL-c0R"/>
+                                    <barButtonItem title="Time Management" id="Njf-ma-iWr"/>
+                                    <barButtonItem title="Mentatlity" id="j8c-yj-jac"/>
+                                </barButtonItems>
+                            </barButtonItemGroup>
+                        </centerItemGroups>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yY6-oP-RwU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="7732" y="-36"/>
+        </scene>
+        <!--Journal Entries-->
+        <scene sceneID="opz-T2-ds3">
+            <objects>
+                <viewController title="Journal Entries" id="IwD-tx-Q6B" customClass="JournalEntriesController" customModule="VitalityBoost" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="jrN-DL-8vA">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="769"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rHr-1z-1aM">
+                                <rect key="frame" x="89" y="101" width="77" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Entries"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CfE-Hs-0p1">
+                                <rect key="frame" x="179" y="101" width="214" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Mental Health Resources"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ITi-zo-vQv">
+                                <rect key="frame" x="0.0" y="101" width="81" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Journal"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="_________________________________________" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oom-Ko-UQO">
+                                <rect key="frame" x="16" y="131" width="363" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Rwy-EY-hRM"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Journal Entries" id="Bta-ro-lWO"/>
+                    <navigationItem key="navigationItem" title="Mentality" id="34Y-An-5rc">
+                        <centerItemGroups>
+                            <barButtonItemGroup customizationDisposition="fixed" id="iVo-uG-J2V">
+                                <barButtonItems>
+                                    <barButtonItem title="Home" id="g3B-Ei-tWj"/>
+                                    <barButtonItem title="Account" id="a7T-4t-hjd"/>
+                                    <barButtonItem title="Resources" id="gLk-4N-Rfm"/>
+                                    <barButtonItem title="Physical Wellbeing" id="C9O-P2-XHw"/>
+                                    <barButtonItem title="Nutrition" id="uRg-SM-v42"/>
+                                    <barButtonItem title="Time Management" id="OQF-Rs-HCO"/>
+                                    <barButtonItem title="Mentatlity" id="zI1-x5-SMY"/>
+                                </barButtonItems>
+                            </barButtonItemGroup>
+                        </centerItemGroups>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DGN-NP-N0o" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="7343" y="-770"/>
+        </scene>
+        <!--Mental Health Resources-->
+        <scene sceneID="1N2-a1-Mvl">
+            <objects>
+                <viewController title="Mental Health Resources" id="owF-n1-hys" customClass="MentalHealthResourcesController" customModule="VitalityBoost" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="mGp-Uo-PE1">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="769"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xtH-KT-M5o">
+                                <rect key="frame" x="89" y="101" width="77" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Entries"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o6o-jB-sZ4">
+                                <rect key="frame" x="179" y="101" width="214" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Mental Health Resources"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yWG-QK-weK">
+                                <rect key="frame" x="0.0" y="101" width="81" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Journal"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="_________________________________________" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Zj-SK-w0g">
+                                <rect key="frame" x="16" y="131" width="363" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="JfX-gB-emf"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Mental Health Resources" id="wTh-Z7-sIN"/>
+                    <navigationItem key="navigationItem" title="Mentality" id="iNM-kA-NPL">
+                        <centerItemGroups>
+                            <barButtonItemGroup customizationDisposition="fixed" id="vX7-uJ-Aqf">
+                                <barButtonItems>
+                                    <barButtonItem title="Home" id="Jlm-2E-Ps0"/>
+                                    <barButtonItem title="Account" id="n8h-9x-ScF"/>
+                                    <barButtonItem title="Resources" id="8AO-Bv-3Au"/>
+                                    <barButtonItem title="Physical Wellbeing" id="acu-S4-HBG"/>
+                                    <barButtonItem title="Nutrition" id="A80-eP-dFg"/>
+                                    <barButtonItem title="Time Management" id="PsM-lg-88p"/>
+                                    <barButtonItem title="Mentatlity" id="sj9-WP-dBo"/>
+                                </barButtonItems>
+                            </barButtonItemGroup>
+                        </centerItemGroups>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="clJ-Aw-4Ka" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="8076" y="-770"/>
+        </scene>
+        <!--Home Nav Controller-->
+        <scene sceneID="hYQ-mJ-Y7G">
+            <objects>
+                <navigationController title="Home Nav Controller" automaticallyAdjustsScrollViewInsets="NO" id="R9E-AM-iGD" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Home" image="house.fill" catalog="system" id="2bS-h6-Zrm"/>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Vitality Boost" id="GOY-x3-ccd">
+                        <centerItemGroups>
+                            <barButtonItemGroup customizationDisposition="fixed" id="Vjf-2E-K3G">
+                                <barButtonItems>
+                                    <barButtonItem title="Home" id="SeD-zy-Cn5"/>
+                                    <barButtonItem title="Account" id="Epl-Q6-kfo"/>
+                                    <barButtonItem title="Resources" id="dFC-rZ-kiL"/>
+                                    <barButtonItem title="Physcial Wellbeing" id="JOw-jb-zNL"/>
+                                    <barButtonItem title="Nutrition" id="og6-JE-ig2"/>
+                                    <barButtonItem title="Time Management" id="cf9-De-3Sq"/>
+                                    <barButtonItem title="Mentality" id="Bf2-vi-xho"/>
+                                </barButtonItems>
+                            </barButtonItemGroup>
+                        </centerItemGroups>
+                    </navigationItem>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="rCt-gC-hYC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="56"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="GlA-Jj-pNd" kind="relationship" relationship="rootViewController" id="obm-sn-hDI"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7UC-bu-itd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1385" y="1595"/>
+        </scene>
+        <!--Account Nav Controller-->
+        <scene sceneID="N4F-s1-ePB">
+            <objects>
+                <navigationController title="Account Nav Controller" automaticallyAdjustsScrollViewInsets="NO" id="TYO-px-tBt" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Account" image="person.crop.circle" catalog="system" id="t5Q-6n-ShL"/>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="uQ0-YQ-KXj">
+                        <centerItemGroups>
+                            <barButtonItemGroup customizationDisposition="fixed" id="8D4-dK-Afi">
+                                <barButtonItems>
+                                    <barButtonItem title="Home" id="Q5r-kx-42j">
+                                        <connections>
+                                            <segue destination="GlA-Jj-pNd" kind="show" id="kjS-sO-8c4"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="Account" id="X6h-HR-aj0">
+                                        <connections>
+                                            <segue destination="Fr2-LV-0cp" kind="show" id="7wI-Cz-YIe"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="Resources" id="lZI-cx-OwK">
+                                        <connections>
+                                            <segue destination="6Pb-Kd-kaL" kind="show" id="hU2-De-6Ph"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="Physcial Wellbeing" id="Ntn-2a-3dY">
+                                        <connections>
+                                            <segue destination="RjW-F5-l3A" kind="show" id="DfB-e6-yTt"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="Nutrition" id="OxH-nA-ijq">
+                                        <connections>
+                                            <segue destination="lPl-1H-fE1" kind="show" id="qoF-nP-Pe6"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="Time Management" id="81i-3j-z1c">
+                                        <connections>
+                                            <segue destination="2i1-go-VpJ" kind="show" id="5qG-lx-RbK"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="Mentality" id="N83-ZL-i3U">
+                                        <connections>
+                                            <segue destination="tIX-9E-1dD" kind="show" id="gBN-CN-BE7"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </barButtonItems>
+                            </barButtonItemGroup>
+                        </centerItemGroups>
+                    </navigationItem>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="FOH-L0-c5h">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="56"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Fr2-LV-0cp" kind="relationship" relationship="rootViewController" id="bIT-f3-Knb"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZSL-mI-uoa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1385" y="-2168"/>
+        </scene>
+        <!--Resources Nav Controller-->
+        <scene sceneID="wBn-bQ-fZ3">
+            <objects>
+                <navigationController title="Resources Nav Controller" automaticallyAdjustsScrollViewInsets="NO" id="6Pb-Kd-kaL" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Fitness" id="uH6-nu-Qlf"/>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="OZl-XT-WWX">
+                        <centerItemGroups>
+                            <barButtonItemGroup customizationDisposition="fixed" id="1y3-BZ-Tfw">
+                                <barButtonItems>
+                                    <barButtonItem title="Home" id="4uy-2O-ivd">
+                                        <connections>
+                                            <segue destination="GlA-Jj-pNd" kind="show" id="4RM-OE-PDU"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="Account" id="F4T-AL-YpI">
+                                        <connections>
+                                            <segue destination="Fr2-LV-0cp" kind="show" id="gc4-yJ-Ie4"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="Resources" id="gdo-nZ-sd7">
+                                        <connections>
+                                            <segue destination="dqU-S4-ZMo" kind="show" id="krn-De-HaW"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="Physcial Wellbeing" id="jqN-0S-X8N">
+                                        <connections>
+                                            <segue destination="RjW-F5-l3A" kind="show" id="Nh4-FY-Tzf"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="Nutrition" id="JS1-uC-Dl3">
+                                        <connections>
+                                            <segue destination="lPl-1H-fE1" kind="show" id="w4k-ue-cGY"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="Time Management" id="G4O-lp-skM">
+                                        <connections>
+                                            <segue destination="2i1-go-VpJ" kind="show" id="qS0-yw-tyi"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="Mentality" id="bNL-ef-8O4">
+                                        <connections>
+                                            <segue destination="tIX-9E-1dD" kind="show" id="rmh-2o-PR4"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </barButtonItems>
+                            </barButtonItemGroup>
+                        </centerItemGroups>
+                    </navigationItem>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="D0n-1D-aoD">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="56"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="dqU-S4-ZMo" kind="relationship" relationship="rootViewController" id="mdJ-43-BB0"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6YM-hy-1Uq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2524" y="793"/>
+        </scene>
+        <!--Physical Wellbeing Nav Controller-->
+        <scene sceneID="kYv-Is-CRL">
+            <objects>
+                <navigationController title="Physical Wellbeing Nav Controller" automaticallyAdjustsScrollViewInsets="NO" id="RjW-F5-l3A" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Workouts" id="hht-nz-JFQ"/>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="YSv-4u-uBy"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="NC5-eK-aCl">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="56"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="vlF-sI-XGK" kind="relationship" relationship="rootViewController" id="Xbh-gE-owS"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="52I-Pl-Wfr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3927" y="793"/>
+        </scene>
+        <!--Nutrition Nav Controller-->
+        <scene sceneID="Xag-ds-Tns">
+            <objects>
+                <navigationController title="Nutrition Nav Controller" automaticallyAdjustsScrollViewInsets="NO" id="lPl-1H-fE1" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Recipes" id="bTy-r5-4eL"/>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="Ul7-0Q-UhX"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="rCK-uQ-Y8N">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="56"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="mEW-Z7-KrK" kind="relationship" relationship="rootViewController" id="4n9-Hd-LPT"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DHs-MK-uxy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5184" y="793"/>
+        </scene>
+        <!--Time Management Nav Controller-->
+        <scene sceneID="WbA-hk-zpE">
+            <objects>
+                <navigationController title="Time Management Nav Controller" automaticallyAdjustsScrollViewInsets="NO" id="2i1-go-VpJ" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Calendar" image="calendar" catalog="system" id="mvB-Vg-byR"/>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="8A5-wb-cGY"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="AJi-9f-YmF">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="56"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BCz-m1-V4c" kind="relationship" relationship="rootViewController" id="Q71-XC-j0k"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gqO-u3-4Qd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6302" y="793"/>
+        </scene>
+        <!--Mentality Nav Controller-->
+        <scene sceneID="ugg-ie-i3w">
+            <objects>
+                <navigationController title="Mentality Nav Controller" automaticallyAdjustsScrollViewInsets="NO" id="tIX-9E-1dD" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Journal" id="PaV-yJ-KME"/>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="7XN-km-BRh"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="3pG-UO-3pk">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="56"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="ikE-pL-l31" kind="relationship" relationship="rootViewController" id="b83-iK-uTH"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="a2r-Zz-w18" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="7731" y="793"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="gBV-GA-xKm"/>
+        <segue reference="PZG-Kb-9Y7"/>
+        <segue reference="GsG-MC-EmQ"/>
+        <segue reference="RNW-kQ-3lY"/>
+        <segue reference="GCc-lX-Fz6"/>
+        <segue reference="69W-4L-ZUf"/>
+        <segue reference="we6-7J-gp9"/>
+        <segue reference="mdJ-43-BB0"/>
+        <segue reference="caB-IP-r3X"/>
+        <segue reference="YGl-SK-72g"/>
+        <segue reference="bIT-f3-Knb"/>
+        <segue reference="kjS-sO-8c4"/>
+    </inferredMetricsTieBreakers>
+    <resources>
+        <image name="ai-generated-8266786_1280" width="1280" height="717"/>
+        <image name="calendar" catalog="system" width="128" height="107"/>
+        <image name="calendar-7544098_1280" width="1280" height="905"/>
+        <image name="dumbbells-2465478_1280" width="1280" height="853"/>
+        <image name="house.fill" catalog="system" width="128" height="104"/>
+        <image name="logbook-154730_1280" width="1280" height="1064"/>
+        <image name="login-7103076_1280" width="1280" height="853"/>
+        <image name="magnifyingglass" catalog="system" width="128" height="117"/>
+        <image name="person.crop.circle" catalog="system" width="128" height="123"/>
+        <image name="person.fill" catalog="system" width="128" height="120"/>
+        <image name="plus" catalog="system" width="128" height="113"/>
+        <image name="vegetables-1529726_1280" width="1280" height="593"/>
+        <image name="yoga-8385447_1280" width="1280" height="890"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="secondarySystemBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
