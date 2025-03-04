@@ -19,19 +19,19 @@
                     </tabBar>
                     <connections>
                         <segue destination="R9E-AM-iGD" kind="relationship" relationship="viewControllers" id="P2N-Ws-m76"/>
-                        <segue destination="rb9-Yi-gZF" kind="relationship" relationship="viewControllers" id="t0z-b5-xll"/>
+                        <segue destination="IaN-U2-qA3" kind="relationship" relationship="viewControllers" id="t0z-b5-xll"/>
                         <segue destination="2i1-go-VpJ" kind="relationship" relationship="viewControllers" id="krL-ew-FNW"/>
                         <segue destination="TYO-px-tBt" kind="relationship" relationship="viewControllers" id="5Kd-ux-gGR"/>
                         <segue destination="6Pb-Kd-kaL" kind="relationship" relationship="viewControllers" id="8ny-da-aVT"/>
                         <segue destination="RjW-F5-l3A" kind="relationship" relationship="viewControllers" id="IiE-a8-HwM"/>
                         <segue destination="lPl-1H-fE1" kind="relationship" relationship="viewControllers" id="fDF-Bu-8lb"/>
                         <segue destination="tIX-9E-1dD" kind="relationship" relationship="viewControllers" id="2Pk-Qk-hOF"/>
-                        <segue destination="dbD-rv-pMu" kind="relationship" relationship="viewControllers" id="30B-mf-pqb"/>
-                        <segue destination="Kke-xN-zFm" kind="relationship" relationship="viewControllers" id="MKW-Ri-MX8"/>
-                        <segue destination="jb1-BG-J3A" kind="relationship" relationship="viewControllers" id="4aY-JD-dQS"/>
-                        <segue destination="PIe-pf-bMv" kind="relationship" relationship="viewControllers" id="BPa-HY-cLV"/>
-                        <segue destination="IwD-tx-Q6B" kind="relationship" relationship="viewControllers" id="sOK-pM-Ie3"/>
-                        <segue destination="owF-n1-hys" kind="relationship" relationship="viewControllers" id="Oj2-gX-l74"/>
+                        <segue destination="T8r-9e-lh3" kind="relationship" relationship="viewControllers" id="30B-mf-pqb"/>
+                        <segue destination="D7g-Ul-73a" kind="relationship" relationship="viewControllers" id="MKW-Ri-MX8"/>
+                        <segue destination="cAF-sz-lXh" kind="relationship" relationship="viewControllers" id="4aY-JD-dQS"/>
+                        <segue destination="551-wt-IUC" kind="relationship" relationship="viewControllers" id="BPa-HY-cLV"/>
+                        <segue destination="4Sv-2b-fDL" kind="relationship" relationship="viewControllers" id="sOK-pM-Ie3"/>
+                        <segue destination="mZI-1G-sLa" kind="relationship" relationship="viewControllers" id="Oj2-gX-l74"/>
                         <segue destination="cWD-XT-nTa" kind="relationship" relationship="viewControllers" id="Eg5-bZ-NlH"/>
                         <segue destination="UxL-fg-8GU" kind="relationship" relationship="viewControllers" id="Lv7-nY-HiS"/>
                         <segue destination="aSb-wR-FFO" kind="relationship" relationship="viewControllers" id="HTE-KT-VGY"/>
@@ -39,7 +39,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dW9-kZ-dg0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-692" y="-35"/>
+            <point key="canvasLocation" x="3926" y="-55"/>
         </scene>
         <!--Home-->
         <scene sceneID="ERo-i1-b0P">
@@ -164,37 +164,37 @@
                                 <barButtonItems>
                                     <barButtonItem title="Home" id="UyM-Bg-zNc">
                                         <connections>
-                                            <segue destination="R9E-AM-iGD" kind="show" id="we6-7J-gp9"/>
+                                            <segue destination="GlA-Jj-pNd" kind="show" identifier="home" id="CfH-dg-xn8"/>
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem title="Account" id="J95-0s-mLr">
                                         <connections>
-                                            <segue destination="TYO-px-tBt" kind="show" id="69W-4L-ZUf"/>
+                                            <segue destination="Fr2-LV-0cp" kind="show" identifier="login" id="3Ge-NU-cOe"/>
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem title="Resources" id="rhW-q9-qCt">
                                         <connections>
-                                            <segue destination="6Pb-Kd-kaL" kind="show" id="GCc-lX-Fz6"/>
+                                            <segue destination="dqU-S4-ZMo" kind="show" identifier="fitness" id="ZhB-G7-pdd"/>
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem title="Physcial Wellbeing" id="AHY-1L-Zac">
                                         <connections>
-                                            <segue destination="RjW-F5-l3A" kind="show" id="RNW-kQ-3lY"/>
+                                            <segue destination="vlF-sI-XGK" kind="show" identifier="workouts" id="BSs-4s-0Oj"/>
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem title="Nutrition" id="Cxc-AQ-hF2">
                                         <connections>
-                                            <segue destination="lPl-1H-fE1" kind="show" id="GsG-MC-EmQ"/>
+                                            <segue destination="mEW-Z7-KrK" kind="show" identifier="recipes" id="I5I-Bm-boA"/>
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem title="Time Management" id="kh2-Ib-guJ">
                                         <connections>
-                                            <segue destination="2i1-go-VpJ" kind="show" id="PZG-Kb-9Y7"/>
+                                            <segue destination="BCz-m1-V4c" kind="show" identifier="calendar" id="fCV-gj-x4i"/>
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem title="Mentality" id="nwh-Sf-Mdo">
                                         <connections>
-                                            <segue destination="tIX-9E-1dD" kind="show" id="gBV-GA-xKm"/>
+                                            <segue destination="ikE-pL-l31" kind="show" identifier="journal" id="O5f-jl-IfF"/>
                                         </connections>
                                     </barButtonItem>
                                 </barButtonItems>
@@ -206,7 +206,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uWp-yP-8R1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1385" y="405"/>
+            <point key="canvasLocation" x="1153" y="2125"/>
         </scene>
         <!--Login-->
         <scene sceneID="DKS-3z-cLb">
@@ -248,7 +248,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="gray" title="Login"/>
                                 <connections>
-                                    <segue destination="cWD-XT-nTa" kind="show" id="caB-IP-r3X"/>
+                                    <segue destination="cWD-XT-nTa" kind="show" identifier="account" id="caB-IP-r3X"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b05-Vd-J9L">
@@ -257,7 +257,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="gray" title="Create Account"/>
                                 <connections>
-                                    <segue destination="aSb-wR-FFO" kind="show" id="YGl-SK-72g"/>
+                                    <segue destination="aSb-wR-FFO" kind="show" identifier="createAccount" id="YGl-SK-72g"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -268,13 +268,41 @@
                         <centerItemGroups>
                             <barButtonItemGroup customizationDisposition="fixed" id="gfH-je-7vI">
                                 <barButtonItems>
-                                    <barButtonItem title="Home" id="HFw-b1-SPb"/>
-                                    <barButtonItem title="Account" id="U2I-CR-H27"/>
-                                    <barButtonItem title="Resources" id="RsM-W7-GSz"/>
-                                    <barButtonItem title="Physical Wellbeing" id="EwH-9s-uq6"/>
-                                    <barButtonItem title="Nutrition" id="PIV-L4-LPW"/>
-                                    <barButtonItem title="Time Management" id="hNR-8N-KiQ"/>
-                                    <barButtonItem title="Mentatlity" id="Tkw-Ki-vVB"/>
+                                    <barButtonItem title="Home" id="HFw-b1-SPb">
+                                        <connections>
+                                            <segue destination="GlA-Jj-pNd" kind="show" identifier="home" id="1hw-jt-DAO"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="Account" id="U2I-CR-H27">
+                                        <connections>
+                                            <segue destination="Fr2-LV-0cp" kind="show" identifier="login" id="KRb-oq-0Gr"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="Resources" id="RsM-W7-GSz">
+                                        <connections>
+                                            <segue destination="dqU-S4-ZMo" kind="show" identifier="fitness" id="5SR-DC-x5t"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="Physical Wellbeing" id="EwH-9s-uq6">
+                                        <connections>
+                                            <segue destination="vlF-sI-XGK" kind="show" identifier="workouts" id="bvD-mg-hgJ"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="Nutrition" id="PIV-L4-LPW">
+                                        <connections>
+                                            <segue destination="mEW-Z7-KrK" kind="show" identifier="recipes" id="viN-ue-4XX"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="Time Management" id="hNR-8N-KiQ">
+                                        <connections>
+                                            <segue destination="BCz-m1-V4c" kind="show" identifier="calendar" id="NBU-9w-ikc"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="Mentatlity" id="Tkw-Ki-vVB">
+                                        <connections>
+                                            <segue destination="ikE-pL-l31" kind="show" identifier="journal" id="xSW-4U-BkK"/>
+                                        </connections>
+                                    </barButtonItem>
                                 </barButtonItems>
                             </barButtonItemGroup>
                         </centerItemGroups>
@@ -282,14 +310,14 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5Uu-bj-QJO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1385" y="-770"/>
+            <point key="canvasLocation" x="-173" y="1685"/>
         </scene>
         <!--Create Account-->
         <scene sceneID="HVM-BI-PeI">
             <objects>
                 <viewController id="aSb-wR-FFO" customClass="CreateAccountController" customModule="VitalityBoost" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="oTF-2Y-tPg">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="769"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gyw-y3-sLi">
@@ -398,13 +426,41 @@
                         <centerItemGroups>
                             <barButtonItemGroup customizationDisposition="fixed" id="Q0Y-Jb-uoD">
                                 <barButtonItems>
-                                    <barButtonItem title="Home" id="f1Q-le-OL1"/>
-                                    <barButtonItem title="Account" id="weJ-TW-WVU"/>
-                                    <barButtonItem title="Resources" id="ieC-Ll-Htc"/>
-                                    <barButtonItem title="Physical Wellbeing" id="9iC-z1-br1"/>
-                                    <barButtonItem title="Nutrition" id="nHC-Wd-YtZ"/>
-                                    <barButtonItem title="Time Management" id="8BH-dt-uTP"/>
-                                    <barButtonItem title="Mentatlity" id="j8r-ez-HTP"/>
+                                    <barButtonItem title="Home" id="f1Q-le-OL1">
+                                        <connections>
+                                            <segue destination="GlA-Jj-pNd" kind="show" identifier="home" id="NNC-dt-DAA"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="Account" id="weJ-TW-WVU">
+                                        <connections>
+                                            <segue destination="Fr2-LV-0cp" kind="show" identifier="login" id="Oq6-AD-Ejo"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="Resources" id="ieC-Ll-Htc">
+                                        <connections>
+                                            <segue destination="dqU-S4-ZMo" kind="show" identifier="fitness" id="VJ8-GB-caw"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="Physical Wellbeing" id="9iC-z1-br1">
+                                        <connections>
+                                            <segue destination="vlF-sI-XGK" kind="show" identifier="workouts" id="0l3-xx-RQA"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="Nutrition" id="nHC-Wd-YtZ">
+                                        <connections>
+                                            <segue destination="mEW-Z7-KrK" kind="show" identifier="recipes" id="sx0-9K-0Rs"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="Time Management" id="8BH-dt-uTP">
+                                        <connections>
+                                            <segue destination="BCz-m1-V4c" kind="show" identifier="calendar" id="M80-n6-6OD"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="Mentatlity" id="j8r-ez-HTP">
+                                        <connections>
+                                            <segue destination="ikE-pL-l31" kind="show" identifier="journal" id="1VD-x3-Gw7"/>
+                                        </connections>
+                                    </barButtonItem>
                                 </barButtonItems>
                             </barButtonItemGroup>
                         </centerItemGroups>
@@ -412,14 +468,14 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="K7O-2Y-CQw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1384" y="-1482"/>
+            <point key="canvasLocation" x="-173" y="2481"/>
         </scene>
         <!--Account-->
         <scene sceneID="8fK-8K-ODo">
             <objects>
                 <viewController id="cWD-XT-nTa" customClass="AccountController" customModule="VitalityBoost" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="uG5-gd-WU4">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="769"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pUU-BE-Wdn">
@@ -525,12 +581,6 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ig7-kT-fLw">
-                                <rect key="frame" x="102" y="783" width="189" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="gray" title="Save/Update Account"/>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="_________________________________________" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sAC-Be-Awj">
                                 <rect key="frame" x="16" y="155" width="363" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -538,6 +588,12 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ig7-kT-fLw">
+                                <rect key="frame" x="103" y="706" width="189" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="gray" title="Save/Update Account"/>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="0Xi-iy-eNa"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -547,13 +603,41 @@
                         <centerItemGroups>
                             <barButtonItemGroup customizationDisposition="fixed" id="0JA-Du-fao">
                                 <barButtonItems>
-                                    <barButtonItem title="Home" id="eXM-Bh-dwA"/>
-                                    <barButtonItem title="Account" id="vGa-JG-uWw"/>
-                                    <barButtonItem title="Resources" id="VMc-MV-utD"/>
-                                    <barButtonItem title="Physical Wellbeing" id="fzW-uB-1wx"/>
-                                    <barButtonItem title="Nutrition" id="aKm-xa-fvu"/>
-                                    <barButtonItem title="Time Management" id="hMW-Td-sny"/>
-                                    <barButtonItem title="Mentatlity" id="qlQ-hz-xNa"/>
+                                    <barButtonItem title="Home" id="eXM-Bh-dwA">
+                                        <connections>
+                                            <segue destination="GlA-Jj-pNd" kind="show" identifier="home" id="0Y3-4i-1Ml"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="Account" id="vGa-JG-uWw">
+                                        <connections>
+                                            <segue destination="Fr2-LV-0cp" kind="show" identifier="login" id="FGL-eC-noL"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="Resources" id="VMc-MV-utD">
+                                        <connections>
+                                            <segue destination="dqU-S4-ZMo" kind="show" identifier="fitness" id="7Ev-Tn-Dfw"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="Physical Wellbeing" id="fzW-uB-1wx">
+                                        <connections>
+                                            <segue destination="vlF-sI-XGK" kind="show" identifier="workouts" id="ZhN-Lg-eK9"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="Nutrition" id="aKm-xa-fvu">
+                                        <connections>
+                                            <segue destination="mEW-Z7-KrK" kind="show" identifier="recipes" id="2bw-0K-ppP"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="Time Management" id="hMW-Td-sny">
+                                        <connections>
+                                            <segue destination="BCz-m1-V4c" kind="show" identifier="calendar" id="Qrc-O6-1S3"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="Mentatlity" id="qlQ-hz-xNa">
+                                        <connections>
+                                            <segue destination="ikE-pL-l31" kind="show" identifier="journal" id="ryd-zH-Ils"/>
+                                        </connections>
+                                    </barButtonItem>
                                 </barButtonItems>
                             </barButtonItemGroup>
                         </centerItemGroups>
@@ -561,7 +645,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hLG-fE-jjp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="638.93129770992368" y="-770.4225352112677"/>
+            <point key="canvasLocation" x="-862" y="1685"/>
         </scene>
         <!--Goals-->
         <scene sceneID="rni-z2-JDd">
@@ -571,41 +655,25 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="769"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Account" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dwV-4v-6r2">
-                                <rect key="frame" x="0.0" y="59" width="393" height="62"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YDI-Qt-aoW">
-                                <rect key="frame" x="47" y="129" width="118" height="35"/>
+                                <rect key="frame" x="47" y="101" width="118" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Contact Info"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xpz-eV-LlH">
-                                <rect key="frame" x="267" y="129" width="68" height="35"/>
+                                <rect key="frame" x="267" y="101" width="68" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Goals"/>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="_________________________________________" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dFb-jT-brR">
-                                <rect key="frame" x="14" y="155" width="363" height="21"/>
+                                <rect key="frame" x="14" y="131" width="363" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mtP-gc-j2i">
-                                <rect key="frame" x="129" y="783" width="133" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="gray" title="Add New Goal"/>
-                                <connections>
-                                    <segue destination="CcN-gf-sCR" kind="show" id="cmk-wX-WMN"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="ATT-ue-Onc"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -615,28 +683,57 @@
                         <centerItemGroups>
                             <barButtonItemGroup customizationDisposition="fixed" id="ISw-xr-Rbs">
                                 <barButtonItems>
-                                    <barButtonItem title="Home" id="XlF-Lb-bJ0"/>
-                                    <barButtonItem title="Account" id="zsA-7b-GAF"/>
-                                    <barButtonItem title="Resources" id="WwN-F5-3ct"/>
-                                    <barButtonItem title="Physical Wellbeing" id="84k-Lq-Qgi"/>
-                                    <barButtonItem title="Nutrition" id="Su8-Eb-YXy"/>
-                                    <barButtonItem title="Time Management" id="MJJ-s8-Ijo"/>
-                                    <barButtonItem title="Mentatlity" id="msF-A3-g4G"/>
+                                    <barButtonItem title="Home" id="XlF-Lb-bJ0">
+                                        <connections>
+                                            <segue destination="GlA-Jj-pNd" kind="show" identifier="home" id="d2O-3k-59l"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="Account" id="zsA-7b-GAF">
+                                        <connections>
+                                            <segue destination="Fr2-LV-0cp" kind="show" identifier="login" id="8ap-dD-8Ar"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="Resources" id="WwN-F5-3ct">
+                                        <connections>
+                                            <segue destination="dqU-S4-ZMo" kind="show" identifier="fitness" id="jaR-Nx-dcq"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="Physical Wellbeing" id="84k-Lq-Qgi">
+                                        <connections>
+                                            <segue destination="vlF-sI-XGK" kind="show" identifier="workouts" id="cOt-LV-IU8"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="Nutrition" id="Su8-Eb-YXy">
+                                        <connections>
+                                            <segue destination="mEW-Z7-KrK" kind="show" identifier="recipes" id="byY-aQ-Ieg"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="Time Management" id="MJJ-s8-Ijo">
+                                        <connections>
+                                            <segue destination="BCz-m1-V4c" kind="show" identifier="calendar" id="lmA-Zg-Nch"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="Mentatlity" id="msF-A3-g4G">
+                                        <connections>
+                                            <segue destination="ikE-pL-l31" kind="show" identifier="journal" id="uoq-v3-am0"/>
+                                        </connections>
+                                    </barButtonItem>
                                 </barButtonItems>
                             </barButtonItemGroup>
                         </centerItemGroups>
+                        <barButtonItem key="rightBarButtonItem" title="Add Goal" image="plus" catalog="system" id="AwI-l7-8th"/>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vuu-8Q-NNF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="639" y="-1482"/>
+            <point key="canvasLocation" x="-863" y="2481"/>
         </scene>
         <!--Add Goal-->
         <scene sceneID="51x-gZ-bgq">
             <objects>
                 <viewController id="CcN-gf-sCR" customClass="AddGoalController" customModule="VitalityBoost" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Lnq-Is-rgN">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Add Goal" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ub3-e8-jwY">
@@ -704,7 +801,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kCN-Un-GtJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="638.93129770992368" y="-2168.3098591549297"/>
+            <point key="canvasLocation" x="-1604" y="2481"/>
         </scene>
         <!--Fitness-->
         <scene sceneID="WDg-qf-s4j">
@@ -725,6 +822,9 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Search"/>
+                                <connections>
+                                    <segue destination="IaN-U2-qA3" kind="show" id="5rg-uv-nv5"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="_________________________________________" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SkV-Go-zb1">
                                 <rect key="frame" x="16" y="129" width="363" height="21"/>
@@ -738,6 +838,9 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Affordable Options"/>
+                                <connections>
+                                    <segue destination="T8r-9e-lh3" kind="show" id="IBL-m8-N9g"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="wnR-fX-oei"/>
@@ -747,13 +850,41 @@
                         <centerItemGroups>
                             <barButtonItemGroup customizationDisposition="fixed" id="ze8-Q3-vkC">
                                 <barButtonItems>
-                                    <barButtonItem title="Home" id="sK5-Mq-6TV"/>
-                                    <barButtonItem title="Account" id="5dc-Uh-J0W"/>
-                                    <barButtonItem title="Resources" id="zmI-2J-Xy4"/>
-                                    <barButtonItem title="Physical Wellbeing" id="WX8-24-vuz"/>
-                                    <barButtonItem title="Nutrition" id="kSR-jC-hcu"/>
-                                    <barButtonItem title="Time Management" id="xC7-ek-lnL"/>
-                                    <barButtonItem title="Mentatlity" id="QeH-y7-oji"/>
+                                    <barButtonItem title="Home" id="sK5-Mq-6TV">
+                                        <connections>
+                                            <segue destination="GlA-Jj-pNd" kind="show" identifier="home" id="VvP-SF-hIX"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="Account" id="5dc-Uh-J0W">
+                                        <connections>
+                                            <segue destination="Fr2-LV-0cp" kind="show" identifier="login" id="6tn-5a-anP"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="Resources" id="zmI-2J-Xy4">
+                                        <connections>
+                                            <segue destination="dqU-S4-ZMo" kind="show" identifier="fitness" id="U4y-8V-7wz"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="Physical Wellbeing" id="WX8-24-vuz">
+                                        <connections>
+                                            <segue destination="vlF-sI-XGK" kind="show" identifier="workouts" id="KCP-FD-SIv"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="Nutrition" id="kSR-jC-hcu">
+                                        <connections>
+                                            <segue destination="mEW-Z7-KrK" kind="show" identifier="recipes" id="QA7-dS-4mj"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="Time Management" id="xC7-ek-lnL">
+                                        <connections>
+                                            <segue destination="BCz-m1-V4c" kind="show" identifier="calendar" id="FgD-fg-ike"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="Mentatlity" id="QeH-y7-oji">
+                                        <connections>
+                                            <segue destination="ikE-pL-l31" kind="show" identifier="journal" id="4aS-ou-5RS"/>
+                                        </connections>
+                                    </barButtonItem>
                                 </barButtonItems>
                             </barButtonItemGroup>
                         </centerItemGroups>
@@ -761,7 +892,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nR1-UC-Nhm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2523" y="-35"/>
+            <point key="canvasLocation" x="2523" y="1685"/>
         </scene>
         <!--Personal Research-->
         <scene sceneID="guV-Sl-xTv">
@@ -800,18 +931,45 @@
                         <viewLayoutGuide key="safeArea" id="25h-LN-icU"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Explore" image="magnifyingglass" catalog="system" id="vAJ-5a-bf4"/>
                     <navigationItem key="navigationItem" title="Resources" id="w5d-9h-hkg">
                         <centerItemGroups>
                             <barButtonItemGroup customizationDisposition="fixed" id="TJG-jS-Omb">
                                 <barButtonItems>
-                                    <barButtonItem title="Home" id="oXA-Nf-JwW"/>
-                                    <barButtonItem title="Account" id="Cpr-fE-bhY"/>
-                                    <barButtonItem title="Resources" id="uST-ve-ptf"/>
-                                    <barButtonItem title="Physical Wellbeing" id="afw-KN-blE"/>
-                                    <barButtonItem title="Nutrition" id="Y9P-5L-uZn"/>
-                                    <barButtonItem title="Time Management" id="0Gp-53-8Ba"/>
-                                    <barButtonItem title="Mentatlity" id="FvJ-th-tRF"/>
+                                    <barButtonItem title="Home" id="oXA-Nf-JwW">
+                                        <connections>
+                                            <segue destination="GlA-Jj-pNd" kind="show" identifier="home" id="Ifs-U3-Zrg"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="Account" id="Cpr-fE-bhY">
+                                        <connections>
+                                            <segue destination="Fr2-LV-0cp" kind="show" identifier="login" id="eO7-Oo-IGy"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="Resources" id="uST-ve-ptf">
+                                        <connections>
+                                            <segue destination="dqU-S4-ZMo" kind="show" identifier="fitness" id="nIC-5q-ZUO"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="Physical Wellbeing" id="afw-KN-blE">
+                                        <connections>
+                                            <segue destination="vlF-sI-XGK" kind="show" identifier="workouts" id="Rtn-kc-fzp"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="Nutrition" id="Y9P-5L-uZn">
+                                        <connections>
+                                            <segue destination="mEW-Z7-KrK" kind="show" identifier="recipes" id="k6N-5t-RY1"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="Time Management" id="0Gp-53-8Ba">
+                                        <connections>
+                                            <segue destination="BCz-m1-V4c" kind="show" identifier="calendar" id="qND-cd-vZe"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="Mentatlity" id="FvJ-th-tRF">
+                                        <connections>
+                                            <segue destination="ikE-pL-l31" kind="show" identifier="journal" id="Tie-3g-Zco"/>
+                                        </connections>
+                                    </barButtonItem>
                                 </barButtonItems>
                             </barButtonItemGroup>
                         </centerItemGroups>
@@ -820,7 +978,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zD0-db-tdI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2926" y="-770"/>
+            <point key="canvasLocation" x="2885" y="2481"/>
         </scene>
         <!--Affordable Options-->
         <scene sceneID="Pvw-kK-Eni">
@@ -859,18 +1017,45 @@
                         <viewLayoutGuide key="safeArea" id="J2F-80-aZ9"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Affordable Options" id="G4i-FJ-WmQ"/>
                     <navigationItem key="navigationItem" title="Resources" id="eIT-X8-IRE">
                         <centerItemGroups>
                             <barButtonItemGroup customizationDisposition="fixed" id="F7R-V3-uB9">
                                 <barButtonItems>
-                                    <barButtonItem title="Home" id="Njj-ho-in7"/>
-                                    <barButtonItem title="Account" id="T6E-ly-3vB"/>
-                                    <barButtonItem title="Resources" id="Khq-FV-1Pk"/>
-                                    <barButtonItem title="Physical Wellbeing" id="5bC-dF-tIO"/>
-                                    <barButtonItem title="Nutrition" id="dKv-Y2-9mE"/>
-                                    <barButtonItem title="Time Management" id="72b-nG-pwJ"/>
-                                    <barButtonItem title="Mentatlity" id="GJj-sH-gEg"/>
+                                    <barButtonItem title="Home" id="Njj-ho-in7">
+                                        <connections>
+                                            <segue destination="GlA-Jj-pNd" kind="show" identifier="home" id="fCe-Fb-gmW"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="Account" id="T6E-ly-3vB">
+                                        <connections>
+                                            <segue destination="Fr2-LV-0cp" kind="show" identifier="login" id="0UO-K4-dxu"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="Resources" id="Khq-FV-1Pk">
+                                        <connections>
+                                            <segue destination="dqU-S4-ZMo" kind="show" identifier="fitness" id="aaW-8Z-n2m"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="Physical Wellbeing" id="5bC-dF-tIO">
+                                        <connections>
+                                            <segue destination="vlF-sI-XGK" kind="show" identifier="workouts" id="cu1-Yh-rLU"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="Nutrition" id="dKv-Y2-9mE">
+                                        <connections>
+                                            <segue destination="mEW-Z7-KrK" kind="show" identifier="recipes" id="mOq-f9-TQC"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="Time Management" id="72b-nG-pwJ">
+                                        <connections>
+                                            <segue destination="BCz-m1-V4c" kind="show" identifier="calendar" id="jgy-LX-vp6"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="Mentatlity" id="GJj-sH-gEg">
+                                        <connections>
+                                            <segue destination="ikE-pL-l31" kind="show" identifier="journal" id="Gm5-Nq-u1Y"/>
+                                        </connections>
+                                    </barButtonItem>
                                 </barButtonItems>
                             </barButtonItemGroup>
                         </centerItemGroups>
@@ -878,7 +1063,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XqI-Uf-4uT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2208" y="-770"/>
+            <point key="canvasLocation" x="2163" y="2481"/>
         </scene>
         <!--Workouts-->
         <scene sceneID="E08-qz-OCj">
@@ -915,13 +1100,41 @@
                         <centerItemGroups>
                             <barButtonItemGroup customizationDisposition="fixed" id="JW9-kc-7W1">
                                 <barButtonItems>
-                                    <barButtonItem title="Home" id="Kb3-oC-LV4"/>
-                                    <barButtonItem title="Account" id="Oq0-kU-gaw"/>
-                                    <barButtonItem title="Resources" id="HmM-AL-izq"/>
-                                    <barButtonItem title="Physical Wellbeing" id="jMl-76-jwh"/>
-                                    <barButtonItem title="Nutrition" id="haU-SS-FoQ"/>
-                                    <barButtonItem title="Time Management" id="6DI-EX-20j"/>
-                                    <barButtonItem title="Mentatlity" id="Lh3-ap-zL6"/>
+                                    <barButtonItem title="Home" id="Kb3-oC-LV4">
+                                        <connections>
+                                            <segue destination="GlA-Jj-pNd" kind="show" identifier="home" id="oje-Wc-wYD"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="Account" id="Oq0-kU-gaw">
+                                        <connections>
+                                            <segue destination="Fr2-LV-0cp" kind="show" identifier="login" id="m0O-U7-4V7"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="Resources" id="HmM-AL-izq">
+                                        <connections>
+                                            <segue destination="dqU-S4-ZMo" kind="show" identifier="fitness" id="Han-HZ-zTu"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="Physical Wellbeing" id="jMl-76-jwh">
+                                        <connections>
+                                            <segue destination="vlF-sI-XGK" kind="show" identifier="workouts" id="dIr-wm-Vif"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="Nutrition" id="haU-SS-FoQ">
+                                        <connections>
+                                            <segue destination="mEW-Z7-KrK" kind="show" identifier="recipes" id="4zM-3Y-Hdx"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="Time Management" id="6DI-EX-20j">
+                                        <connections>
+                                            <segue destination="BCz-m1-V4c" kind="show" identifier="calendar" id="ziB-BJ-y28"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="Mentatlity" id="Lh3-ap-zL6">
+                                        <connections>
+                                            <segue destination="ikE-pL-l31" kind="show" identifier="journal" id="XEa-Pf-b5r"/>
+                                        </connections>
+                                    </barButtonItem>
                                 </barButtonItems>
                             </barButtonItemGroup>
                         </centerItemGroups>
@@ -929,7 +1142,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SRr-U1-A29" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3926" y="-35"/>
+            <point key="canvasLocation" x="3926" y="1685"/>
         </scene>
         <!--Supplements-->
         <scene sceneID="kxi-zH-P3H">
@@ -962,18 +1175,45 @@
                         <viewLayoutGuide key="safeArea" id="rAB-Uq-bDe"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Supplements" id="Xec-ek-gQl"/>
                     <navigationItem key="navigationItem" title="Physical Wellbeing" id="dUJ-fP-lMy">
                         <centerItemGroups>
                             <barButtonItemGroup customizationDisposition="fixed" id="NI8-y3-jZv">
                                 <barButtonItems>
-                                    <barButtonItem title="Home" id="0yx-Kd-P5p"/>
-                                    <barButtonItem title="Account" id="GFO-YJ-mwI"/>
-                                    <barButtonItem title="Resources" id="sgh-25-AqB"/>
-                                    <barButtonItem title="Physical Wellbeing" id="tI4-LO-tPp"/>
-                                    <barButtonItem title="Nutrition" id="Af3-u4-F3C"/>
-                                    <barButtonItem title="Time Management" id="g5z-N9-cE0"/>
-                                    <barButtonItem title="Mentatlity" id="HXL-OQ-ZbN"/>
+                                    <barButtonItem title="Home" id="0yx-Kd-P5p">
+                                        <connections>
+                                            <segue destination="GlA-Jj-pNd" kind="show" identifier="home" id="wqn-91-xIN"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="Account" id="GFO-YJ-mwI">
+                                        <connections>
+                                            <segue destination="Fr2-LV-0cp" kind="show" identifier="login" id="gwH-z1-m0E"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="Resources" id="sgh-25-AqB">
+                                        <connections>
+                                            <segue destination="dqU-S4-ZMo" kind="show" identifier="fitness" id="Bm7-q2-h5u"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="Physical Wellbeing" id="tI4-LO-tPp">
+                                        <connections>
+                                            <segue destination="vlF-sI-XGK" kind="show" identifier="workouts" id="p8O-Ir-m8r"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="Nutrition" id="Af3-u4-F3C">
+                                        <connections>
+                                            <segue destination="mEW-Z7-KrK" kind="show" identifier="recipes" id="ecp-fS-4tB"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="Time Management" id="g5z-N9-cE0">
+                                        <connections>
+                                            <segue destination="BCz-m1-V4c" kind="show" identifier="calendar" id="GeO-Op-mUa"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="Mentatlity" id="HXL-OQ-ZbN">
+                                        <connections>
+                                            <segue destination="ikE-pL-l31" kind="show" identifier="journal" id="Hja-Vy-J99"/>
+                                        </connections>
+                                    </barButtonItem>
                                 </barButtonItems>
                             </barButtonItemGroup>
                         </centerItemGroups>
@@ -981,7 +1221,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="J6z-nB-rCE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3926" y="-770"/>
+            <point key="canvasLocation" x="3926" y="2481"/>
         </scene>
         <!--Recipes-->
         <scene sceneID="KKI-bE-NAU">
@@ -1018,13 +1258,41 @@
                         <centerItemGroups>
                             <barButtonItemGroup customizationDisposition="fixed" id="EvK-id-SOj">
                                 <barButtonItems>
-                                    <barButtonItem title="Home" id="XKL-ed-fX5"/>
-                                    <barButtonItem title="Account" id="Ak1-8H-W7g"/>
-                                    <barButtonItem title="Resources" id="fRo-34-22A"/>
-                                    <barButtonItem title="Physical Wellbeing" id="1PR-a5-G61"/>
-                                    <barButtonItem title="Nutrition" id="duH-Yy-TMD"/>
-                                    <barButtonItem title="Time Management" id="czq-ZZ-aBZ"/>
-                                    <barButtonItem title="Mentatlity" id="Vux-wp-s5q"/>
+                                    <barButtonItem title="Home" id="XKL-ed-fX5">
+                                        <connections>
+                                            <segue destination="GlA-Jj-pNd" kind="show" identifier="home" id="t1n-rK-v6K"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="Account" id="Ak1-8H-W7g">
+                                        <connections>
+                                            <segue destination="Fr2-LV-0cp" kind="show" identifier="login" id="esw-JD-iXJ"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="Resources" id="fRo-34-22A">
+                                        <connections>
+                                            <segue destination="dqU-S4-ZMo" kind="show" identifier="fitness" id="U0m-Zu-TmO"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="Physical Wellbeing" id="1PR-a5-G61">
+                                        <connections>
+                                            <segue destination="vlF-sI-XGK" kind="show" identifier="workouts" id="ffK-Fa-GEq"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="Nutrition" id="duH-Yy-TMD">
+                                        <connections>
+                                            <segue destination="mEW-Z7-KrK" kind="show" identifier="recipes" id="0DC-JC-Gez"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="Time Management" id="czq-ZZ-aBZ">
+                                        <connections>
+                                            <segue destination="BCz-m1-V4c" kind="show" identifier="calendar" id="jgW-Cc-gfj"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="Mentatlity" id="Vux-wp-s5q">
+                                        <connections>
+                                            <segue destination="ikE-pL-l31" kind="show" identifier="journal" id="RvF-4F-haF"/>
+                                        </connections>
+                                    </barButtonItem>
                                 </barButtonItems>
                             </barButtonItemGroup>
                         </centerItemGroups>
@@ -1032,7 +1300,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0Ne-QY-hB0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5184" y="-35"/>
+            <point key="canvasLocation" x="5184" y="1685"/>
         </scene>
         <!--Recipes Search-->
         <scene sceneID="iQU-Vt-wAn">
@@ -1065,18 +1333,45 @@
                         <viewLayoutGuide key="safeArea" id="BW7-2h-e45"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Recipe Search" id="gwB-1s-IlF"/>
                     <navigationItem key="navigationItem" title="Nutrition" id="4XZ-4l-NeV">
                         <centerItemGroups>
                             <barButtonItemGroup customizationDisposition="fixed" id="LoE-ez-DBR">
                                 <barButtonItems>
-                                    <barButtonItem title="Home" id="goB-UN-xHW"/>
-                                    <barButtonItem title="Account" id="gbq-xh-7xB"/>
-                                    <barButtonItem title="Resources" id="sv2-j6-C1U"/>
-                                    <barButtonItem title="Physical Wellbeing" id="Vwb-ct-3Ra"/>
-                                    <barButtonItem title="Nutrition" id="09m-We-Jai"/>
-                                    <barButtonItem title="Time Management" id="YUE-Pb-dLR"/>
-                                    <barButtonItem title="Mentatlity" id="gEh-Bn-72E"/>
+                                    <barButtonItem title="Home" id="goB-UN-xHW">
+                                        <connections>
+                                            <segue destination="GlA-Jj-pNd" kind="show" identifier="home" id="pZd-qZ-hDM"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="Account" id="gbq-xh-7xB">
+                                        <connections>
+                                            <segue destination="Fr2-LV-0cp" kind="show" identifier="login" id="EuL-F2-fHc"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="Resources" id="sv2-j6-C1U">
+                                        <connections>
+                                            <segue destination="dqU-S4-ZMo" kind="show" identifier="fitness" id="7Ft-vF-uLE"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="Physical Wellbeing" id="Vwb-ct-3Ra">
+                                        <connections>
+                                            <segue destination="vlF-sI-XGK" kind="show" identifier="workouts" id="aoM-5V-uTq"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="Nutrition" id="09m-We-Jai">
+                                        <connections>
+                                            <segue destination="mEW-Z7-KrK" kind="show" identifier="recipes" id="hfV-vW-hSQ"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="Time Management" id="YUE-Pb-dLR">
+                                        <connections>
+                                            <segue destination="BCz-m1-V4c" kind="show" identifier="calendar" id="ocl-up-jRq"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="Mentatlity" id="gEh-Bn-72E">
+                                        <connections>
+                                            <segue destination="ikE-pL-l31" kind="show" identifier="journal" id="KTL-UA-lwQ"/>
+                                        </connections>
+                                    </barButtonItem>
                                 </barButtonItems>
                             </barButtonItemGroup>
                         </centerItemGroups>
@@ -1084,7 +1379,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Hoy-WD-t9C" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5184" y="-770"/>
+            <point key="canvasLocation" x="5184" y="2481"/>
         </scene>
         <!--Calendar-->
         <scene sceneID="lc8-i4-VWP">
@@ -1121,13 +1416,41 @@
                         <centerItemGroups>
                             <barButtonItemGroup customizationDisposition="fixed" id="1eX-lc-Nxn">
                                 <barButtonItems>
-                                    <barButtonItem title="Home" id="8CO-cz-aox"/>
-                                    <barButtonItem title="Account" id="dzi-Mu-ppN"/>
-                                    <barButtonItem title="Resources" id="uAp-dO-BNU"/>
-                                    <barButtonItem title="Physical Wellbeing" id="7ET-19-kq2"/>
-                                    <barButtonItem title="Nutrition" id="ZDK-jA-IS1"/>
-                                    <barButtonItem title="Time Management" id="4gf-hN-SY3"/>
-                                    <barButtonItem title="Mentatlity" id="OYL-s5-zxQ"/>
+                                    <barButtonItem title="Home" id="8CO-cz-aox">
+                                        <connections>
+                                            <segue destination="GlA-Jj-pNd" kind="show" identifier="home" id="8ko-OQ-kvG"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="Account" id="dzi-Mu-ppN">
+                                        <connections>
+                                            <segue destination="Fr2-LV-0cp" kind="show" identifier="login" id="yl7-gD-q4Q"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="Resources" id="uAp-dO-BNU">
+                                        <connections>
+                                            <segue destination="dqU-S4-ZMo" kind="show" identifier="fitness" id="JY6-SZ-D8B"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="Physical Wellbeing" id="7ET-19-kq2">
+                                        <connections>
+                                            <segue destination="vlF-sI-XGK" kind="show" identifier="workouts" id="DtD-3H-7aJ"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="Nutrition" id="ZDK-jA-IS1">
+                                        <connections>
+                                            <segue destination="mEW-Z7-KrK" kind="show" identifier="recipes" id="Fos-4V-eOQ"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="Time Management" id="4gf-hN-SY3">
+                                        <connections>
+                                            <segue destination="BCz-m1-V4c" kind="show" identifier="calendar" id="fXQ-mb-nMM"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="Mentatlity" id="OYL-s5-zxQ">
+                                        <connections>
+                                            <segue destination="ikE-pL-l31" kind="show" identifier="journal" id="wG0-6o-ef6"/>
+                                        </connections>
+                                    </barButtonItem>
                                 </barButtonItems>
                             </barButtonItemGroup>
                         </centerItemGroups>
@@ -1135,7 +1458,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XO4-IX-1DC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6302" y="-35"/>
+            <point key="canvasLocation" x="6302" y="1685"/>
         </scene>
         <!--Organization Assistance-->
         <scene sceneID="4aL-D6-Wug">
@@ -1168,18 +1491,45 @@
                         <viewLayoutGuide key="safeArea" id="Zzx-hs-1Ke"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Organization Assistance" id="87I-42-VeT"/>
                     <navigationItem key="navigationItem" title="Time Management" id="5Wf-In-duN">
                         <centerItemGroups>
                             <barButtonItemGroup customizationDisposition="fixed" id="vzi-rw-MJQ">
                                 <barButtonItems>
-                                    <barButtonItem title="Home" id="6dx-v0-Hc6"/>
-                                    <barButtonItem title="Account" id="ffD-um-guG"/>
-                                    <barButtonItem title="Resources" id="vIu-WK-Z9X"/>
-                                    <barButtonItem title="Physical Wellbeing" id="nzq-BM-Ym8"/>
-                                    <barButtonItem title="Nutrition" id="dMx-nR-aPZ"/>
-                                    <barButtonItem title="Time Management" id="JVY-Zy-5tH"/>
-                                    <barButtonItem title="Mentatlity" id="GMd-kg-ktN"/>
+                                    <barButtonItem title="Home" id="6dx-v0-Hc6">
+                                        <connections>
+                                            <segue destination="GlA-Jj-pNd" kind="show" identifier="home" id="C0U-pu-YLc"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="Account" id="ffD-um-guG">
+                                        <connections>
+                                            <segue destination="Fr2-LV-0cp" kind="show" identifier="login" id="ULS-HY-KHP"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="Resources" id="vIu-WK-Z9X">
+                                        <connections>
+                                            <segue destination="dqU-S4-ZMo" kind="show" identifier="fitness" id="p9e-mn-yPS"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="Physical Wellbeing" id="nzq-BM-Ym8">
+                                        <connections>
+                                            <segue destination="vlF-sI-XGK" kind="show" identifier="workouts" id="bJb-X7-uVZ"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="Nutrition" id="dMx-nR-aPZ">
+                                        <connections>
+                                            <segue destination="mEW-Z7-KrK" kind="show" identifier="recipes" id="fCP-pl-RVH"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="Time Management" id="JVY-Zy-5tH">
+                                        <connections>
+                                            <segue destination="BCz-m1-V4c" kind="show" identifier="calendar" id="nnV-qY-g8b"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="Mentatlity" id="GMd-kg-ktN">
+                                        <connections>
+                                            <segue destination="ikE-pL-l31" kind="show" identifier="journal" id="UHl-Fc-Oco"/>
+                                        </connections>
+                                    </barButtonItem>
                                 </barButtonItems>
                             </barButtonItemGroup>
                         </centerItemGroups>
@@ -1187,7 +1537,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0Tk-3e-kAp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6302" y="-770"/>
+            <point key="canvasLocation" x="6302" y="2481"/>
         </scene>
         <!--Journal-->
         <scene sceneID="96I-lq-Mq9">
@@ -1275,13 +1625,41 @@
                         <centerItemGroups>
                             <barButtonItemGroup customizationDisposition="fixed" id="jvb-LL-gGH">
                                 <barButtonItems>
-                                    <barButtonItem title="Home" id="mxi-Ov-gW9"/>
-                                    <barButtonItem title="Account" id="0Qs-DY-FVX"/>
-                                    <barButtonItem title="Resources" id="zxa-pt-3u0"/>
-                                    <barButtonItem title="Physical Wellbeing" id="6fU-Zj-4ph"/>
-                                    <barButtonItem title="Nutrition" id="xmH-XL-c0R"/>
-                                    <barButtonItem title="Time Management" id="Njf-ma-iWr"/>
-                                    <barButtonItem title="Mentatlity" id="j8c-yj-jac"/>
+                                    <barButtonItem title="Home" id="mxi-Ov-gW9">
+                                        <connections>
+                                            <segue destination="GlA-Jj-pNd" kind="show" identifier="home" id="LbC-y4-p8I"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="Account" id="0Qs-DY-FVX">
+                                        <connections>
+                                            <segue destination="Fr2-LV-0cp" kind="show" identifier="login" id="uho-JY-yBc"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="Resources" id="zxa-pt-3u0">
+                                        <connections>
+                                            <segue destination="dqU-S4-ZMo" kind="show" identifier="fitness" id="1G6-Ob-aqQ"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="Physical Wellbeing" id="6fU-Zj-4ph">
+                                        <connections>
+                                            <segue destination="vlF-sI-XGK" kind="show" identifier="workouts" id="W8o-pE-1tO"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="Nutrition" id="xmH-XL-c0R">
+                                        <connections>
+                                            <segue destination="mEW-Z7-KrK" kind="show" identifier="recipes" id="7bM-cE-VRx"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="Time Management" id="Njf-ma-iWr">
+                                        <connections>
+                                            <segue destination="BCz-m1-V4c" kind="show" identifier="calendar" id="nzV-rs-TOh"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="Mentatlity" id="j8c-yj-jac">
+                                        <connections>
+                                            <segue destination="ikE-pL-l31" kind="show" identifier="journal" id="ROw-ho-ibt"/>
+                                        </connections>
+                                    </barButtonItem>
                                 </barButtonItems>
                             </barButtonItemGroup>
                         </centerItemGroups>
@@ -1289,7 +1667,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yY6-oP-RwU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7732" y="-36"/>
+            <point key="canvasLocation" x="7731" y="1685"/>
         </scene>
         <!--Journal Entries-->
         <scene sceneID="opz-T2-ds3">
@@ -1328,18 +1706,45 @@
                         <viewLayoutGuide key="safeArea" id="Rwy-EY-hRM"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Journal Entries" id="Bta-ro-lWO"/>
                     <navigationItem key="navigationItem" title="Mentality" id="34Y-An-5rc">
                         <centerItemGroups>
                             <barButtonItemGroup customizationDisposition="fixed" id="iVo-uG-J2V">
                                 <barButtonItems>
-                                    <barButtonItem title="Home" id="g3B-Ei-tWj"/>
-                                    <barButtonItem title="Account" id="a7T-4t-hjd"/>
-                                    <barButtonItem title="Resources" id="gLk-4N-Rfm"/>
-                                    <barButtonItem title="Physical Wellbeing" id="C9O-P2-XHw"/>
-                                    <barButtonItem title="Nutrition" id="uRg-SM-v42"/>
-                                    <barButtonItem title="Time Management" id="OQF-Rs-HCO"/>
-                                    <barButtonItem title="Mentatlity" id="zI1-x5-SMY"/>
+                                    <barButtonItem title="Home" id="g3B-Ei-tWj">
+                                        <connections>
+                                            <segue destination="GlA-Jj-pNd" kind="show" identifier="home" id="JA4-X7-ihC"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="Account" id="a7T-4t-hjd">
+                                        <connections>
+                                            <segue destination="Fr2-LV-0cp" kind="show" identifier="login" id="LQH-x4-hli"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="Resources" id="gLk-4N-Rfm">
+                                        <connections>
+                                            <segue destination="dqU-S4-ZMo" kind="show" identifier="fitness" id="Qlq-HI-oYy"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="Physical Wellbeing" id="C9O-P2-XHw">
+                                        <connections>
+                                            <segue destination="vlF-sI-XGK" kind="show" identifier="workouts" id="qXs-pB-Xku"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="Nutrition" id="uRg-SM-v42">
+                                        <connections>
+                                            <segue destination="mEW-Z7-KrK" kind="show" identifier="recipes" id="et6-sT-Cyv"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="Time Management" id="OQF-Rs-HCO">
+                                        <connections>
+                                            <segue destination="BCz-m1-V4c" kind="show" identifier="calendar" id="BQ7-Hz-D4a"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="Mentatlity" id="zI1-x5-SMY">
+                                        <connections>
+                                            <segue destination="ikE-pL-l31" kind="show" identifier="journal" id="Qut-jy-gBO"/>
+                                        </connections>
+                                    </barButtonItem>
                                 </barButtonItems>
                             </barButtonItemGroup>
                         </centerItemGroups>
@@ -1347,7 +1752,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DGN-NP-N0o" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7343" y="-770"/>
+            <point key="canvasLocation" x="7410" y="2480"/>
         </scene>
         <!--Mental Health Resources-->
         <scene sceneID="1N2-a1-Mvl">
@@ -1386,18 +1791,45 @@
                         <viewLayoutGuide key="safeArea" id="JfX-gB-emf"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Mental Health Resources" id="wTh-Z7-sIN"/>
                     <navigationItem key="navigationItem" title="Mentality" id="iNM-kA-NPL">
                         <centerItemGroups>
                             <barButtonItemGroup customizationDisposition="fixed" id="vX7-uJ-Aqf">
                                 <barButtonItems>
-                                    <barButtonItem title="Home" id="Jlm-2E-Ps0"/>
-                                    <barButtonItem title="Account" id="n8h-9x-ScF"/>
-                                    <barButtonItem title="Resources" id="8AO-Bv-3Au"/>
-                                    <barButtonItem title="Physical Wellbeing" id="acu-S4-HBG"/>
-                                    <barButtonItem title="Nutrition" id="A80-eP-dFg"/>
-                                    <barButtonItem title="Time Management" id="PsM-lg-88p"/>
-                                    <barButtonItem title="Mentatlity" id="sj9-WP-dBo"/>
+                                    <barButtonItem title="Home" id="Jlm-2E-Ps0">
+                                        <connections>
+                                            <segue destination="GlA-Jj-pNd" kind="show" identifier="home" id="8lB-M1-Ayd"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="Account" id="n8h-9x-ScF">
+                                        <connections>
+                                            <segue destination="Fr2-LV-0cp" kind="show" identifier="login" id="E9s-61-5qY"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="Resources" id="8AO-Bv-3Au">
+                                        <connections>
+                                            <segue destination="dqU-S4-ZMo" kind="show" identifier="fitness" id="Gne-El-k3o"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="Physical Wellbeing" id="acu-S4-HBG">
+                                        <connections>
+                                            <segue destination="vlF-sI-XGK" kind="show" identifier="workouts" id="eQh-jm-nh8"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="Nutrition" id="A80-eP-dFg">
+                                        <connections>
+                                            <segue destination="mEW-Z7-KrK" kind="show" identifier="recipes" id="AEm-6l-J0O"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="Time Management" id="PsM-lg-88p">
+                                        <connections>
+                                            <segue destination="BCz-m1-V4c" kind="show" identifier="calendar" id="rdb-To-Fv1"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="Mentatlity" id="sj9-WP-dBo">
+                                        <connections>
+                                            <segue destination="ikE-pL-l31" kind="show" identifier="journal" id="wHv-lY-Emr"/>
+                                        </connections>
+                                    </barButtonItem>
                                 </barButtonItems>
                             </barButtonItemGroup>
                         </centerItemGroups>
@@ -1405,11 +1837,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="clJ-Aw-4Ka" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="8076" y="-770"/>
+            <point key="canvasLocation" x="8105" y="2480"/>
         </scene>
         <!--Home Nav Controller-->
         <scene sceneID="hYQ-mJ-Y7G">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7UC-bu-itd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController title="Home Nav Controller" automaticallyAdjustsScrollViewInsets="NO" id="R9E-AM-iGD" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Home" image="house.fill" catalog="system" id="2bS-h6-Zrm"/>
                     <toolbarItems/>
@@ -1429,7 +1862,7 @@
                         </centerItemGroups>
                     </navigationItem>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="rCt-gC-hYC">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="56"/>
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -1437,9 +1870,8 @@
                         <segue destination="GlA-Jj-pNd" kind="relationship" relationship="rootViewController" id="obm-sn-hDI"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="7UC-bu-itd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1385" y="1595"/>
+            <point key="canvasLocation" x="1153" y="793"/>
         </scene>
         <!--Account Nav Controller-->
         <scene sceneID="N4F-s1-ePB">
@@ -1451,47 +1883,19 @@
                         <centerItemGroups>
                             <barButtonItemGroup customizationDisposition="fixed" id="8D4-dK-Afi">
                                 <barButtonItems>
-                                    <barButtonItem title="Home" id="Q5r-kx-42j">
-                                        <connections>
-                                            <segue destination="GlA-Jj-pNd" kind="show" id="kjS-sO-8c4"/>
-                                        </connections>
-                                    </barButtonItem>
-                                    <barButtonItem title="Account" id="X6h-HR-aj0">
-                                        <connections>
-                                            <segue destination="Fr2-LV-0cp" kind="show" id="7wI-Cz-YIe"/>
-                                        </connections>
-                                    </barButtonItem>
-                                    <barButtonItem title="Resources" id="lZI-cx-OwK">
-                                        <connections>
-                                            <segue destination="6Pb-Kd-kaL" kind="show" id="hU2-De-6Ph"/>
-                                        </connections>
-                                    </barButtonItem>
-                                    <barButtonItem title="Physcial Wellbeing" id="Ntn-2a-3dY">
-                                        <connections>
-                                            <segue destination="RjW-F5-l3A" kind="show" id="DfB-e6-yTt"/>
-                                        </connections>
-                                    </barButtonItem>
-                                    <barButtonItem title="Nutrition" id="OxH-nA-ijq">
-                                        <connections>
-                                            <segue destination="lPl-1H-fE1" kind="show" id="qoF-nP-Pe6"/>
-                                        </connections>
-                                    </barButtonItem>
-                                    <barButtonItem title="Time Management" id="81i-3j-z1c">
-                                        <connections>
-                                            <segue destination="2i1-go-VpJ" kind="show" id="5qG-lx-RbK"/>
-                                        </connections>
-                                    </barButtonItem>
-                                    <barButtonItem title="Mentality" id="N83-ZL-i3U">
-                                        <connections>
-                                            <segue destination="tIX-9E-1dD" kind="show" id="gBN-CN-BE7"/>
-                                        </connections>
-                                    </barButtonItem>
+                                    <barButtonItem title="Home" id="Q5r-kx-42j"/>
+                                    <barButtonItem title="Account" id="X6h-HR-aj0"/>
+                                    <barButtonItem title="Resources" id="lZI-cx-OwK"/>
+                                    <barButtonItem title="Physcial Wellbeing" id="Ntn-2a-3dY"/>
+                                    <barButtonItem title="Nutrition" id="OxH-nA-ijq"/>
+                                    <barButtonItem title="Time Management" id="81i-3j-z1c"/>
+                                    <barButtonItem title="Mentality" id="N83-ZL-i3U"/>
                                 </barButtonItems>
                             </barButtonItemGroup>
                         </centerItemGroups>
                     </navigationItem>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="FOH-L0-c5h">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="56"/>
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -1501,7 +1905,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZSL-mI-uoa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1385" y="-2168"/>
+            <point key="canvasLocation" x="-173" y="793"/>
         </scene>
         <!--Resources Nav Controller-->
         <scene sceneID="wBn-bQ-fZ3">
@@ -1513,47 +1917,19 @@
                         <centerItemGroups>
                             <barButtonItemGroup customizationDisposition="fixed" id="1y3-BZ-Tfw">
                                 <barButtonItems>
-                                    <barButtonItem title="Home" id="4uy-2O-ivd">
-                                        <connections>
-                                            <segue destination="GlA-Jj-pNd" kind="show" id="4RM-OE-PDU"/>
-                                        </connections>
-                                    </barButtonItem>
-                                    <barButtonItem title="Account" id="F4T-AL-YpI">
-                                        <connections>
-                                            <segue destination="Fr2-LV-0cp" kind="show" id="gc4-yJ-Ie4"/>
-                                        </connections>
-                                    </barButtonItem>
-                                    <barButtonItem title="Resources" id="gdo-nZ-sd7">
-                                        <connections>
-                                            <segue destination="dqU-S4-ZMo" kind="show" id="krn-De-HaW"/>
-                                        </connections>
-                                    </barButtonItem>
-                                    <barButtonItem title="Physcial Wellbeing" id="jqN-0S-X8N">
-                                        <connections>
-                                            <segue destination="RjW-F5-l3A" kind="show" id="Nh4-FY-Tzf"/>
-                                        </connections>
-                                    </barButtonItem>
-                                    <barButtonItem title="Nutrition" id="JS1-uC-Dl3">
-                                        <connections>
-                                            <segue destination="lPl-1H-fE1" kind="show" id="w4k-ue-cGY"/>
-                                        </connections>
-                                    </barButtonItem>
-                                    <barButtonItem title="Time Management" id="G4O-lp-skM">
-                                        <connections>
-                                            <segue destination="2i1-go-VpJ" kind="show" id="qS0-yw-tyi"/>
-                                        </connections>
-                                    </barButtonItem>
-                                    <barButtonItem title="Mentality" id="bNL-ef-8O4">
-                                        <connections>
-                                            <segue destination="tIX-9E-1dD" kind="show" id="rmh-2o-PR4"/>
-                                        </connections>
-                                    </barButtonItem>
+                                    <barButtonItem title="Home" id="4uy-2O-ivd"/>
+                                    <barButtonItem title="Account" id="F4T-AL-YpI"/>
+                                    <barButtonItem title="Resources" id="gdo-nZ-sd7"/>
+                                    <barButtonItem title="Physcial Wellbeing" id="jqN-0S-X8N"/>
+                                    <barButtonItem title="Nutrition" id="JS1-uC-Dl3"/>
+                                    <barButtonItem title="Time Management" id="G4O-lp-skM"/>
+                                    <barButtonItem title="Mentality" id="bNL-ef-8O4"/>
                                 </barButtonItems>
                             </barButtonItemGroup>
                         </centerItemGroups>
                     </navigationItem>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="D0n-1D-aoD">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="56"/>
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -1573,7 +1949,7 @@
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="YSv-4u-uBy"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="NC5-eK-aCl">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="56"/>
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -1593,7 +1969,7 @@
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="Ul7-0Q-UhX"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="rCK-uQ-Y8N">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="56"/>
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -1613,7 +1989,7 @@
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="8A5-wb-cGY"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="AJi-9f-YmF">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="56"/>
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -1633,7 +2009,7 @@
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="7XN-km-BRh"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="3pG-UO-3pk">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="56"/>
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -1645,20 +2021,154 @@
             </objects>
             <point key="canvasLocation" x="7731" y="793"/>
         </scene>
+        <!--Affordable Options Nav Controller-->
+        <scene sceneID="Rrq-hi-4St">
+            <objects>
+                <navigationController title="Affordable Options Nav Controller" automaticallyAdjustsScrollViewInsets="NO" id="T8r-9e-lh3" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Affordable Options" id="G4i-FJ-WmQ"/>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="bzK-bT-ZaT"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Nu7-UB-K7N">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="dbD-rv-pMu" kind="relationship" relationship="rootViewController" id="vMW-13-md2"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vyK-MD-zaw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2163" y="3320"/>
+        </scene>
+        <!--Personal Research Nav Controller-->
+        <scene sceneID="gbQ-2r-XR9">
+            <objects>
+                <navigationController title="Personal Research Nav Controller" automaticallyAdjustsScrollViewInsets="NO" id="IaN-U2-qA3" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Explore" image="magnifyingglass" catalog="system" id="vAJ-5a-bf4"/>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="fMx-Yy-7Lw"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="PcY-Nf-Iz9">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="rb9-Yi-gZF" kind="relationship" relationship="rootViewController" id="dwW-et-bNg"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4Z7-wE-KIi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2886" y="3320"/>
+        </scene>
+        <!--Supplements Nav Controller-->
+        <scene sceneID="lvV-DE-QCS">
+            <objects>
+                <navigationController title="Supplements Nav Controller" automaticallyAdjustsScrollViewInsets="NO" id="D7g-Ul-73a" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Supplements" id="Xec-ek-gQl"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="VUP-nJ-pon">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Kke-xN-zFm" kind="relationship" relationship="rootViewController" id="3Az-lK-iEr"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8Jz-aI-wAv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3926" y="3320"/>
+        </scene>
+        <!--Recipe Search Nav Controller-->
+        <scene sceneID="FSQ-I5-Brv">
+            <objects>
+                <navigationController title="Recipe Search Nav Controller" automaticallyAdjustsScrollViewInsets="NO" id="cAF-sz-lXh" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Recipe Search" id="gwB-1s-IlF"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="jTe-7J-Ipb">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="jb1-BG-J3A" kind="relationship" relationship="rootViewController" id="lEy-dH-QRI"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fFa-8g-cgz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5184" y="3320"/>
+        </scene>
+        <!--Organization Assistance Nav Controller-->
+        <scene sceneID="puQ-eF-Fum">
+            <objects>
+                <navigationController title="Organization Assistance Nav Controller" automaticallyAdjustsScrollViewInsets="NO" id="551-wt-IUC" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Organization Assistance" id="87I-42-VeT"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="X5q-sT-qIX">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="PIe-pf-bMv" kind="relationship" relationship="rootViewController" id="sIa-oJ-PSn"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="P6f-Lr-xrZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6302" y="3320"/>
+        </scene>
+        <!--Journal Entries Nav Controller-->
+        <scene sceneID="Fgp-bR-Iu3">
+            <objects>
+                <navigationController title="Journal Entries Nav Controller" automaticallyAdjustsScrollViewInsets="NO" id="4Sv-2b-fDL" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Journal Entries" id="Bta-ro-lWO"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="7Iw-AL-Lx0">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="IwD-tx-Q6B" kind="relationship" relationship="rootViewController" id="XVa-VG-8kb"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FqT-yP-o8z" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="7410" y="3320"/>
+        </scene>
+        <!--Mental Health Resources Nav Controller-->
+        <scene sceneID="Fko-AJ-2GT">
+            <objects>
+                <navigationController title="Mental Health Resources Nav Controller" automaticallyAdjustsScrollViewInsets="NO" id="mZI-1G-sLa" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Mental Health Resources" id="wTh-Z7-sIN"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="jaj-7D-BBi">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="owF-n1-hys" kind="relationship" relationship="rootViewController" id="Rto-za-GYj"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vXs-ni-End" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="8105" y="3320"/>
+        </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="gBV-GA-xKm"/>
-        <segue reference="PZG-Kb-9Y7"/>
-        <segue reference="GsG-MC-EmQ"/>
-        <segue reference="RNW-kQ-3lY"/>
-        <segue reference="GCc-lX-Fz6"/>
-        <segue reference="69W-4L-ZUf"/>
-        <segue reference="we6-7J-gp9"/>
-        <segue reference="mdJ-43-BB0"/>
-        <segue reference="caB-IP-r3X"/>
-        <segue reference="YGl-SK-72g"/>
-        <segue reference="bIT-f3-Knb"/>
-        <segue reference="kjS-sO-8c4"/>
+        <segue reference="t0z-b5-xll"/>
+        <segue reference="30B-mf-pqb"/>
+        <segue reference="uoq-v3-am0"/>
+        <segue reference="lmA-Zg-Nch"/>
+        <segue reference="byY-aQ-Ieg"/>
+        <segue reference="cOt-LV-IU8"/>
+        <segue reference="jaR-Nx-dcq"/>
+        <segue reference="Eg5-bZ-NlH"/>
+        <segue reference="HTE-KT-VGY"/>
+        <segue reference="8ap-dD-8Ar"/>
+        <segue reference="d2O-3k-59l"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="ai-generated-8266786_1280" width="1280" height="717"/>
