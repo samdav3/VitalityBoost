@@ -46,108 +46,196 @@
             <objects>
                 <viewController id="GlA-Jj-pNd" userLabel="Home" customClass="ViewController" customModule="VitalityBoost" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ryi-r7-ZXz">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="2095"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="1869"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uYB-ij-YOC">
-                                <rect key="frame" x="0.0" y="87" width="393" height="1886"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uYB-ij-YOC">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="1820"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4ye-xu-XGx" userLabel="Content View">
-                                        <rect key="frame" x="0.0" y="0.0" width="922.33333333333337" height="1963"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4ye-xu-XGx" userLabel="Content View">
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="1820"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="login-7103076_1280" translatesAutoresizingMaskIntoConstraints="NO" id="Zgv-JN-Ci2">
-                                                <rect key="frame" x="20" y="484" width="353" height="91"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <imageView clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="login-7103076_1280" translatesAutoresizingMaskIntoConstraints="NO" id="Zgv-JN-Ci2">
+                                                <rect key="frame" x="13" y="484" width="367" height="91"/>
+                                                <accessibility key="accessibilityConfiguration">
+                                                    <accessibilityTraits key="traits" button="YES" image="YES" allowsDirectInteraction="YES"/>
+                                                    <bool key="isElement" value="YES"/>
+                                                </accessibility>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="91" id="Mf9-vT-Ig0"/>
+                                                </constraints>
                                             </imageView>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ai-generated-8266786_1280" translatesAutoresizingMaskIntoConstraints="NO" id="MVJ-Ep-R3s">
-                                                <rect key="frame" x="20" y="934" width="353" height="91"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dumbbells-2465478_1280" translatesAutoresizingMaskIntoConstraints="NO" id="Vzx-ef-1tm">
+                                                <rect key="frame" x="12" y="1159" width="368" height="91"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="91" id="URL-6f-VLI"/>
+                                                </constraints>
                                             </imageView>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="dumbbells-2465478_1280" translatesAutoresizingMaskIntoConstraints="NO" id="Vzx-ef-1tm">
-                                                <rect key="frame" x="20" y="1159" width="353" height="91"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="calendar-7544098_1280" translatesAutoresizingMaskIntoConstraints="NO" id="7O0-CH-IGm">
+                                                <rect key="frame" x="12" y="1384" width="368" height="91"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="368" id="Xms-CB-Znm"/>
+                                                    <constraint firstAttribute="height" constant="91" id="yhC-Zw-bcJ"/>
+                                                </constraints>
                                             </imageView>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="calendar-7544098_1280" translatesAutoresizingMaskIntoConstraints="NO" id="7O0-CH-IGm">
-                                                <rect key="frame" x="20" y="1384" width="353" height="91"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logbook-154730_1280" translatesAutoresizingMaskIntoConstraints="NO" id="AFa-TN-AkE">
+                                                <rect key="frame" x="12" y="1609" width="368" height="91"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="91" id="BOt-8v-Rkp"/>
+                                                </constraints>
                                             </imageView>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="logbook-154730_1280" translatesAutoresizingMaskIntoConstraints="NO" id="AFa-TN-AkE">
-                                                <rect key="frame" x="20" y="1609" width="353" height="91"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="vegetables-1529726_1280" translatesAutoresizingMaskIntoConstraints="NO" id="L1L-Lh-Ufm">
+                                                <rect key="frame" x="12" y="709" width="368" height="91"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="91" id="awC-zd-nsG"/>
+                                                </constraints>
                                             </imageView>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="vegetables-1529726_1280" translatesAutoresizingMaskIntoConstraints="NO" id="L1L-Lh-Ufm">
-                                                <rect key="frame" x="20" y="709" width="353" height="91"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="yoga-8385447_1280" translatesAutoresizingMaskIntoConstraints="NO" id="sNP-dQ-0vO">
+                                                <rect key="frame" x="7" y="134" width="381" height="175"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="175" id="jul-2n-9aI"/>
+                                                </constraints>
                                             </imageView>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="yoga-8385447_1280" translatesAutoresizingMaskIntoConstraints="NO" id="sNP-dQ-0vO">
-                                                <rect key="frame" x="20" y="134" width="353" height="175"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            </imageView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Create an Account to store your personal information, concerns, goals, saved items and progress throughout your health journey." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MWF-fN-zYv">
-                                                <rect key="frame" x="20" y="583" width="353" height="118"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Create an Account to store your personal information, concerns, goals, saved items and progress throughout your health journey." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MWF-fN-zYv">
+                                                <rect key="frame" x="20" y="583" width="368" height="118"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="118" id="Qva-As-tvS"/>
+                                                </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6xz-lq-ram">
-                                                <rect key="frame" x="20" y="808" width="353" height="118"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6xz-lq-ram">
+                                                <rect key="frame" x="20" y="808" width="368" height="118"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="118" id="S99-8X-nDH"/>
+                                                </constraints>
                                                 <string key="text">Find recipes and nutrition facts to help guide you in your health journey. You can search by common health concerns or perform your own research.</string>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Find resources to help you achieve your health goals through our saved resources or researching through our Resource Search." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="osh-ES-UkS">
-                                                <rect key="frame" x="20" y="1033" width="353" height="118"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Find resources to help you achieve your health goals through our saved resources or researching through our Resource Search." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="osh-ES-UkS">
+                                                <rect key="frame" x="20" y="1033" width="368" height="118"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="118" id="ZZv-kP-bZ4"/>
+                                                </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T50-tU-TW5">
-                                                <rect key="frame" x="20" y="1258" width="353" height="118"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T50-tU-TW5">
+                                                <rect key="frame" x="12" y="1258" width="368" height="118"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="118" id="Gdq-1V-OH3"/>
+                                                </constraints>
                                                 <string key="text">Find workouts, fitness plans and more through our Physical Wellbeing page. Including fitness supplements and centers in your area.</string>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O0p-yd-qi6">
-                                                <rect key="frame" x="20" y="1483" width="353" height="118"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O0p-yd-qi6">
+                                                <rect key="frame" x="43" y="1483" width="345" height="118"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="118" id="dnP-0X-MpB"/>
+                                                </constraints>
                                                 <string key="text">Use the built in Calendar to help you plan out your days to ensure you can include time for yourself and your health goals, along with resources to help you along the way.</string>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Journal about your health journey, save journal entries to reflect upon later. Improve your mentality through self relflection." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JWN-iv-zGE">
-                                                <rect key="frame" x="20" y="1708" width="353" height="118"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Journal about your health journey, save journal entries to reflect upon later. Improve your mentality through self relflection." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JWN-iv-zGE">
+                                                <rect key="frame" x="12" y="1708" width="368" height="118"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="118" id="mPT-PQ-zQV"/>
+                                                </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Explore the below resources to find what you need. Happy Health Journey!" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fdB-uX-AnY">
-                                                <rect key="frame" x="20" y="317" width="353" height="159"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Explore the below resources to find what you need. Happy Health Journey!" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fdB-uX-AnY">
+                                                <rect key="frame" x="7" y="309" width="381" height="159"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="159" id="g9X-wg-veP"/>
+                                                </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="The answer to living your best life based on your Personal Needs! Mentality, Physicality and Nutrition all in one place!" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tqW-ZA-nkm">
-                                                <rect key="frame" x="20" y="0.0" width="353" height="106"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The answer to living your best life based on your Personal Needs! Mentality, Physicality and Nutrition all in one place!" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tqW-ZA-nkm">
+                                                <rect key="frame" x="20" y="16" width="355" height="61"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ai-generated-8266786_1280" translatesAutoresizingMaskIntoConstraints="NO" id="MVJ-Ep-R3s">
+                                                <rect key="frame" x="12" y="934" width="368" height="91"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="91" id="MK3-ff-Yre"/>
+                                                </constraints>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ai-generated-8266786_1280" translatesAutoresizingMaskIntoConstraints="NO" id="aO5-gb-OkF">
+                                                <rect key="frame" x="20" y="934" width="355" height="91"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstItem="6xz-lq-ram" firstAttribute="top" secondItem="L1L-Lh-Ufm" secondAttribute="bottom" constant="8" symbolic="YES" id="2kp-y9-l7Y"/>
+                                            <constraint firstItem="L1L-Lh-Ufm" firstAttribute="leading" secondItem="MWF-fN-zYv" secondAttribute="leading" constant="-8" id="3TT-PW-n30"/>
+                                            <constraint firstItem="osh-ES-UkS" firstAttribute="top" secondItem="MVJ-Ep-R3s" secondAttribute="bottom" constant="8" id="4dX-6W-rsE"/>
+                                            <constraint firstItem="6xz-lq-ram" firstAttribute="leading" secondItem="L1L-Lh-Ufm" secondAttribute="leading" constant="8" id="4er-ti-HKt"/>
+                                            <constraint firstItem="osh-ES-UkS" firstAttribute="trailing" secondItem="Vzx-ef-1tm" secondAttribute="trailing" constant="8" id="4nP-7f-zaM"/>
+                                            <constraint firstItem="osh-ES-UkS" firstAttribute="leading" secondItem="Vzx-ef-1tm" secondAttribute="leading" constant="8" id="Ca1-OZ-v5v"/>
+                                            <constraint firstItem="6xz-lq-ram" firstAttribute="leading" secondItem="MVJ-Ep-R3s" secondAttribute="leading" constant="8" id="ChL-W4-Zz2"/>
+                                            <constraint firstItem="L1L-Lh-Ufm" firstAttribute="top" secondItem="MWF-fN-zYv" secondAttribute="bottom" constant="8" symbolic="YES" id="DHF-Rj-VfM"/>
+                                            <constraint firstItem="O0p-yd-qi6" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="4ye-xu-XGx" secondAttribute="leading" constant="20" symbolic="YES" id="ESS-nd-gSO"/>
+                                            <constraint firstItem="tqW-ZA-nkm" firstAttribute="top" secondItem="4ye-xu-XGx" secondAttribute="top" constant="16" id="ETg-eg-2a3"/>
+                                            <constraint firstItem="7O0-CH-IGm" firstAttribute="top" secondItem="T50-tU-TW5" secondAttribute="bottom" constant="8" id="GJI-VQ-3cV"/>
+                                            <constraint firstItem="6xz-lq-ram" firstAttribute="trailing" secondItem="L1L-Lh-Ufm" secondAttribute="trailing" constant="8" id="I55-hU-q9G"/>
+                                            <constraint firstItem="6xz-lq-ram" firstAttribute="trailing" secondItem="MWF-fN-zYv" secondAttribute="trailing" id="LKA-07-Hz0"/>
+                                            <constraint firstItem="fdB-uX-AnY" firstAttribute="top" secondItem="sNP-dQ-0vO" secondAttribute="bottom" id="MZY-84-2eA"/>
+                                            <constraint firstItem="JWN-iv-zGE" firstAttribute="top" secondItem="AFa-TN-AkE" secondAttribute="bottom" constant="8" id="Mse-6T-bbN"/>
+                                            <constraint firstItem="sNP-dQ-0vO" firstAttribute="top" secondItem="tqW-ZA-nkm" secondAttribute="bottom" constant="57" id="OHP-Fk-rqe"/>
+                                            <constraint firstItem="sNP-dQ-0vO" firstAttribute="trailing" secondItem="fdB-uX-AnY" secondAttribute="trailing" id="OJc-o4-PcW"/>
+                                            <constraint firstItem="7O0-CH-IGm" firstAttribute="leading" secondItem="AFa-TN-AkE" secondAttribute="leading" id="OXs-RU-0z2"/>
+                                            <constraint firstItem="T50-tU-TW5" firstAttribute="top" secondItem="Vzx-ef-1tm" secondAttribute="bottom" constant="8" id="RGB-d5-CyG"/>
+                                            <constraint firstItem="7O0-CH-IGm" firstAttribute="trailing" secondItem="L1L-Lh-Ufm" secondAttribute="trailing" id="RPa-94-aqf"/>
+                                            <constraint firstItem="Vzx-ef-1tm" firstAttribute="top" secondItem="osh-ES-UkS" secondAttribute="bottom" constant="8" id="Rtw-XX-UmU"/>
+                                            <constraint firstItem="Zgv-JN-Ci2" firstAttribute="centerX" secondItem="4ye-xu-XGx" secondAttribute="centerX" id="Snh-In-IyY"/>
+                                            <constraint firstItem="AFa-TN-AkE" firstAttribute="trailing" secondItem="JWN-iv-zGE" secondAttribute="trailing" id="T8C-ic-R2U"/>
+                                            <constraint firstItem="Zgv-JN-Ci2" firstAttribute="leading" secondItem="fdB-uX-AnY" secondAttribute="leading" constant="6" id="TeX-uW-dSw"/>
+                                            <constraint firstItem="Zgv-JN-Ci2" firstAttribute="top" secondItem="fdB-uX-AnY" secondAttribute="bottom" constant="16" id="XR2-Dh-ldc"/>
+                                            <constraint firstAttribute="height" constant="1820" id="XYb-YF-3GI"/>
+                                            <constraint firstItem="AFa-TN-AkE" firstAttribute="leading" secondItem="JWN-iv-zGE" secondAttribute="leading" id="YW6-D9-EBJ"/>
+                                            <constraint firstItem="MWF-fN-zYv" firstAttribute="top" secondItem="Zgv-JN-Ci2" secondAttribute="bottom" constant="8" id="Ydb-UG-KZf"/>
+                                            <constraint firstItem="MVJ-Ep-R3s" firstAttribute="top" secondItem="6xz-lq-ram" secondAttribute="bottom" constant="8" symbolic="YES" id="aG3-Iz-ba8"/>
+                                            <constraint firstItem="MVJ-Ep-R3s" firstAttribute="trailing" secondItem="osh-ES-UkS" secondAttribute="trailing" constant="-8" id="akm-gP-mC5"/>
+                                            <constraint firstItem="Vzx-ef-1tm" firstAttribute="trailing" secondItem="T50-tU-TW5" secondAttribute="trailing" id="cG8-jg-BYH"/>
+                                            <constraint firstItem="sNP-dQ-0vO" firstAttribute="leading" secondItem="fdB-uX-AnY" secondAttribute="leading" id="cfI-FO-JGm"/>
+                                            <constraint firstItem="7O0-CH-IGm" firstAttribute="trailing" secondItem="AFa-TN-AkE" secondAttribute="trailing" id="efK-Mw-Wzj"/>
+                                            <constraint firstItem="O0p-yd-qi6" firstAttribute="top" secondItem="7O0-CH-IGm" secondAttribute="bottom" constant="8" id="gR4-cA-1T8"/>
+                                            <constraint firstItem="JWN-iv-zGE" firstAttribute="trailing" secondItem="fdB-uX-AnY" secondAttribute="trailing" constant="-8" id="igz-5m-9pi"/>
+                                            <constraint firstItem="7O0-CH-IGm" firstAttribute="trailing" secondItem="T50-tU-TW5" secondAttribute="trailing" id="kJN-ft-0fE"/>
+                                            <constraint firstItem="MVJ-Ep-R3s" firstAttribute="leading" secondItem="osh-ES-UkS" secondAttribute="leading" constant="-8" id="l5V-FJ-QSh"/>
+                                            <constraint firstItem="tqW-ZA-nkm" firstAttribute="leading" secondItem="4ye-xu-XGx" secondAttribute="leading" constant="20" id="pGB-rm-K5g"/>
+                                            <constraint firstItem="tqW-ZA-nkm" firstAttribute="centerX" secondItem="sNP-dQ-0vO" secondAttribute="centerX" id="qWy-8N-8GP"/>
+                                            <constraint firstItem="AFa-TN-AkE" firstAttribute="top" secondItem="O0p-yd-qi6" secondAttribute="bottom" constant="8" id="rIG-QB-G4w"/>
+                                            <constraint firstAttribute="trailing" secondItem="O0p-yd-qi6" secondAttribute="trailing" constant="5" id="tDF-s0-lyl"/>
+                                            <constraint firstItem="Vzx-ef-1tm" firstAttribute="leading" secondItem="T50-tU-TW5" secondAttribute="leading" id="tKv-D3-bX6"/>
+                                            <constraint firstItem="Zgv-JN-Ci2" firstAttribute="trailing" secondItem="fdB-uX-AnY" secondAttribute="trailing" constant="-8" id="toD-yn-Y5W"/>
+                                            <constraint firstItem="7O0-CH-IGm" firstAttribute="leading" secondItem="T50-tU-TW5" secondAttribute="leading" id="yRd-cd-OPo"/>
+                                            <constraint firstItem="tqW-ZA-nkm" firstAttribute="leading" secondItem="MWF-fN-zYv" secondAttribute="leading" id="z3X-4h-eum"/>
+                                        </constraints>
                                     </view>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstItem="4ye-xu-XGx" firstAttribute="top" secondItem="7Ai-HE-dap" secondAttribute="top" id="CjY-Mw-hrF"/>
+                                    <constraint firstItem="4ye-xu-XGx" firstAttribute="leading" secondItem="uYB-ij-YOC" secondAttribute="leading" id="KML-hR-xXp"/>
+                                    <constraint firstAttribute="bottom" secondItem="4ye-xu-XGx" secondAttribute="bottom" id="MDf-iJ-qmA"/>
+                                    <constraint firstItem="4ye-xu-XGx" firstAttribute="width" secondItem="uYB-ij-YOC" secondAttribute="width" id="tfL-wm-B3v"/>
+                                    <constraint firstAttribute="trailing" secondItem="4ye-xu-XGx" secondAttribute="trailing" id="uor-wD-8v8"/>
+                                </constraints>
                                 <viewLayoutGuide key="contentLayoutGuide" id="7Ai-HE-dap"/>
                                 <viewLayoutGuide key="frameLayoutGuide" id="mfL-tm-Dcs"/>
                             </scrollView>
@@ -157,6 +245,17 @@
                         <accessibility key="accessibilityConfiguration">
                             <bool key="isElement" value="YES"/>
                         </accessibility>
+                        <constraints>
+                            <constraint firstItem="uYB-ij-YOC" firstAttribute="trailing" secondItem="eBu-YX-YW8" secondAttribute="trailing" id="9hp-eA-ich"/>
+                            <constraint firstItem="uYB-ij-YOC" firstAttribute="top" secondItem="eBu-YX-YW8" secondAttribute="top" id="9yE-QX-Fql"/>
+                            <constraint firstItem="uYB-ij-YOC" firstAttribute="leading" secondItem="eBu-YX-YW8" secondAttribute="leading" id="C1t-fR-ONI"/>
+                            <constraint firstItem="uYB-ij-YOC" firstAttribute="width" secondItem="ryi-r7-ZXz" secondAttribute="width" id="b2O-3g-EHF"/>
+                            <constraint firstItem="uYB-ij-YOC" firstAttribute="leading" secondItem="eBu-YX-YW8" secondAttribute="leading" id="b2q-fC-6eH"/>
+                            <constraint firstItem="eBu-YX-YW8" firstAttribute="bottom" secondItem="uYB-ij-YOC" secondAttribute="bottom" id="bZQ-p8-bzx"/>
+                            <constraint firstItem="uYB-ij-YOC" firstAttribute="top" secondItem="eBu-YX-YW8" secondAttribute="top" id="haP-TF-Pym"/>
+                            <constraint firstItem="uYB-ij-YOC" firstAttribute="width" secondItem="ryi-r7-ZXz" secondAttribute="width" id="iHj-NA-7tK"/>
+                            <constraint firstItem="uYB-ij-YOC" firstAttribute="trailing" secondItem="eBu-YX-YW8" secondAttribute="trailing" id="qmO-9P-YEp"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Vitality Boost" id="K1O-Dg-ym4">
                         <centerItemGroups>
@@ -202,11 +301,11 @@
                         </centerItemGroups>
                     </navigationItem>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
-                    <size key="freeformSize" width="393" height="2105"/>
+                    <size key="freeformSize" width="393" height="1879"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uWp-yP-8R1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1153" y="2125"/>
+            <point key="canvasLocation" x="1151.9083969465648" y="2093.3098591549297"/>
         </scene>
         <!--Login-->
         <scene sceneID="DKS-3z-cLb">
@@ -317,7 +416,7 @@
             <objects>
                 <viewController id="aSb-wR-FFO" customClass="CreateAccountController" customModule="VitalityBoost" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="oTF-2Y-tPg">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="769"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gyw-y3-sLi">
@@ -421,7 +520,7 @@
                         <viewLayoutGuide key="safeArea" id="xRS-Km-GeQ"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Create Account" image="plus" catalog="system" id="fOF-xG-PtC"/>
+                    <tabBarItem key="tabBarItem" title="Create Account" image="person.crop.circle.badge.plus" catalog="system" id="fOF-xG-PtC"/>
                     <navigationItem key="navigationItem" title="Create Account" id="i9P-KB-H9g">
                         <centerItemGroups>
                             <barButtonItemGroup customizationDisposition="fixed" id="Q0Y-Jb-uoD">
@@ -475,20 +574,23 @@
             <objects>
                 <viewController id="cWD-XT-nTa" customClass="AccountController" customModule="VitalityBoost" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="uG5-gd-WU4">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="769"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pUU-BE-Wdn">
                                 <rect key="frame" x="49" y="129" width="118" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Contact Info"/>
+                                <buttonConfiguration key="configuration" style="tinted" title="Contact Info"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bf4-Jb-Qa9">
                                 <rect key="frame" x="269" y="129" width="68" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Goals"/>
+                                <connections>
+                                    <segue destination="UxL-fg-8GU" kind="show" identifier="goals" id="KQb-Jx-NuV"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zUk-0N-Ech">
                                 <rect key="frame" x="16" y="197" width="151" height="44"/>
@@ -598,7 +700,7 @@
                         <viewLayoutGuide key="safeArea" id="0Xi-iy-eNa"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Account Info" image="person.fill" catalog="system" id="xIo-r0-9Me"/>
+                    <tabBarItem key="tabBarItem" title="Account Info" image="person.circle" catalog="system" id="xIo-r0-9Me"/>
                     <navigationItem key="navigationItem" title="Account" id="AJW-3W-MMo">
                         <centerItemGroups>
                             <barButtonItemGroup customizationDisposition="fixed" id="0JA-Du-fao">
@@ -652,7 +754,7 @@
             <objects>
                 <viewController id="UxL-fg-8GU" customClass="GoalsController" customModule="VitalityBoost" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="k0F-D6-rN7">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="769"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YDI-Qt-aoW">
@@ -660,12 +762,15 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Contact Info"/>
+                                <connections>
+                                    <segue destination="cWD-XT-nTa" kind="show" identifier="contactInfo" id="FUm-qA-H58"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xpz-eV-LlH">
                                 <rect key="frame" x="267" y="101" width="68" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Goals"/>
+                                <buttonConfiguration key="configuration" style="tinted" title="Goals"/>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="_________________________________________" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dFb-jT-brR">
                                 <rect key="frame" x="14" y="131" width="363" height="21"/>
@@ -678,7 +783,7 @@
                         <viewLayoutGuide key="safeArea" id="ATT-ue-Onc"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Goals" id="U7Y-vh-3gO"/>
+                    <tabBarItem key="tabBarItem" title="Goals" image="chart.bar.doc.horizontal.fill" catalog="system" id="U7Y-vh-3gO"/>
                     <navigationItem key="navigationItem" title="Goals" id="W4T-Px-3ad">
                         <centerItemGroups>
                             <barButtonItemGroup customizationDisposition="fixed" id="ISw-xr-Rbs">
@@ -721,7 +826,11 @@
                                 </barButtonItems>
                             </barButtonItemGroup>
                         </centerItemGroups>
-                        <barButtonItem key="rightBarButtonItem" title="Add Goal" image="plus" catalog="system" id="AwI-l7-8th"/>
+                        <barButtonItem key="rightBarButtonItem" title="Add Goal" image="plus" catalog="system" id="AwI-l7-8th">
+                            <connections>
+                                <segue destination="CcN-gf-sCR" kind="show" identifier="addGoal" id="URf-WC-nIi"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vuu-8Q-NNF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -733,16 +842,9 @@
             <objects>
                 <viewController id="CcN-gf-sCR" customClass="AddGoalController" customModule="VitalityBoost" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Lnq-Is-rgN">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Add Goal" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ub3-e8-jwY">
-                                <rect key="frame" x="0.0" y="59" width="393" height="62"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Goal Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bGY-Ar-pwT">
                                 <rect key="frame" x="16" y="129" width="145" height="53"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -815,7 +917,7 @@
                                 <rect key="frame" x="16" y="101" width="79" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Fitness"/>
+                                <buttonConfiguration key="configuration" style="tinted" title="Fitness"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OaL-cC-zQx">
                                 <rect key="frame" x="299" y="101" width="78" height="35"/>
@@ -823,7 +925,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Search"/>
                                 <connections>
-                                    <segue destination="IaN-U2-qA3" kind="show" id="5rg-uv-nv5"/>
+                                    <segue destination="rb9-Yi-gZF" kind="show" id="niP-Cx-dMk"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="_________________________________________" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SkV-Go-zb1">
@@ -839,7 +941,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Affordable Options"/>
                                 <connections>
-                                    <segue destination="T8r-9e-lh3" kind="show" id="IBL-m8-N9g"/>
+                                    <segue destination="dbD-rv-pMu" kind="show" id="2IW-06-4Wa"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -899,20 +1001,23 @@
             <objects>
                 <viewController title="Personal Research" id="rb9-Yi-gZF" customClass="PersonalResearchController" customModule="VitalityBoost" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="r9e-D8-OeU">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mQe-P9-R0W">
                                 <rect key="frame" x="299" y="101" width="78" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Search"/>
+                                <buttonConfiguration key="configuration" style="tinted" title="Search"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="34H-V4-y9Y">
                                 <rect key="frame" x="113" y="101" width="168" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Affordable Options"/>
+                                <connections>
+                                    <segue destination="dbD-rv-pMu" kind="show" identifier="affordableOptions" id="scp-y7-UWH"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="_________________________________________" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fnu-wm-0A6">
                                 <rect key="frame" x="16" y="131" width="363" height="21"/>
@@ -926,6 +1031,9 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Fitness"/>
+                                <connections>
+                                    <segue destination="dqU-S4-ZMo" kind="show" identifier="fitness" id="mgl-WQ-uGQ"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="25h-LN-icU"/>
@@ -985,7 +1093,7 @@
             <objects>
                 <viewController title="Affordable Options" id="dbD-rv-pMu" customClass="AffordableOptionsController" customModule="VitalityBoost" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="bwJ-5I-OS5">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="769"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mwq-SG-hqv">
@@ -993,18 +1101,24 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Fitness"/>
+                                <connections>
+                                    <segue destination="dqU-S4-ZMo" kind="show" identifier="fitness" id="MG4-Xb-gjZ"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TkM-Dx-LGL">
                                 <rect key="frame" x="299" y="101" width="78" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Search"/>
+                                <connections>
+                                    <segue destination="rb9-Yi-gZF" kind="show" identifier="personalResearch" id="66h-vg-3Zd"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vdw-LE-jS9">
                                 <rect key="frame" x="113" y="101" width="168" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Affordable Options"/>
+                                <buttonConfiguration key="configuration" style="tinted" title="Affordable Options"/>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="_________________________________________" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qSH-6l-0Zj">
                                 <rect key="frame" x="16" y="131" width="363" height="21"/>
@@ -1077,7 +1191,7 @@
                                 <rect key="frame" x="52" y="101" width="97" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Workouts"/>
+                                <buttonConfiguration key="configuration" style="tinted" title="Workouts"/>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="_________________________________________" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fac-nj-tUN">
                                 <rect key="frame" x="15" y="131" width="363" height="21"/>
@@ -1091,6 +1205,9 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Supplements"/>
+                                <connections>
+                                    <segue destination="Kke-xN-zFm" kind="show" identifier="supplements" id="tjS-gq-cbq"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="7WX-Z6-qSJ"/>
@@ -1149,20 +1266,23 @@
             <objects>
                 <viewController title="Supplements" id="Kke-xN-zFm" customClass="SupplementsController" customModule="VitalityBoost" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="W6Q-o8-Dxw">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="769"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0H8-Tx-iUE">
                                 <rect key="frame" x="217" y="101" width="125" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Supplements"/>
+                                <buttonConfiguration key="configuration" style="tinted" title="Supplements"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I5R-w3-QMw">
                                 <rect key="frame" x="52" y="101" width="97" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Workouts"/>
+                                <connections>
+                                    <segue destination="vlF-sI-XGK" kind="show" identifier="workouts" id="Qfw-H7-cSF"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="_________________________________________" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RYz-5u-mHh">
                                 <rect key="frame" x="15" y="131" width="363" height="21"/>
@@ -1236,12 +1356,15 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Recipe Search"/>
+                                <connections>
+                                    <segue destination="jb1-BG-J3A" kind="show" identifier="recipeSearch" id="Hx1-DI-RVH"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UTM-SJ-Dco">
                                 <rect key="frame" x="58" y="101" width="85" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Recipes"/>
+                                <buttonConfiguration key="configuration" style="tinted" title="Recipes"/>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="_________________________________________" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uwg-RA-QRk">
                                 <rect key="frame" x="15" y="131" width="363" height="21"/>
@@ -1307,20 +1430,23 @@
             <objects>
                 <viewController title="Recipes Search" id="jb1-BG-J3A" customClass="RecipesSearchController" customModule="VitalityBoost" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="0Ln-zv-yDf">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="769"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q4G-E3-xNr">
                                 <rect key="frame" x="213" y="101" width="134" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Recipe Search"/>
+                                <buttonConfiguration key="configuration" style="tinted" title="Recipe Search"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xic-Ec-5qR">
                                 <rect key="frame" x="58" y="101" width="85" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Recipes"/>
+                                <connections>
+                                    <segue destination="mEW-Z7-KrK" kind="show" identifier="recipes" id="0Kp-cl-umx"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="_________________________________________" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FVP-GR-O6g">
                                 <rect key="frame" x="15" y="131" width="363" height="21"/>
@@ -1394,12 +1520,15 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Organization Assistance"/>
+                                <connections>
+                                    <segue destination="PIe-pf-bMv" kind="show" identifier="organizationAssistance" id="cSX-nM-wRz"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wMF-Ki-959">
                                 <rect key="frame" x="35" y="101" width="93" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Calendar"/>
+                                <buttonConfiguration key="configuration" style="tinted" title="Calendar"/>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="_________________________________________" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Amz-C3-IPM">
                                 <rect key="frame" x="16" y="131" width="363" height="21"/>
@@ -1465,14 +1594,14 @@
             <objects>
                 <viewController title="Organization Assistance" id="PIe-pf-bMv" customClass="OrganizationAssistanceController" customModule="VitalityBoost" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ZK9-XV-Ooz">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="769"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1ro-pn-50Z">
                                 <rect key="frame" x="156" y="101" width="208" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Organization Assistance"/>
+                                <buttonConfiguration key="configuration" style="tinted" title="Organization Assistance"/>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="_________________________________________" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Hd-ry-TXB">
                                 <rect key="frame" x="16" y="131" width="363" height="21"/>
@@ -1486,6 +1615,9 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Calendar"/>
+                                <connections>
+                                    <segue destination="BCz-m1-V4c" kind="show" identifier="calendar" id="yC1-uF-tI2"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Zzx-hs-1Ke"/>
@@ -1547,17 +1679,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g5m-RQ-AhL">
-                                <rect key="frame" x="179" y="101" width="214" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Mental Health Resources"/>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y2T-ju-63k">
-                                <rect key="frame" x="0.0" y="101" width="81" height="35"/>
+                                <rect key="frame" x="13" y="101" width="81" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Journal"/>
+                                <buttonConfiguration key="configuration" style="tinted" title="Journal"/>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="_________________________________________" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L6u-eU-rAr">
                                 <rect key="frame" x="16" y="131" width="363" height="21"/>
@@ -1567,10 +1693,13 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XU2-Mw-1jT">
-                                <rect key="frame" x="89" y="101" width="77" height="35"/>
+                                <rect key="frame" x="94" y="101" width="77" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Entries"/>
+                                <connections>
+                                    <segue destination="IwD-tx-Q6B" kind="show" identifier="journalEntries" id="Q6b-VM-vE5"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Entry Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sP8-v3-Jiq">
                                 <rect key="frame" x="16" y="160" width="114" height="44"/>
@@ -1616,6 +1745,15 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="gray" title="Discard"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g5m-RQ-AhL">
+                                <rect key="frame" x="165" y="101" width="214" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Mental Health Resources"/>
+                                <connections>
+                                    <segue destination="owF-n1-hys" kind="show" identifier="mentalHealthResources" id="EM0-Rl-PdI"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="FRK-Be-Ckb"/>
@@ -1674,26 +1812,26 @@
             <objects>
                 <viewController title="Journal Entries" id="IwD-tx-Q6B" customClass="JournalEntriesController" customModule="VitalityBoost" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="jrN-DL-8vA">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="769"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rHr-1z-1aM">
-                                <rect key="frame" x="89" y="101" width="77" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Entries"/>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CfE-Hs-0p1">
-                                <rect key="frame" x="179" y="101" width="214" height="35"/>
+                                <rect key="frame" x="165" y="101" width="214" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Mental Health Resources"/>
+                                <connections>
+                                    <segue destination="owF-n1-hys" kind="show" identifier="mentalHealthResources" id="EZK-2f-cox"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ITi-zo-vQv">
-                                <rect key="frame" x="0.0" y="101" width="81" height="35"/>
+                                <rect key="frame" x="16" y="101" width="81" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Journal"/>
+                                <connections>
+                                    <segue destination="ikE-pL-l31" kind="show" identifier="journal" id="LD3-vr-jRd"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="_________________________________________" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oom-Ko-UQO">
                                 <rect key="frame" x="16" y="131" width="363" height="21"/>
@@ -1702,6 +1840,12 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rHr-1z-1aM">
+                                <rect key="frame" x="92" y="101" width="77" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="tinted" title="Entries"/>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Rwy-EY-hRM"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -1759,7 +1903,7 @@
             <objects>
                 <viewController title="Mental Health Resources" id="owF-n1-hys" customClass="MentalHealthResourcesController" customModule="VitalityBoost" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="mGp-Uo-PE1">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="769"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xtH-KT-M5o">
@@ -1767,18 +1911,18 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Entries"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o6o-jB-sZ4">
-                                <rect key="frame" x="179" y="101" width="214" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Mental Health Resources"/>
+                                <connections>
+                                    <segue destination="IwD-tx-Q6B" kind="show" identifier="journalEntries" id="N45-HY-67v"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yWG-QK-weK">
-                                <rect key="frame" x="0.0" y="101" width="81" height="35"/>
+                                <rect key="frame" x="16" y="101" width="81" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Journal"/>
+                                <connections>
+                                    <segue destination="ikE-pL-l31" kind="show" identifier="journal" id="sqO-U8-g7N"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="_________________________________________" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Zj-SK-w0g">
                                 <rect key="frame" x="16" y="131" width="363" height="21"/>
@@ -1787,6 +1931,12 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o6o-jB-sZ4">
+                                <rect key="frame" x="165" y="101" width="214" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="tinted" title="Mental Health Resources"/>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="JfX-gB-emf"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -1842,7 +1992,6 @@
         <!--Home Nav Controller-->
         <scene sceneID="hYQ-mJ-Y7G">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="7UC-bu-itd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController title="Home Nav Controller" automaticallyAdjustsScrollViewInsets="NO" id="R9E-AM-iGD" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Home" image="house.fill" catalog="system" id="2bS-h6-Zrm"/>
                     <toolbarItems/>
@@ -1870,6 +2019,7 @@
                         <segue destination="GlA-Jj-pNd" kind="relationship" relationship="rootViewController" id="obm-sn-hDI"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7UC-bu-itd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1153" y="793"/>
         </scene>
@@ -1911,7 +2061,7 @@
         <scene sceneID="wBn-bQ-fZ3">
             <objects>
                 <navigationController title="Resources Nav Controller" automaticallyAdjustsScrollViewInsets="NO" id="6Pb-Kd-kaL" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Fitness" id="uH6-nu-Qlf"/>
+                    <tabBarItem key="tabBarItem" title="Fitness" image="figure.run" catalog="system" id="uH6-nu-Qlf"/>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="OZl-XT-WWX">
                         <centerItemGroups>
@@ -1945,7 +2095,7 @@
         <scene sceneID="kYv-Is-CRL">
             <objects>
                 <navigationController title="Physical Wellbeing Nav Controller" automaticallyAdjustsScrollViewInsets="NO" id="RjW-F5-l3A" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Workouts" id="hht-nz-JFQ"/>
+                    <tabBarItem key="tabBarItem" title="Workouts" image="figure.water.fitness" catalog="system" id="hht-nz-JFQ"/>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="YSv-4u-uBy"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="NC5-eK-aCl">
@@ -1965,7 +2115,7 @@
         <scene sceneID="Xag-ds-Tns">
             <objects>
                 <navigationController title="Nutrition Nav Controller" automaticallyAdjustsScrollViewInsets="NO" id="lPl-1H-fE1" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Recipes" id="bTy-r5-4eL"/>
+                    <tabBarItem key="tabBarItem" title="Recipes" image="fork.knife" catalog="system" id="bTy-r5-4eL"/>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="Ul7-0Q-UhX"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="rCK-uQ-Y8N">
@@ -2005,7 +2155,7 @@
         <scene sceneID="ugg-ie-i3w">
             <objects>
                 <navigationController title="Mentality Nav Controller" automaticallyAdjustsScrollViewInsets="NO" id="tIX-9E-1dD" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Journal" id="PaV-yJ-KME"/>
+                    <tabBarItem key="tabBarItem" title="Journal" image="note.text.badge.plus" catalog="system" id="PaV-yJ-KME"/>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="7XN-km-BRh"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="3pG-UO-3pk">
@@ -2025,7 +2175,7 @@
         <scene sceneID="Rrq-hi-4St">
             <objects>
                 <navigationController title="Affordable Options Nav Controller" automaticallyAdjustsScrollViewInsets="NO" id="T8r-9e-lh3" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Affordable Options" id="G4i-FJ-WmQ"/>
+                    <tabBarItem key="tabBarItem" title="Affordable Options" image="dollarsign.arrow.circlepath" catalog="system" id="G4i-FJ-WmQ"/>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="bzK-bT-ZaT"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Nu7-UB-K7N">
@@ -2065,7 +2215,7 @@
         <scene sceneID="lvV-DE-QCS">
             <objects>
                 <navigationController title="Supplements Nav Controller" automaticallyAdjustsScrollViewInsets="NO" id="D7g-Ul-73a" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Supplements" id="Xec-ek-gQl"/>
+                    <tabBarItem key="tabBarItem" title="Supplements" image="pill.fill" catalog="system" id="Xec-ek-gQl"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="VUP-nJ-pon">
                         <rect key="frame" x="0.0" y="59" width="393" height="44"/>
@@ -2084,7 +2234,7 @@
         <scene sceneID="FSQ-I5-Brv">
             <objects>
                 <navigationController title="Recipe Search Nav Controller" automaticallyAdjustsScrollViewInsets="NO" id="cAF-sz-lXh" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Recipe Search" id="gwB-1s-IlF"/>
+                    <tabBarItem key="tabBarItem" title="Recipe Search" image="fork.knife.circle.fill" catalog="system" id="gwB-1s-IlF"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="jTe-7J-Ipb">
                         <rect key="frame" x="0.0" y="59" width="393" height="44"/>
@@ -2103,7 +2253,7 @@
         <scene sceneID="puQ-eF-Fum">
             <objects>
                 <navigationController title="Organization Assistance Nav Controller" automaticallyAdjustsScrollViewInsets="NO" id="551-wt-IUC" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Organization Assistance" id="87I-42-VeT"/>
+                    <tabBarItem key="tabBarItem" title="Organization Assistance" image="folder" catalog="system" id="87I-42-VeT"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="X5q-sT-qIX">
                         <rect key="frame" x="0.0" y="59" width="393" height="44"/>
@@ -2122,7 +2272,7 @@
         <scene sceneID="Fgp-bR-Iu3">
             <objects>
                 <navigationController title="Journal Entries Nav Controller" automaticallyAdjustsScrollViewInsets="NO" id="4Sv-2b-fDL" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Journal Entries" id="Bta-ro-lWO"/>
+                    <tabBarItem key="tabBarItem" title="Journal Entries" image="note.text" catalog="system" id="Bta-ro-lWO"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="7Iw-AL-Lx0">
                         <rect key="frame" x="0.0" y="59" width="393" height="44"/>
@@ -2141,7 +2291,7 @@
         <scene sceneID="Fko-AJ-2GT">
             <objects>
                 <navigationController title="Mental Health Resources Nav Controller" automaticallyAdjustsScrollViewInsets="NO" id="mZI-1G-sLa" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Mental Health Resources" id="wTh-Z7-sIN"/>
+                    <tabBarItem key="tabBarItem" title="Mental Health Resources" image="brain.head.profile.fill" catalog="system" id="wTh-Z7-sIN"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="jaj-7D-BBi">
                         <rect key="frame" x="0.0" y="59" width="393" height="44"/>
@@ -2158,29 +2308,47 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="t0z-b5-xll"/>
-        <segue reference="30B-mf-pqb"/>
-        <segue reference="uoq-v3-am0"/>
-        <segue reference="lmA-Zg-Nch"/>
-        <segue reference="byY-aQ-Ieg"/>
-        <segue reference="cOt-LV-IU8"/>
-        <segue reference="jaR-Nx-dcq"/>
-        <segue reference="Eg5-bZ-NlH"/>
-        <segue reference="HTE-KT-VGY"/>
-        <segue reference="8ap-dD-8Ar"/>
-        <segue reference="d2O-3k-59l"/>
+        <segue reference="EZK-2f-cox"/>
+        <segue reference="N45-HY-67v"/>
+        <segue reference="O5f-jl-IfF"/>
+        <segue reference="cSX-nM-wRz"/>
+        <segue reference="fCV-gj-x4i"/>
+        <segue reference="Hx1-DI-RVH"/>
+        <segue reference="I5I-Bm-boA"/>
+        <segue reference="tjS-gq-cbq"/>
+        <segue reference="BSs-4s-0Oj"/>
+        <segue reference="scp-y7-UWH"/>
+        <segue reference="66h-vg-3Zd"/>
+        <segue reference="ZhB-G7-pdd"/>
+        <segue reference="KQb-Jx-NuV"/>
+        <segue reference="FUm-qA-H58"/>
+        <segue reference="YGl-SK-72g"/>
+        <segue reference="3Ge-NU-cOe"/>
+        <segue reference="fCe-Fb-gmW"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="ai-generated-8266786_1280" width="1280" height="717"/>
+        <image name="brain.head.profile.fill" catalog="system" width="120" height="128"/>
         <image name="calendar" catalog="system" width="128" height="107"/>
         <image name="calendar-7544098_1280" width="1280" height="905"/>
+        <image name="chart.bar.doc.horizontal.fill" catalog="system" width="115" height="128"/>
+        <image name="dollarsign.arrow.circlepath" catalog="system" width="128" height="112"/>
         <image name="dumbbells-2465478_1280" width="1280" height="853"/>
+        <image name="figure.run" catalog="system" width="115" height="128"/>
+        <image name="figure.water.fitness" catalog="system" width="128" height="88"/>
+        <image name="folder" catalog="system" width="128" height="96"/>
+        <image name="fork.knife" catalog="system" width="94" height="128"/>
+        <image name="fork.knife.circle.fill" catalog="system" width="128" height="123"/>
         <image name="house.fill" catalog="system" width="128" height="104"/>
         <image name="logbook-154730_1280" width="1280" height="1064"/>
         <image name="login-7103076_1280" width="1280" height="853"/>
         <image name="magnifyingglass" catalog="system" width="128" height="117"/>
+        <image name="note.text" catalog="system" width="128" height="107"/>
+        <image name="note.text.badge.plus" catalog="system" width="128" height="109"/>
+        <image name="person.circle" catalog="system" width="128" height="123"/>
         <image name="person.crop.circle" catalog="system" width="128" height="123"/>
-        <image name="person.fill" catalog="system" width="128" height="120"/>
+        <image name="person.crop.circle.badge.plus" catalog="system" width="128" height="114"/>
+        <image name="pill.fill" catalog="system" width="128" height="123"/>
         <image name="plus" catalog="system" width="128" height="113"/>
         <image name="vegetables-1529726_1280" width="1280" height="593"/>
         <image name="yoga-8385447_1280" width="1280" height="890"/>

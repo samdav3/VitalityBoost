@@ -22,6 +22,16 @@ class ViewController: UIViewController {
         performSegue(withIdentifier: "recipes", sender: UIButton.self)
         performSegue(withIdentifier: "calendar", sender: UIButton.self)
         performSegue(withIdentifier: "journal", sender: UIButton.self)
+        performSegue(withIdentifier: "goals", sender: UIButton.self)
+        performSegue(withIdentifier: "contactInfo", sender: UIButton.self)
+        performSegue(withIdentifier: "affordableOptions", sender: UIButton.self)
+        performSegue(withIdentifier: "personalResearch", sender: UIButton.self)
+        performSegue(withIdentifier: "supplements", sender: UIButton.self)
+        performSegue(withIdentifier: "recipeSearch", sender: UIButton.self)
+        performSegue(withIdentifier: "organizationAssistance", sender: UIButton.self)
+        performSegue(withIdentifier: "journalEntries", sender: UIButton.self)
+        performSegue(withIdentifier: "mentalHealthResources", sender: UIButton.self)
+        performSegue(withIdentifier: "addGoal", sender: UIButton.self)
     }
 
 }
