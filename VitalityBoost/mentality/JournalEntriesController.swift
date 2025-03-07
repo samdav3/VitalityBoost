@@ -7,8 +7,39 @@
 
 import UIKit
 
-class JournalEntriesController: UIViewController {
+class JournalEntriesController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
+    @IBOutlet var mainView: UIView!
+    @IBOutlet weak var subView: UIView!
+    @IBOutlet weak var table: UITableView!
+    let mentTableArray = ["", "", "", ""]
+    let cellID = "cellID"
     
+    override func viewDidLoad() {
+        
+        super.viewDidLoad()
+        // Do any additional setup after loading the view.
+        table.dataSource = self
+        table.delegate = self
+        table.frame = subView.bounds
+        mainView.addSubview(subView)
+
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return mentTableArray.count
+        }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        var cell = tableView.dequeueReusableCell(withIdentifier: cellID)
+        if (cell == nil){
+            cell = UITableViewCell(
+                style: UITableViewCell.CellStyle.default,
+                reuseIdentifier: cellID
+            )
+        }
+        cell?.textLabel?.text = mentTableArray[indexPath.row]
+        return cell!
+        }
         
     }
