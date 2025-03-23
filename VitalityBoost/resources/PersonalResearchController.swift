@@ -9,6 +9,6 @@ import UIKit
 
 class PersonalResearchController: UIViewController {
     
-    
+    var rcvdUsername = ""
         
     }

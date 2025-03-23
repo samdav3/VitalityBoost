@@ -10,6 +10,7 @@ import EventKit
 
 class CalendarController: UIViewController {
     
+    var rcvdUsername = ""
     
         
     }

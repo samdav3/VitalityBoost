@@ -6,8 +6,11 @@
 //
 
 import UIKit
+import SwiftUI
 
 class ViewController: UIViewController {
+    
+    var rcvdUsername = ""
     
     override func viewDidLoad() {
         
@@ -34,6 +37,8 @@ class ViewController: UIViewController {
         performSegue(withIdentifier: "journalEntries", sender: UIButton.self)
         performSegue(withIdentifier: "mentalHealthResources", sender: UIButton.self)
         performSegue(withIdentifier: "addGoal", sender: UIButton.self)
+        performSegue(withIdentifier: "createAccount", sender: UIButton.self)
+        
     }
     
     

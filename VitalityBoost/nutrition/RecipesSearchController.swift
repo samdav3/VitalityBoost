@@ -9,6 +9,6 @@ import UIKit
 
 class RecipesSearchController: UIViewController {
     
-    
+    var rcvdUsername = ""
         
     }

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="xTt-eE-o2Y">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="xTt-eE-o2Y">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -308,7 +308,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="gray" title="Login"/>
                                 <connections>
-                                    <segue destination="cWD-XT-nTa" kind="show" identifier="account" id="caB-IP-r3X"/>
+                                    <segue destination="cWD-XT-nTa" kind="show" identifier="login" id="oig-I6-ZJF"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b05-Vd-J9L">
@@ -333,11 +333,7 @@
                                             <segue destination="GlA-Jj-pNd" kind="show" identifier="home" id="1hw-jt-DAO"/>
                                         </connections>
                                     </barButtonItem>
-                                    <barButtonItem title="Account" id="U2I-CR-H27">
-                                        <connections>
-                                            <segue destination="Fr2-LV-0cp" kind="show" identifier="login" id="KRb-oq-0Gr"/>
-                                        </connections>
-                                    </barButtonItem>
+                                    <barButtonItem title="Account" id="U2I-CR-H27"/>
                                     <barButtonItem title="Resources" id="RsM-W7-GSz">
                                         <connections>
                                             <segue destination="dqU-S4-ZMo" kind="show" identifier="fitness" id="5SR-DC-x5t"/>
@@ -367,6 +363,10 @@
                             </barButtonItemGroup>
                         </centerItemGroups>
                     </navigationItem>
+                    <connections>
+                        <outlet property="userPassword" destination="5ng-c1-Yoc" id="BFL-Jx-6gq"/>
+                        <outlet property="userUsername" destination="j9K-S7-WSy" id="Unb-Ai-eWd"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5Uu-bj-QJO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -470,6 +470,9 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="gray" title="Create Account"/>
+                                <connections>
+                                    <action selector="createAccountBtn:" destination="aSb-wR-FFO" eventType="touchUpInside" id="naE-n8-o08"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WqO-97-4IH">
                                 <rect key="frame" x="175" y="186" width="202" height="34"/>
@@ -525,6 +528,16 @@
                             </barButtonItemGroup>
                         </centerItemGroups>
                     </navigationItem>
+                    <connections>
+                        <outlet property="createAcctBtn" destination="Gza-ec-tWQ" id="aZu-gX-S1r"/>
+                        <outlet property="userAddress" destination="ave-HH-waq" id="ft1-60-1Vm"/>
+                        <outlet property="userEmailT" destination="vO9-xn-KFo" id="ApM-bB-nat"/>
+                        <outlet property="userFirstName" destination="guB-Jl-csu" id="f58-CS-xLl"/>
+                        <outlet property="userLastName" destination="8gt-cW-vXS" id="E0C-lG-nt6"/>
+                        <outlet property="userPassword" destination="WqO-97-4IH" id="0fO-ff-ABB"/>
+                        <outlet property="userPhone" destination="7Ir-lJ-Yaj" id="zyt-Jg-nx6"/>
+                        <outlet property="userUsername" destination="7Qa-55-N7t" id="hIg-jh-WTR"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="K7O-2Y-CQw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -656,6 +669,9 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="gray" title="Save/Update Account"/>
+                                <connections>
+                                    <action selector="saveUpdateBtn:" destination="cWD-XT-nTa" eventType="touchUpInside" id="0dq-6q-XrB"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="0Xi-iy-eNa"/>
@@ -705,10 +721,19 @@
                             </barButtonItemGroup>
                         </centerItemGroups>
                     </navigationItem>
+                    <connections>
+                        <outlet property="userAddress" destination="cev-4E-D0V" id="4UB-uD-mgI"/>
+                        <outlet property="userEmailT" destination="rxm-7j-2qG" id="KYo-xM-2me"/>
+                        <outlet property="userFirstName" destination="VEf-Yr-1xx" id="aFR-vs-6nI"/>
+                        <outlet property="userLastName" destination="lcQ-nG-cDA" id="UA9-9P-Mwt"/>
+                        <outlet property="userPassword" destination="jZN-UM-zF1" id="M51-K9-v5n"/>
+                        <outlet property="userPhone" destination="H3u-M8-Wg3" id="Ab6-Av-S0B"/>
+                        <outlet property="userUsername" destination="uOi-gi-Gqm" id="Kc8-MO-Eg2"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hLG-fE-jjp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-862" y="1685"/>
+            <point key="canvasLocation" x="-863.35877862595419" y="1684.5070422535211"/>
         </scene>
         <!--Goals-->
         <scene sceneID="rni-z2-JDd">
@@ -2803,23 +2828,23 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="EZK-2f-cox"/>
-        <segue reference="N45-HY-67v"/>
-        <segue reference="Hja-Vy-J99"/>
+        <segue reference="EM0-Rl-PdI"/>
+        <segue reference="Q6b-VM-vE5"/>
+        <segue reference="1VD-x3-Gw7"/>
         <segue reference="cSX-nM-wRz"/>
-        <segue reference="GeO-Op-mUa"/>
+        <segue reference="M80-n6-6OD"/>
         <segue reference="Hx1-DI-RVH"/>
-        <segue reference="ecp-fS-4tB"/>
+        <segue reference="sx0-9K-0Rs"/>
         <segue reference="tjS-gq-cbq"/>
-        <segue reference="Qfw-H7-cSF"/>
-        <segue reference="2IW-06-4Wa"/>
+        <segue reference="0l3-xx-RQA"/>
+        <segue reference="scp-y7-UWH"/>
         <segue reference="66h-vg-3Zd"/>
-        <segue reference="Bm7-q2-h5u"/>
+        <segue reference="VJ8-GB-caw"/>
         <segue reference="KQb-Jx-NuV"/>
-        <segue reference="FUm-qA-H58"/>
+        <segue reference="oig-I6-ZJF"/>
         <segue reference="YGl-SK-72g"/>
-        <segue reference="gwH-z1-m0E"/>
-        <segue reference="wqn-91-xIN"/>
+        <segue reference="Oq6-AD-Ejo"/>
+        <segue reference="NNC-dt-DAA"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="ai-generated-8266786_1280" width="1280" height="717"/>
@@ -2827,7 +2852,7 @@
         <image name="calendar" catalog="system" width="128" height="107"/>
         <image name="calendar-7544098_1280" width="1280" height="905"/>
         <image name="chart.bar.doc.horizontal.fill" catalog="system" width="115" height="128"/>
-        <image name="dollarsign.arrow.circlepath" catalog="system" width="128" height="112"/>
+        <image name="dollarsign.arrow.circlepath" catalog="system" width="128" height="119"/>
         <image name="dumbbells-2465478_1280" width="1280" height="853"/>
         <image name="figure.run" catalog="system" width="115" height="128"/>
         <image name="figure.water.fitness" catalog="system" width="128" height="88"/>
@@ -2851,7 +2876,7 @@
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="secondarySystemBackgroundColor">
-            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

@@ -6,9 +6,89 @@
 //
 
 import UIKit
+import SwiftUI
+import FirebaseCore
+import FirebaseFirestore
+import FirebaseAuth
+import FirebaseAppCheck
+import CoreMedia
 
 class CreateAccountController: UIViewController {
     
+    let db = Firestore.firestore()
     
-        
+    @IBOutlet weak var userUsername: UITextField!
+    @IBOutlet weak var userPassword: UITextField!
+    @IBOutlet weak var userFirstName: UITextField!
+    @IBOutlet weak var userLastName: UITextField!
+    @IBOutlet weak var userEmailT: UITextField!
+    @IBOutlet weak var userPhone: UITextField!
+    @IBOutlet weak var userAddress: UITextField!
+    @IBOutlet weak var createAcctBtn: UIButton!
+    
+    var username = ""
+    public var rcvdUsername = ""
+    var userUsernameEntry = ""
+    var userPasswordEntry = ""
+    var userFirstNameEntry = ""
+    var userLastNameEntry = ""
+    var userEmaiLEntry = ""
+    var userPhoneEntry = ""
+    var userAddressEntry = ""
+    
+    override func viewDidLoad()  {
+        super.viewDidLoad()
+        userUsername.text! = rcvdUsername
+        Task{
+            await checkDB()
+        }
     }
+    
+    func checkDB() async{
+        do{
+            let document = try await db.collection("users").document(rcvdUsername).getDocument()
+            if(document.exists){
+                let updateAlert = UIAlertController(title: "Username already Exists", message: "Please use a different Username or Login to existing Account.", preferredStyle: .alert)
+                updateAlert.addAction(UIAlertAction(title: "Dismiss", style: .default, handler: nil))
+                self.present(updateAlert, animated: true, completion: nil)
+            }else{
+                print("Error checking DB")
+            }
+        }
+        catch{
+            print("Error getting document: \(error)")
+        }
+    }
+    
+    @IBAction func createAccountBtn(_ sender: UIButton) {
+        Task {
+            await createAccount()
+        }
+    }
+    
+    
+    func createAccount() async {
+        do{
+            _ = try await db.collection("users").document(userUsername.text!).setData([
+                "username": userUsername.text!,
+                "password": userPassword.text!,
+                "firstName": userFirstName.text!,
+                "lastName": userLastName.text!,
+                "email": userEmailT.text!,
+                "phone": userPhone.text!,
+                "address": userAddress.text!,
+            ])
+            
+            let docID = db.collection("users").document(userUsername.text!).documentID
+            print("Document added/updated with ID: \(docID)")
+            let updateAlert = UIAlertController(title: "Account Info Saved", message: "Document added.updated with ID: \(docID)", preferredStyle: .alert)
+            updateAlert.addAction(UIAlertAction(title: "Dismiss", style: .default, handler: nil))
+            self.present(updateAlert, animated: true, completion: nil)
+        }
+        catch {
+            print("Error adding document: \(error)")
+            
+        }
+    }
+    
+}

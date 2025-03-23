@@ -9,6 +9,8 @@ import UIKit
 
 class OrganizationAssistanceController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
+    var rcvdUsername = ""
+    
     @IBOutlet var mainView: UIView!
     @IBOutlet weak var subView: UIView!
     @IBOutlet weak var table: UITableView!

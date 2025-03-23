@@ -9,6 +9,6 @@ import UIKit
 
 class AddGoalController: UIViewController {
     
-    
+    var rcvdUsername = ""
         
     }
