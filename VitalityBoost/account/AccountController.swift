@@ -40,7 +40,6 @@ class AccountController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         if (rcvdUsername == ""){
             print("do nothing")
         }else{
@@ -48,9 +47,8 @@ class AccountController: UIViewController {
                 await login()
             }
         }
-        
+        print(rcvdUsername)
     }
-    
     
     func login() async {
         do{
@@ -95,6 +93,9 @@ class AccountController: UIViewController {
         }
     }
     
+    
+    
+    
     @IBAction func saveUpdateBtn(_ sender: UIButton) {
         Task {
             await updateEntry()
@@ -129,12 +130,15 @@ class AccountController: UIViewController {
         }
     }
     
+    
+    /*MARK: Navigation*/
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
+    
         if segue.identifier == "home"{
             let homeVC = segue.destination as! ViewController
             homeVC.rcvdUsername = rcvdUsername
             homeVC.navigationItem.title = "Home"
+            
         }
         else if segue.identifier == "login"{
             let loginVC = segue.destination as! LoginController
@@ -190,6 +194,7 @@ class AccountController: UIViewController {
             let personalResearchVC = segue.destination as! PersonalResearchController
             personalResearchVC.rcvdUsername = rcvdUsername
             personalResearchVC.navigationItem.title = "Personal Research"
+            
         }
         else if segue.identifier == "supplements" {
             let supplementsVC = segue.destination as! SupplementsController
@@ -221,5 +226,11 @@ class AccountController: UIViewController {
             addGoalVC.rcvdUsername = rcvdUsername
             addGoalVC.navigationItem.title = "Add Goal"
         }
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        let tabBar = tabBarController as! BaseTabBarController
+        tabBar.rcvdUsername = rcvdUsername
+        
     }
 }

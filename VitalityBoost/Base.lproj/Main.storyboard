@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Tab Bar Controller-->
+        <!--Base Tab Bar Controller-->
         <scene sceneID="sgI-tU-tQr">
             <objects>
-                <tabBarController id="xTt-eE-o2Y" sceneMemberID="viewController">
+                <tabBarController id="xTt-eE-o2Y" customClass="BaseTabBarController" customModule="VitalityBoost" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="NTv-nf-X0d">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -34,7 +34,6 @@
                         <segue destination="mZI-1G-sLa" kind="relationship" relationship="viewControllers" id="Oj2-gX-l74"/>
                         <segue destination="cWD-XT-nTa" kind="relationship" relationship="viewControllers" id="Eg5-bZ-NlH"/>
                         <segue destination="UxL-fg-8GU" kind="relationship" relationship="viewControllers" id="Lv7-nY-HiS"/>
-                        <segue destination="aSb-wR-FFO" kind="relationship" relationship="viewControllers" id="HTE-KT-VGY"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dW9-kZ-dg0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -548,7 +547,7 @@
             <objects>
                 <viewController id="cWD-XT-nTa" customClass="AccountController" customModule="VitalityBoost" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="uG5-gd-WU4">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="783"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="735"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pUU-BE-Wdn">
@@ -740,7 +739,7 @@
             <objects>
                 <viewController id="UxL-fg-8GU" customClass="GoalsController" customModule="VitalityBoost" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="k0F-D6-rN7">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="783"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="735"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YDI-Qt-aoW">
@@ -845,6 +844,13 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Due Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bte-xj-HVL">
+                                <rect key="frame" x="16" y="323" width="145" height="53"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BzP-3B-NDc">
                                 <rect key="frame" x="169" y="138" width="208" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -861,11 +867,18 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gb7-R2-wAR">
-                                <rect key="frame" x="160" y="357" width="94" height="35"/>
+                                <rect key="frame" x="149" y="439" width="94" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="gray" title="Add Goal"/>
+                                <connections>
+                                    <action selector="addGoal:" destination="CcN-gf-sCR" eventType="touchUpInside" id="6KW-H0-6J7"/>
+                                </connections>
                             </button>
+                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="7Z9-Ir-PlS">
+                                <rect key="frame" x="169" y="326" width="208" height="47"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            </datePicker>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6fs-UK-6XM"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -886,10 +899,15 @@
                             </barButtonItemGroup>
                         </centerItemGroups>
                     </navigationItem>
+                    <connections>
+                        <outlet property="goalDescription" destination="UHY-dt-fQQ" id="3gt-r5-E5o"/>
+                        <outlet property="goalDueDate" destination="7Z9-Ir-PlS" id="CzS-0u-glR"/>
+                        <outlet property="goalTitle" destination="BzP-3B-NDc" id="m2w-6d-udz"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kCN-Un-GtJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1604" y="2481"/>
+            <point key="canvasLocation" x="-1605.3435114503816" y="2480.2816901408451"/>
         </scene>
         <!--Fitness-->
         <scene sceneID="WDg-qf-s4j">
@@ -2169,6 +2187,9 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="gray" title="Save"/>
+                                <connections>
+                                    <action selector="saveEntry:" destination="ikE-pL-l31" eventType="touchUpInside" id="Nn1-30-0U6"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ac5-vY-vBh">
                                 <rect key="frame" x="13" y="720" width="82" height="35"/>
@@ -2232,6 +2253,11 @@
                             </barButtonItemGroup>
                         </centerItemGroups>
                     </navigationItem>
+                    <connections>
+                        <outlet property="entryDate" destination="0hk-eP-Wd5" id="Y13-sc-PIQ"/>
+                        <outlet property="entryTitle" destination="RHs-oe-Of8" id="QEc-9j-YBd"/>
+                        <outlet property="journalEntry" destination="rOf-xa-AMb" id="uqU-Wx-1Dh"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yY6-oP-RwU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -2858,23 +2884,22 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="EZK-2f-cox"/>
-        <segue reference="N45-HY-67v"/>
-        <segue reference="LD3-vr-jRd"/>
+        <segue reference="EM0-Rl-PdI"/>
+        <segue reference="Q6b-VM-vE5"/>
+        <segue reference="f5F-Wl-wq8"/>
         <segue reference="cSX-nM-wRz"/>
-        <segue reference="BQ7-Hz-D4a"/>
+        <segue reference="nzV-rs-TOh"/>
         <segue reference="Hx1-DI-RVH"/>
-        <segue reference="et6-sT-Cyv"/>
+        <segue reference="7bM-cE-VRx"/>
         <segue reference="tjS-gq-cbq"/>
-        <segue reference="qXs-pB-Xku"/>
+        <segue reference="W8o-pE-1tO"/>
         <segue reference="scp-y7-UWH"/>
         <segue reference="66h-vg-3Zd"/>
-        <segue reference="Qlq-HI-oYy"/>
-        <segue reference="KQb-Jx-NuV"/>
-        <segue reference="oig-I6-ZJF"/>
-        <segue reference="YGl-SK-72g"/>
-        <segue reference="LQH-x4-hli"/>
-        <segue reference="JA4-X7-ihC"/>
+        <segue reference="1G6-Ob-aqQ"/>
+        <segue reference="Lv7-nY-HiS"/>
+        <segue reference="Eg5-bZ-NlH"/>
+        <segue reference="uho-JY-yBc"/>
+        <segue reference="LbC-y4-p8I"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="ai-generated-8266786_1280" width="1280" height="717"/>
@@ -2906,7 +2931,7 @@
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="secondarySystemBackgroundColor">
-            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

@@ -44,12 +44,29 @@ class CreateAccountController: UIViewController {
         }
     }
     
+//    override func viewDidAppear(_ animated: Bool){
+//        let tabBar = tabBarController as! BaseTabBarController
+//        rcvdUsername = String(describing: tabBar.rcvdUsername)
+//        print(rcvdUsername)
+//    }
+//    
+//    override func viewWillDisappear(_ animated: Bool) {
+//        let tabBar = tabBarController as! BaseTabBarController
+//        tabBar.rcvdUsername = String(rcvdUsername)
+//        
+//    }
+
+    
     func checkDB() async{
         do{
             let document = try await db.collection("users").document(rcvdUsername).getDocument()
             if(document.exists){
+                
                 let updateAlert = UIAlertController(title: "Username already Exists", message: "Please use a different Username or Login to existing Account.", preferredStyle: .alert)
-                updateAlert.addAction(UIAlertAction(title: "Dismiss", style: .default, handler: nil))
+                updateAlert.addAction(UIAlertAction(title: "Dismiss", style: .default, handler: {_ in 
+                    updateAlert.dismiss(animated: true, completion: nil)
+                    
+                }))
                 self.present(updateAlert, animated: true, completion: nil)
             }else{
                 print("Error checking DB")

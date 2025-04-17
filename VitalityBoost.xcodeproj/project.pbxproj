@@ -33,6 +33,8 @@
 		3F01EAE72D74FC0A00726A1A /* SupplementsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F01EAE62D74FC0A00726A1A /* SupplementsController.swift */; };
 		3F01EAE92D74FC1E00726A1A /* RecipesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F01EAE82D74FC1E00726A1A /* RecipesController.swift */; };
 		3F01EAEB2D74FC2B00726A1A /* RecipesSearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F01EAEA2D74FC2B00726A1A /* RecipesSearchController.swift */; };
+		3F2306242DA0403200AF864B /* SFSafariViewWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F2306232DA0403200AF864B /* SFSafariViewWrapper.swift */; };
+		3F451FE62DB16E47001B402E /* BaseTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F451FE52DB16E47001B402E /* BaseTabBarController.swift */; };
 		3F9DC21E2D90569F0032FE7F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3F9DC21D2D90569F0032FE7F /* GoogleService-Info.plist */; };
 		3F9DC21F2D90569F0032FE7F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3F9DC21D2D90569F0032FE7F /* GoogleService-Info.plist */; };
 		3F9DC2202D90569F0032FE7F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3F9DC21D2D90569F0032FE7F /* GoogleService-Info.plist */; };
@@ -108,6 +110,8 @@
 		3F01EAE82D74FC1E00726A1A /* RecipesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesController.swift; sourceTree = "<group>"; };
 		3F01EAEA2D74FC2B00726A1A /* RecipesSearchController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesSearchController.swift; sourceTree = "<group>"; };
 		3F2306222D9F0C7300AF864B /* VitalityBoost.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = VitalityBoost.entitlements; sourceTree = "<group>"; };
+		3F2306232DA0403200AF864B /* SFSafariViewWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SFSafariViewWrapper.swift; sourceTree = "<group>"; };
+		3F451FE52DB16E47001B402E /* BaseTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTabBarController.swift; sourceTree = "<group>"; };
 		3F9DC21D2D90569F0032FE7F /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -221,6 +225,7 @@
 			isa = PBXGroup;
 			children = (
 				3F01EA972D74FA6800726A1A /* ViewController.swift */,
+				3F451FE52DB16E47001B402E /* BaseTabBarController.swift */,
 			);
 			path = menu;
 			sourceTree = "<group>";
@@ -255,6 +260,7 @@
 		3F01EAC72D74FAA500726A1A /* resources */ = {
 			isa = PBXGroup;
 			children = (
+				3F2306232DA0403200AF864B /* SFSafariViewWrapper.swift */,
 				3F01EADA2D74FB9400726A1A /* FitnessController.swift */,
 				3F01EADC2D74FBA300726A1A /* PersonalResearchController.swift */,
 				3F01EADE2D74FBC000726A1A /* AffordableOptionsController.swift */,
@@ -434,6 +440,7 @@
 				3F01EAD52D74FB5000726A1A /* JournalController.swift in Sources */,
 				3F01EACF2D74FB0C00726A1A /* GoalsController.swift in Sources */,
 				3F01EA982D74FA6800726A1A /* ViewController.swift in Sources */,
+				3F451FE62DB16E47001B402E /* BaseTabBarController.swift in Sources */,
 				3F01EAE92D74FC1E00726A1A /* RecipesController.swift in Sources */,
 				3F01EACD2D74FAF700726A1A /* AccountController.swift in Sources */,
 				3F01EAE12D74FBD700726A1A /* CalendarController.swift in Sources */,
@@ -441,6 +448,7 @@
 				3F01EADB2D74FB9400726A1A /* FitnessController.swift in Sources */,
 				3F01EACB2D74FAD500726A1A /* LoginController.swift in Sources */,
 				3F01EAD72D74FB6100726A1A /* JournalEntriesController.swift in Sources */,
+				3F2306242DA0403200AF864B /* SFSafariViewWrapper.swift in Sources */,
 				3F01EAD32D74FB3800726A1A /* CreateAccountController.swift in Sources */,
 				3F01EA942D74FA6800726A1A /* AppDelegate.swift in Sources */,
 				3F01EA962D74FA6800726A1A /* SceneDelegate.swift in Sources */,
