@@ -87,6 +87,8 @@ class GoalsController: UIViewController, UITableViewDelegate, UITableViewDataSou
         tableView.frame = subView.bounds
         query = baseQuery()
         print("viewDidLoad")
+        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "TableViewCell")
+
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -116,12 +118,12 @@ class GoalsController: UIViewController, UITableViewDelegate, UITableViewDataSou
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "TableViewCell")
     
         let cell = tableView.dequeueReusableCell(withIdentifier: "TableViewCell", for: indexPath)
         let date = goalTableArray[indexPath.row].date
         let title = goalTableArray[indexPath.row].title
-        
+        print(title)
+        print(date)
         cell.textLabel?.text = title
         cell.detailTextLabel?.text = date
         
@@ -130,9 +132,12 @@ class GoalsController: UIViewController, UITableViewDelegate, UITableViewDataSou
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
       tableView.deselectRow(at: indexPath, animated: true)
-      let controller = GoalEntryCellDetailController.fromStoryboard()
-      controller.entries = goalTableArray[indexPath.row]
-      controller.goalReference = documents[indexPath.row].reference
+            let controller = GoalEntryCellDetailController.fromStoryboard()
+            controller.entries = goalTableArray[indexPath.row]
+            controller.rcvdUsername = rcvdUsername
+            controller.goalReference = documents[indexPath.row].reference
+            self.navigationController?.pushViewController(controller, animated: true)
+        
     }
     
     
@@ -229,6 +234,13 @@ class GoalsController: UIViewController, UITableViewDelegate, UITableViewDataSou
             addGoalVC.rcvdUsername = rcvdUsername
             addGoalVC.navigationItem.title = "Add Goal"
         }
+        else if segue.identifier == "goalDetails" {
+            let goalDetailsVC = segue.destination as! GoalEntryCellDetailController
+            goalDetailsVC.rcvdUsername = rcvdUsername
+            //goalDetailsVC.entries = goalTableArray[indexPath.row]
+            goalDetailsVC.navigationItem.title = "Goal Details"
+        }
+        
     }
     
     }

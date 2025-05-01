@@ -23,8 +23,6 @@ class JournalEntriesController: UIViewController, UITableViewDelegate, UITableVi
     @IBOutlet weak var table: UITableView!
     private var mentTableArray: [Journal] = []
     private var documents: [DocumentSnapshot] = []
-    //let cellID = "TableViewCell"
-    //let backgroundView = UIImageView()
     
     fileprivate var query: Query? {
       didSet {
@@ -82,7 +80,10 @@ class JournalEntriesController: UIViewController, UITableViewDelegate, UITableVi
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         print(rcvdUsername)
-        
+        //Task{
+            //await loadEntries()
+            print(mentTableArray)
+        //}
         table.dataSource = self
         table.delegate = self
         mainView.addSubview(subView)
@@ -90,8 +91,7 @@ class JournalEntriesController: UIViewController, UITableViewDelegate, UITableVi
         table.frame = subView.bounds
         query = baseQuery()
         print("viewDidLoad")
-        //tableView.register(TableViewCell.self, forCellWithReuseIdentifier: "TableViewCell")
-//        UIViewController().loadViewIfNeeded()
+        table.register(UITableViewCell.self, forCellReuseIdentifier: "TableViewCell")
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -123,14 +123,15 @@ class JournalEntriesController: UIViewController, UITableViewDelegate, UITableVi
     
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "TableViewCell")
-    
+        
         let cell = tableView.dequeueReusableCell(withIdentifier: "TableViewCell", for: indexPath)
         let date = mentTableArray[indexPath.row].date
         let title = mentTableArray[indexPath.row].title
         
         cell.textLabel?.text = title
         cell.detailTextLabel?.text = date
+//        let menTableArray = mentTableArray[indexPath.row]
+//        cell.populate(mentTableArray: menTableArray)
         
         return cell
         }
@@ -138,10 +139,9 @@ class JournalEntriesController: UIViewController, UITableViewDelegate, UITableVi
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
       tableView.deselectRow(at: indexPath, animated: true)
       let controller = JournalEntryCellDetailController.fromStoryboard()
-      //controller.titleImageURL = imageURL(from: restaurants[indexPath.row].name)
       controller.entries = mentTableArray[indexPath.row]
       controller.journalReference = documents[indexPath.row].reference
-      //self.navigationController?.pushViewController(controller, animated: true)
+      self.navigationController?.pushViewController(controller, animated: true)
     }
     
 
@@ -239,11 +239,6 @@ class JournalEntriesController: UIViewController, UITableViewDelegate, UITableVi
             addGoalVC.rcvdUsername = rcvdUsername
             addGoalVC.navigationItem.title = "Add Goal"
         }
-        else if segue.identifier == "entryDetails"{
-            let entryDetailsVC = segue.destination as! JournalEntryCellDetailController
-            entryDetailsVC.rcvdUsername = rcvdUsername
-            entryDetailsVC.navigationItem.title = "Entry Details"
-        }
     }
     
     
@@ -253,3 +248,109 @@ class JournalEntriesController: UIViewController, UITableViewDelegate, UITableVi
 ///main class ends here
 ///
 
+//class TableViewCell: UITableViewCell {
+//    
+//    @IBOutlet weak var titleLabel: UILabel!
+//    @IBOutlet weak var dateLabel: UILabel!
+//    
+//    
+////    let label1 = {
+////     let d = UILabel()
+////         d.textColor = UIColor.darkGray
+////         d.textAlignment = .center
+////        d.text = ""
+////        d.font = UIFont(name: "Montserrat", size: 30)
+////     return d
+////    }()
+////    let label2 = {
+////     let t = UILabel()
+////         t.textColor = UIColor.darkGray
+////         t.textAlignment = .center
+////        t.text = ""
+////        t.font = UIFont(name: "Montserrat", size: 30)
+////     return t
+////    }()
+////    let label3 = {
+////     let e = UILabel()
+////         e.textColor = UIColor.darkGray
+////         e.textAlignment = .center
+////        e.text = ""
+////        e.font = UIFont(name: "Montserrat", size: 30)
+////     return e
+////    }()
+////
+//    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
+//        super.init(style: style, reuseIdentifier: "TableViewCell")
+//
+//        addSubview(titleLabel)
+//        addSubview(dateLabel)
+//
+//    }
+//
+//    required init?(coder aDecoder: NSCoder) {
+//        fatalError("init(coder:) has not been implemented")
+//    }
+//    
+//    func populate(mentTableArray: Journal) {
+//        
+////        label1.text = mentTableArray.date
+////        label2.text = mentTableArray.title
+////        label3.text = mentTableArray.description
+//        dateLabel.text = mentTableArray.date
+//        titleLabel.text = mentTableArray.title
+////        entryLabel.text = mentTableArray.description
+//        //trashIcon.setImage(<#T##image: UIImage?##UIImage?#>, for: <#T##UIControl.State#>)
+////        let image = imageURL(from: restaurant.name)
+////        thumbnailView.sd_setImage(with: image)
+//    }
+//    override func prepareForReuse() {
+//        super.prepareForReuse()
+////        thumbnailView.sd_cancelCurrentImageLoad()
+//}
+//}
+////    
+    
+    //@IBOutlet weak private var trashIcon: UIButton!
+
+    
+
+
+
+
+
+//fileprivate func convertToOptionalNSAttributedStringKeyDictionary(_ input: [String: Any]?) -> [NSAttributedString.Key: Any]? {
+//guard let input = input else { return nil }
+//return Dictionary(uniqueKeysWithValues: input.map { key, value in (NSAttributedString.Key(rawValue: key), value)})
+//}
+
+    
+
+
+
+//    func loadEntries() async {
+//
+//        return db.collection("users").document(rcvdUsername).collection("journal").limit(to: 50)
+//        //collection("restaurants").limit(to: 50)
+//    }
+//        do{
+//            let entries = try await db.collection("users").document(rcvdUsername).collection("journal").getDocuments()
+//
+//            //var entryData = ""
+//
+//            if (entries.isEmpty){
+//                print("failure")
+//                let updateAlert = UIAlertController(title: "No Entry History Found", message: "You have no saved Journal Entries in your Account.", preferredStyle: .alert)
+//                updateAlert.addAction(UIAlertAction(title: "Dismiss", style: .default, handler: nil))
+//                self.present(updateAlert, animated: true, completion: nil)
+//
+//            }else{
+//                let querySnapshot = try await db.collection("users").document(rcvdUsername).collection("journal").getDocuments()
+//                for document in querySnapshot.documents{
+//                    mentTableArray.append("\(document.get("date") as! String)")
+//                }
+//            }
+//        }
+//        catch{
+//            print("Error retrieving data from database.")
+//        }
+//
