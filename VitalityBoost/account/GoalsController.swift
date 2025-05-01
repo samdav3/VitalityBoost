@@ -13,16 +13,86 @@ import FirebaseAuth
 import FirebaseAppCheck
 import CoreMedia
 
-class GoalsController: UIViewController {
-    
+class GoalsController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+
+    let db = Firestore.firestore()
     var rcvdUsername = ""
+    
+    @IBOutlet var mainView: UIView!
+    @IBOutlet weak var subView: UIView!
+    @IBOutlet weak var tableView: UITableView!
+    private var goalTableArray: [Goals] = []
+    private var documents: [DocumentSnapshot] = []
+    
+    fileprivate var query: Query? {
+      didSet {
+        if let listener = listener {
+          listener.remove()
+          observeQuery()
+        }
+      }
+    }
+
+    private var listener: ListenerRegistration?
+
+    fileprivate func observeQuery() {
+      guard let query = query else { return }
+      stopObserving()
+
+        listener = query.addSnapshotListener { [unowned self] (snapshot, error) in
+          guard let snapshot = snapshot else {
+            print("Error fetching snapshot results: \(error!)")
+            return
+          }
+          let models = snapshot.documents.map { (document) -> Goals in
+            if let model = Goals(dictionary: document.data()) {
+              return model
+            } else {
+              // Don't use fatalError here in a real app.
+              fatalError("Unable to initialize type \(String.self) with dictionary \(document.data())")
+            }
+          }
+          self.goalTableArray = models
+          self.documents = snapshot.documents
+
+//          if self.documents.count > 0 {
+//              self.tableView.backgroundView = nil
+//          } else {
+//            self.tableView.backgroundView = self.backgroundView
+//          }
+            
+            self.tableView.reloadData()
+        }
+
+
+    }
+
+    fileprivate func stopObserving() {
+      listener?.remove()
+    }
+
+    fileprivate func baseQuery() -> Query {
+      return Firestore.firestore().collection("users").document(rcvdUsername).collection("goals").limit(to: 50)
+    }
         
     override func viewDidLoad() {
         
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         print(rcvdUsername)
-        
+        tableView.dataSource = self
+        tableView.delegate = self
+        mainView.addSubview(subView)
+        subView.addSubview(tableView)
+        tableView.frame = subView.bounds
+        query = baseQuery()
+        print("viewDidLoad")
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+      super.viewWillAppear(animated)
+        print("viewWillAppear")
+      observeQuery()
     }
     
     override func viewDidAppear(_ animated: Bool){
@@ -34,7 +104,35 @@ class GoalsController: UIViewController {
     override func viewWillDisappear(_ animated: Bool) {
         let tabBar = tabBarController as! BaseTabBarController
         tabBar.rcvdUsername = String(rcvdUsername)
+        stopObserving()
+    }
+    
+    deinit {
+      listener?.remove()
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return goalTableArray.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "TableViewCell")
+    
+        let cell = tableView.dequeueReusableCell(withIdentifier: "TableViewCell", for: indexPath)
+        let date = goalTableArray[indexPath.row].date
+        let title = goalTableArray[indexPath.row].title
         
+        cell.textLabel?.text = title
+        cell.detailTextLabel?.text = date
+        
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+      tableView.deselectRow(at: indexPath, animated: true)
+      let controller = GoalEntryCellDetailController.fromStoryboard()
+      controller.entries = goalTableArray[indexPath.row]
+      controller.goalReference = documents[indexPath.row].reference
     }
     
     

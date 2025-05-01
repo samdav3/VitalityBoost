@@ -35,6 +35,11 @@
 		3F01EAEB2D74FC2B00726A1A /* RecipesSearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F01EAEA2D74FC2B00726A1A /* RecipesSearchController.swift */; };
 		3F2306242DA0403200AF864B /* SFSafariViewWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F2306232DA0403200AF864B /* SFSafariViewWrapper.swift */; };
 		3F451FE62DB16E47001B402E /* BaseTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F451FE52DB16E47001B402E /* BaseTabBarController.swift */; };
+		3F4520252DC29DD7001B402E /* Journal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F4520242DC29DD1001B402E /* Journal.swift */; };
+		3F4520272DC2A1C4001B402E /* LocalCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F4520262DC2A1BE001B402E /* LocalCollection.swift */; };
+		3F4520292DC2A9B3001B402E /* JournalEntryCellDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F4520282DC2A99B001B402E /* JournalEntryCellDetailController.swift */; };
+		3F45202B2DC3E703001B402E /* Goals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F45202A2DC3E6FC001B402E /* Goals.swift */; };
+		3F45202F2DC3EBA2001B402E /* GoalEntryCellDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F45202E2DC3EB9B001B402E /* GoalEntryCellDetailController.swift */; };
 		3F9DC21E2D90569F0032FE7F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3F9DC21D2D90569F0032FE7F /* GoogleService-Info.plist */; };
 		3F9DC21F2D90569F0032FE7F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3F9DC21D2D90569F0032FE7F /* GoogleService-Info.plist */; };
 		3F9DC2202D90569F0032FE7F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3F9DC21D2D90569F0032FE7F /* GoogleService-Info.plist */; };
@@ -112,6 +117,11 @@
 		3F2306222D9F0C7300AF864B /* VitalityBoost.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = VitalityBoost.entitlements; sourceTree = "<group>"; };
 		3F2306232DA0403200AF864B /* SFSafariViewWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SFSafariViewWrapper.swift; sourceTree = "<group>"; };
 		3F451FE52DB16E47001B402E /* BaseTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTabBarController.swift; sourceTree = "<group>"; };
+		3F4520242DC29DD1001B402E /* Journal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Journal.swift; sourceTree = "<group>"; };
+		3F4520262DC2A1BE001B402E /* LocalCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalCollection.swift; sourceTree = "<group>"; };
+		3F4520282DC2A99B001B402E /* JournalEntryCellDetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalEntryCellDetailController.swift; sourceTree = "<group>"; };
+		3F45202A2DC3E6FC001B402E /* Goals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Goals.swift; sourceTree = "<group>"; };
+		3F45202E2DC3EB9B001B402E /* GoalEntryCellDetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalEntryCellDetailController.swift; sourceTree = "<group>"; };
 		3F9DC21D2D90569F0032FE7F /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -194,6 +204,7 @@
 				3F01EAC42D74FA9100726A1A /* nutrition */,
 				3F01EAC32D74FA8A00726A1A /* menu */,
 				3F01EA932D74FA6800726A1A /* AppDelegate.swift */,
+				3F4520262DC2A1BE001B402E /* LocalCollection.swift */,
 				3F01EA952D74FA6800726A1A /* SceneDelegate.swift */,
 				3F01EA992D74FA6800726A1A /* Main.storyboard */,
 				3F01EA9C2D74FA6B00726A1A /* Assets.xcassets */,
@@ -271,6 +282,8 @@
 		3F01EAC82D74FAAB00726A1A /* mentality */ = {
 			isa = PBXGroup;
 			children = (
+				3F4520282DC2A99B001B402E /* JournalEntryCellDetailController.swift */,
+				3F4520242DC29DD1001B402E /* Journal.swift */,
 				3F01EAD42D74FB5000726A1A /* JournalController.swift */,
 				3F01EAD62D74FB6100726A1A /* JournalEntriesController.swift */,
 				3F01EAD82D74FB7700726A1A /* MentalHealthResourcesController.swift */,
@@ -281,6 +294,8 @@
 		3F01EAC92D74FAB100726A1A /* account */ = {
 			isa = PBXGroup;
 			children = (
+				3F45202E2DC3EB9B001B402E /* GoalEntryCellDetailController.swift */,
+				3F45202A2DC3E6FC001B402E /* Goals.swift */,
 				3F01EACA2D74FAD500726A1A /* LoginController.swift */,
 				3F01EACC2D74FAF700726A1A /* AccountController.swift */,
 				3F01EACE2D74FB0C00726A1A /* GoalsController.swift */,
@@ -440,15 +455,20 @@
 				3F01EAD52D74FB5000726A1A /* JournalController.swift in Sources */,
 				3F01EACF2D74FB0C00726A1A /* GoalsController.swift in Sources */,
 				3F01EA982D74FA6800726A1A /* ViewController.swift in Sources */,
+				3F45202F2DC3EBA2001B402E /* GoalEntryCellDetailController.swift in Sources */,
 				3F451FE62DB16E47001B402E /* BaseTabBarController.swift in Sources */,
+				3F4520272DC2A1C4001B402E /* LocalCollection.swift in Sources */,
 				3F01EAE92D74FC1E00726A1A /* RecipesController.swift in Sources */,
 				3F01EACD2D74FAF700726A1A /* AccountController.swift in Sources */,
 				3F01EAE12D74FBD700726A1A /* CalendarController.swift in Sources */,
 				3F01EAE32D74FBE700726A1A /* OrganizationAssistanceController.swift in Sources */,
 				3F01EADB2D74FB9400726A1A /* FitnessController.swift in Sources */,
+				3F4520292DC2A9B3001B402E /* JournalEntryCellDetailController.swift in Sources */,
 				3F01EACB2D74FAD500726A1A /* LoginController.swift in Sources */,
 				3F01EAD72D74FB6100726A1A /* JournalEntriesController.swift in Sources */,
+				3F4520252DC29DD7001B402E /* Journal.swift in Sources */,
 				3F2306242DA0403200AF864B /* SFSafariViewWrapper.swift in Sources */,
+				3F45202B2DC3E703001B402E /* Goals.swift in Sources */,
 				3F01EAD32D74FB3800726A1A /* CreateAccountController.swift in Sources */,
 				3F01EA942D74FA6800726A1A /* AppDelegate.swift in Sources */,
 				3F01EA962D74FA6800726A1A /* SceneDelegate.swift in Sources */,

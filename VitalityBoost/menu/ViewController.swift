@@ -50,6 +50,7 @@ class ViewController: UIViewController {
         performSegue(withIdentifier: "mentalHealthResources", sender: UIButton.self)
         performSegue(withIdentifier: "addGoal", sender: UIButton.self)
         performSegue(withIdentifier: "createAccount", sender: UIButton.self)
+        performSegue(withIdentifier: "entryDetails", sender: UIButton.self)
         
         
         
@@ -147,6 +148,11 @@ class ViewController: UIViewController {
             let addGoalVC = segue.destination as! AddGoalController
             addGoalVC.rcvdUsername = rcvdUsername
             addGoalVC.navigationItem.title = "Add Goal"
+        }
+        else if segue.identifier == "entryDetails"{
+            let entryDetailsVC = segue.destination as! JournalEntryCellDetailController
+            entryDetailsVC.rcvdUsername = rcvdUsername
+            entryDetailsVC.navigationItem.title = "Entry Details"
         }
     }
     

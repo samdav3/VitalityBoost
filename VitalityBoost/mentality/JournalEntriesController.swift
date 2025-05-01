@@ -11,6 +11,7 @@ import FirebaseCore
 import FirebaseFirestore
 import FirebaseAuth
 import FirebaseAppCheck
+import FirebaseDatabaseInternal
 
 class JournalEntriesController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
@@ -20,80 +21,130 @@ class JournalEntriesController: UIViewController, UITableViewDelegate, UITableVi
     @IBOutlet var mainView: UIView!
     @IBOutlet weak var subView: UIView!
     @IBOutlet weak var table: UITableView!
-    var mentTableArray: Array<String> = ["Test"]
-    let cellID = "cellID"
-    var cellInfo = ""
+    private var mentTableArray: [Journal] = []
+    private var documents: [DocumentSnapshot] = []
+    //let cellID = "TableViewCell"
+    //let backgroundView = UIImageView()
+    
+    fileprivate var query: Query? {
+      didSet {
+        if let listener = listener {
+          listener.remove()
+          observeQuery()
+        }
+      }
+    }
+
+    private var listener: ListenerRegistration?
+
+    fileprivate func observeQuery() {
+      guard let query = query else { return }
+      stopObserving()
+
+        listener = query.addSnapshotListener { [unowned self] (snapshot, error) in
+          guard let snapshot = snapshot else {
+            print("Error fetching snapshot results: \(error!)")
+            return
+          }
+          let models = snapshot.documents.map { (document) -> Journal in
+            if let model = Journal(dictionary: document.data()) {
+              return model
+            } else {
+              // Don't use fatalError here in a real app.
+              fatalError("Unable to initialize type \(String.self) with dictionary \(document.data())")
+            }
+          }
+          self.mentTableArray = models
+          self.documents = snapshot.documents
+
+//          if self.documents.count > 0 {
+//              self.tableView.backgroundView = nil
+//          } else {
+//            self.tableView.backgroundView = self.backgroundView
+//          }
+            
+            self.table.reloadData()
+        }
+
+
+    }
+
+    fileprivate func stopObserving() {
+      listener?.remove()
+    }
+
+    fileprivate func baseQuery() -> Query {
+      return Firestore.firestore().collection("users").document(rcvdUsername).collection("journal").limit(to: 50)
+    }
     
     override func viewDidLoad() {
         
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         print(rcvdUsername)
-        Task{
-            await loadEntries()
-            print(mentTableArray)
-        }
+        
         table.dataSource = self
         table.delegate = self
-        table.frame = subView.bounds
         mainView.addSubview(subView)
-        
-        
-
+        subView.addSubview(table)
+        table.frame = subView.bounds
+        query = baseQuery()
+        print("viewDidLoad")
+        //tableView.register(TableViewCell.self, forCellWithReuseIdentifier: "TableViewCell")
+//        UIViewController().loadViewIfNeeded()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+      super.viewWillAppear(animated)
+        print("viewWillAppear")
+      observeQuery()
     }
     
     override func viewDidAppear(_ animated: Bool){
         let tabBar = tabBarController as! BaseTabBarController
         rcvdUsername = String(describing: tabBar.rcvdUsername)
         print(rcvdUsername)
+        print("viewDidAppear")
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         let tabBar = tabBarController as! BaseTabBarController
         tabBar.rcvdUsername = String(rcvdUsername)
-        
+        stopObserving()
+    }
+    
+    deinit {
+      listener?.remove()
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return mentTableArray.count
         }
     
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        var cell = tableView.dequeueReusableCell(withIdentifier: cellID)
-        if (cell == nil){
-            cell = UITableViewCell(
-                style: UITableViewCell.CellStyle.default,
-                reuseIdentifier: cellID
-            )
-        }
-        cell?.textLabel?.text = cellInfo.description
-        return cell!
+        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "TableViewCell")
+    
+        let cell = tableView.dequeueReusableCell(withIdentifier: "TableViewCell", for: indexPath)
+        let date = mentTableArray[indexPath.row].date
+        let title = mentTableArray[indexPath.row].title
+        
+        cell.textLabel?.text = title
+        cell.detailTextLabel?.text = date
+        
+        return cell
         }
     
-    func loadEntries() async {
-        do{
-            //var entryData = ""
-            let entries = try await db.collection("users").document(rcvdUsername).collection("journal").getDocuments()
-            print(entries)
-            if (entries.isEmpty){
-                print("failure")
-                let updateAlert = UIAlertController(title: "No Entry History Found", message: "You have no saved Journal Entries in your Account.", preferredStyle: .alert)
-                updateAlert.addAction(UIAlertAction(title: "Dismiss", style: .default, handler: nil))
-                self.present(updateAlert, animated: true, completion: nil)
-                
-            }else{
-                let querySnapshot = try await db.collection("users").document(rcvdUsername).collection("journal").getDocuments()
-                for document in querySnapshot.documents{
-                    mentTableArray.append("\(document.data().values.description)")
-                }
-                print(mentTableArray)
-            }
-        }
-        catch{
-            print("Error retrieving data from database.")
-        }
-        
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+      tableView.deselectRow(at: indexPath, animated: true)
+      let controller = JournalEntryCellDetailController.fromStoryboard()
+      //controller.titleImageURL = imageURL(from: restaurants[indexPath.row].name)
+      controller.entries = mentTableArray[indexPath.row]
+      controller.journalReference = documents[indexPath.row].reference
+      //self.navigationController?.pushViewController(controller, animated: true)
     }
+    
+
     
     /*MARK: - Navigation*/
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -188,6 +239,17 @@ class JournalEntriesController: UIViewController, UITableViewDelegate, UITableVi
             addGoalVC.rcvdUsername = rcvdUsername
             addGoalVC.navigationItem.title = "Add Goal"
         }
+        else if segue.identifier == "entryDetails"{
+            let entryDetailsVC = segue.destination as! JournalEntryCellDetailController
+            entryDetailsVC.rcvdUsername = rcvdUsername
+            entryDetailsVC.navigationItem.title = "Entry Details"
+        }
     }
+    
+    
         
     }
+
+///main class ends here
+///
+

@@ -64,12 +64,12 @@ class AddGoalController: UIViewController {
         goalTitleText = goalTitle.text! as String
         let description = goalDescription.text! as String
         do{
-            _ = try await db.collection("users").document(rcvdUsername).collection("goals").document(date).setData([
+            _ = try await db.collection("users").document(rcvdUsername).collection("goals").document(goalTitleText).setData([
                 "description": description,
                 "date": date,
                 "title": goalTitleText
             ])
-            let docID = db.collection("users").document(rcvdUsername).collection("journal").document(date).documentID
+            let docID = db.collection("users").document(rcvdUsername).collection("journal").document(goalTitleText).documentID
             print("Document added with ID \(docID)")
             
             let updateAlert = UIAlertController(title: "Goal Added", message: "Your Goal has been added to your Accounts Goal Entries!", preferredStyle: .alert)
