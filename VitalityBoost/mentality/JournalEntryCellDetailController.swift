@@ -18,7 +18,7 @@ class JournalEntryCellDetailController: UIViewController {
     
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var entryLabel: UILabel!
+    @IBOutlet weak var entryLabel: UITextView!
     
   var localCollection: LocalCollection<Journal>!
 

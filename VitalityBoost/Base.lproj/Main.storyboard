@@ -32,7 +32,6 @@
                         <segue destination="551-wt-IUC" kind="relationship" relationship="viewControllers" id="BPa-HY-cLV"/>
                         <segue destination="4Sv-2b-fDL" kind="relationship" relationship="viewControllers" id="sOK-pM-Ie3"/>
                         <segue destination="mZI-1G-sLa" kind="relationship" relationship="viewControllers" id="Oj2-gX-l74"/>
-                        <segue destination="cWD-XT-nTa" kind="relationship" relationship="viewControllers" id="Eg5-bZ-NlH"/>
                         <segue destination="UxL-fg-8GU" kind="relationship" relationship="viewControllers" id="Lv7-nY-HiS"/>
                     </connections>
                 </tabBarController>
@@ -45,11 +44,11 @@
             <objects>
                 <viewController id="GlA-Jj-pNd" userLabel="Home" customClass="ViewController" customModule="VitalityBoost" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ryi-r7-ZXz">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="1698"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="1767"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uYB-ij-YOC">
-                                <rect key="frame" x="0.0" y="0.0" width="393" height="1649"/>
+                                <rect key="frame" x="0.0" y="162" width="393" height="1488"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4ye-xu-XGx" userLabel="Content View">
                                         <rect key="frame" x="0.0" y="0.0" width="393" height="1757"/>
@@ -265,14 +264,14 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uWp-yP-8R1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1151.9083969465648" y="1760.2112676056338"/>
+            <point key="canvasLocation" x="2075.5725190839694" y="1969.3661971830986"/>
         </scene>
         <!--Login-->
         <scene sceneID="DKS-3z-cLb">
             <objects>
-                <viewController id="Fr2-LV-0cp" customClass="LoginController" customModule="VitalityBoost" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Login" title="Login" id="Fr2-LV-0cp" customClass="LoginController" customModule="VitalityBoost" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="TMK-gj-uLn">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="783"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VTh-Co-Mfj">
@@ -306,9 +305,6 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="gray" title="Login"/>
-                                <connections>
-                                    <segue destination="cWD-XT-nTa" kind="show" identifier="login" id="oig-I6-ZJF"/>
-                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b05-Vd-J9L">
                                 <rect key="frame" x="191" y="356" width="169" height="35"/>
@@ -369,14 +365,14 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5Uu-bj-QJO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-173" y="1685"/>
+            <point key="canvasLocation" x="602.29007633587787" y="1684.5070422535211"/>
         </scene>
         <!--Create Account-->
         <scene sceneID="HVM-BI-PeI">
             <objects>
-                <viewController id="aSb-wR-FFO" customClass="CreateAccountController" customModule="VitalityBoost" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CreateAccount" title="Create Account" id="aSb-wR-FFO" customClass="CreateAccountController" customModule="VitalityBoost" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="oTF-2Y-tPg">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="783"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gyw-y3-sLi">
@@ -536,6 +532,7 @@
                         <outlet property="userPassword" destination="WqO-97-4IH" id="0fO-ff-ABB"/>
                         <outlet property="userPhone" destination="7Ir-lJ-Yaj" id="zyt-Jg-nx6"/>
                         <outlet property="userUsername" destination="7Qa-55-N7t" id="hIg-jh-WTR"/>
+                        <segue destination="Fr2-LV-0cp" kind="show" identifier="backToLogin" id="OLZ-NO-Geq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="K7O-2Y-CQw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -545,9 +542,9 @@
         <!--Account-->
         <scene sceneID="8fK-8K-ODo">
             <objects>
-                <viewController id="cWD-XT-nTa" customClass="AccountController" customModule="VitalityBoost" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Account" title="Account" id="cWD-XT-nTa" customClass="AccountController" customModule="VitalityBoost" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="uG5-gd-WU4">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="783"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pUU-BE-Wdn">
@@ -676,7 +673,6 @@
                         <viewLayoutGuide key="safeArea" id="0Xi-iy-eNa"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Account Info" image="person.circle" catalog="system" id="xIo-r0-9Me"/>
                     <navigationItem key="navigationItem" title="Account" id="AJW-3W-MMo">
                         <centerItemGroups>
                             <barButtonItemGroup customizationDisposition="fixed" id="0JA-Du-fao">
@@ -732,14 +728,14 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hLG-fE-jjp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-863.35877862595419" y="1684.5070422535211"/>
+            <point key="canvasLocation" x="-89.312977099236633" y="1684.5070422535211"/>
         </scene>
         <!--Goals-->
         <scene sceneID="rni-z2-JDd">
             <objects>
-                <viewController id="UxL-fg-8GU" customClass="GoalsController" customModule="VitalityBoost" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Goals" title="Goals" id="UxL-fg-8GU" customClass="GoalsController" customModule="VitalityBoost" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="k0F-D6-rN7">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="735"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YDI-Qt-aoW">
@@ -747,9 +743,6 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Contact Info"/>
-                                <connections>
-                                    <segue destination="cWD-XT-nTa" kind="show" identifier="contactInfo" id="FUm-qA-H58"/>
-                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xpz-eV-LlH">
                                 <rect key="frame" x="267" y="101" width="68" height="35"/>
@@ -857,25 +850,25 @@
             <objects>
                 <viewController storyboardIdentifier="goalEntries" title="Goal Details" id="Oyc-07-mB4" customClass="GoalEntryCellDetailController" customModule="VitalityBoost" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="t40-ze-nP5">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="783"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AXE-hX-7RO">
-                                <rect key="frame" x="36" y="201" width="321" height="46"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ogf-JW-ICB">
+                                <rect key="frame" x="153" y="147" width="204" height="46"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Entry" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="300" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="s3a-cp-rZY">
-                                <rect key="frame" x="36" y="255" width="321" height="423"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AXE-hX-7RO">
+                                <rect key="frame" x="153" y="201" width="204" height="46"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TQK-W6-vWi">
-                                <rect key="frame" x="137" y="714" width="118" height="35"/>
+                                <rect key="frame" x="36" y="714" width="118" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="gray" title="Delete Entry"/>
@@ -883,13 +876,38 @@
                                     <action selector="didTapAddButton:" destination="Oyc-07-mB4" eventType="touchUpInside" id="4Is-mY-xfL"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ogf-JW-ICB">
-                                <rect key="frame" x="36" y="147" width="321" height="46"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Due Date:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gTR-Yo-sKt">
+                                <rect key="frame" x="36" y="147" width="109" height="46"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Title:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j17-w5-O90">
+                                <rect key="frame" x="36" y="200" width="109" height="46"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="1RP-4w-rnx">
+                                <rect key="frame" x="36" y="255" width="321" height="426"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m5Q-11-lmw">
+                                <rect key="frame" x="236" y="714" width="125" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="gray" title="Update Entry"/>
+                                <connections>
+                                    <action selector="didTapAddButton:" destination="Oyc-07-mB4" eventType="touchUpInside" id="IoS-h2-blJ"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="3k1-1U-aKh"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -897,7 +915,7 @@
                     <navigationItem key="navigationItem" id="PBO-c7-agK"/>
                     <connections>
                         <outlet property="dateLabel" destination="ogf-JW-ICB" id="0WF-eG-Dz5"/>
-                        <outlet property="entryLabel" destination="s3a-cp-rZY" id="dCs-bo-5Kt"/>
+                        <outlet property="entryLabel" destination="1RP-4w-rnx" id="aM0-hE-l0X"/>
                         <outlet property="mainView" destination="t40-ze-nP5" id="BN1-Qg-AGq"/>
                         <outlet property="titleLabel" destination="AXE-hX-7RO" id="sMU-rU-QuK"/>
                     </connections>
@@ -911,7 +929,7 @@
             <objects>
                 <viewController id="CcN-gf-sCR" customClass="AddGoalController" customModule="VitalityBoost" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Lnq-Is-rgN">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="783"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Goal Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bGY-Ar-pwT">
@@ -928,13 +946,6 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Due Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bte-xj-HVL">
-                                <rect key="frame" x="16" y="323" width="145" height="53"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BzP-3B-NDc">
                                 <rect key="frame" x="169" y="138" width="208" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -942,16 +953,24 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="UHY-dt-fQQ">
-                                <rect key="frame" x="169" y="190" width="208" height="128"/>
+                                <rect key="frame" x="169" y="190" width="208" height="293"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <accessibility key="accessibilityConfiguration" hint="Enter New Goal Description Here"/>
                                 <color key="textColor" systemColor="labelColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Due Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bte-xj-HVL">
+                                <rect key="frame" x="16" y="488" width="145" height="53"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gb7-R2-wAR">
-                                <rect key="frame" x="149" y="439" width="94" height="35"/>
+                                <rect key="frame" x="149" y="604" width="94" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="gray" title="Add Goal"/>
@@ -960,7 +979,7 @@
                                 </connections>
                             </button>
                             <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="7Z9-Ir-PlS">
-                                <rect key="frame" x="169" y="326" width="208" height="47"/>
+                                <rect key="frame" x="169" y="491" width="208" height="47"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                             </datePicker>
                         </subviews>
@@ -998,11 +1017,11 @@
             <objects>
                 <viewController title="Fitness" id="dqU-S4-ZMo" customClass="FitnessController" customModule="VitalityBoost" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" ambiguous="YES" id="7xc-bd-4Of">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="783"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OaL-cC-zQx">
-                                <rect key="frame" x="299" y="64" width="78" height="35"/>
+                                <rect key="frame" x="299" y="167" width="78" height="35"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="35" id="3by-Zs-soS"/>
                                     <constraint firstAttribute="width" constant="78" id="ZHE-E5-meP"/>
@@ -1014,7 +1033,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="_________________________________________" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SkV-Go-zb1">
-                                <rect key="frame" x="16" y="92" width="393" height="21"/>
+                                <rect key="frame" x="16" y="195" width="393" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="TaV-LM-ud7"/>
                                     <constraint firstAttribute="width" constant="393" id="kSe-cm-Z8N"/>
@@ -1024,7 +1043,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aee-UZ-HvZ">
-                                <rect key="frame" x="113" y="64" width="168" height="35"/>
+                                <rect key="frame" x="113" y="167" width="168" height="35"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="35" id="NI2-ba-wHf"/>
                                     <constraint firstAttribute="width" constant="168" id="OCU-KA-bbM"/>
@@ -1036,7 +1055,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b6y-jL-ilj">
-                                <rect key="frame" x="16" y="64" width="79" height="35"/>
+                                <rect key="frame" x="16" y="167" width="79" height="35"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="79" id="H8Q-MU-gQI"/>
                                     <constraint firstAttribute="height" constant="35" id="Iq4-WK-y1l"/>
@@ -1145,18 +1164,18 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nR1-UC-Nhm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2522.9007633587785" y="1684.5070422535211"/>
+            <point key="canvasLocation" x="4376.3358778625952" y="1684.5070422535211"/>
         </scene>
         <!--Personal Research-->
         <scene sceneID="guV-Sl-xTv">
             <objects>
                 <viewController title="Personal Research" id="rb9-Yi-gZF" customClass="PersonalResearchController" customModule="VitalityBoost" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="r9e-D8-OeU">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="783"/>
+                    <view key="view" contentMode="scaleToFill" ambiguous="YES" id="r9e-D8-OeU">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mQe-P9-R0W">
-                                <rect key="frame" x="299" y="5" width="78" height="35"/>
+                                <rect key="frame" x="299" y="167" width="78" height="35"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="35" id="6lS-gd-g1U"/>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="78" id="Uzd-gl-o9E"/>
@@ -1167,7 +1186,7 @@
                                 <buttonConfiguration key="configuration" style="tinted" title="Search"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="34H-V4-y9Y">
-                                <rect key="frame" x="113" y="5" width="168" height="35"/>
+                                <rect key="frame" x="113" y="167" width="168" height="35"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="168" id="Fxn-qc-DaY"/>
                                     <constraint firstAttribute="height" constant="35" id="VAw-g0-bTN"/>
@@ -1181,7 +1200,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="_________________________________________" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fnu-wm-0A6">
-                                <rect key="frame" x="16" y="33" width="363" height="21"/>
+                                <rect key="frame" x="16" y="195" width="363" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="21" id="HWL-ZV-9Zd"/>
                                     <constraint firstAttribute="height" constant="21" id="W7F-Ho-YBP"/>
@@ -1193,7 +1212,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t04-zD-RH0">
-                                <rect key="frame" x="16" y="5" width="79" height="35"/>
+                                <rect key="frame" x="16" y="167" width="79" height="35"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="35" id="dod-Hx-Gre"/>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="79" id="hB9-Tm-rgL"/>
@@ -1206,7 +1225,7 @@
                                     <segue destination="dqU-S4-ZMo" kind="show" identifier="fitness" id="mgl-WQ-uGQ"/>
                                 </connections>
                             </button>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UwP-fB-wrW">
+                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UwP-fB-wrW">
                                 <rect key="frame" x="15" y="62" width="362" height="664"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
@@ -1291,11 +1310,11 @@
             <objects>
                 <viewController title="Affordable Options" id="dbD-rv-pMu" customClass="AffordableOptionsController" customModule="VitalityBoost" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" ambiguous="YES" id="bwJ-5I-OS5">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="783"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mwq-SG-hqv">
-                                <rect key="frame" x="16" y="64" width="79" height="35"/>
+                                <rect key="frame" x="16" y="167" width="79" height="35"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="35" id="SVU-3f-Jkg"/>
                                     <constraint firstAttribute="width" constant="79" id="jn7-vn-GDr"/>
@@ -1307,7 +1326,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TkM-Dx-LGL">
-                                <rect key="frame" x="299" y="64" width="78" height="35"/>
+                                <rect key="frame" x="299" y="167" width="78" height="35"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="78" id="W2o-aO-FaC"/>
                                     <constraint firstAttribute="height" constant="35" id="Zre-Kp-6t9"/>
@@ -1319,7 +1338,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vdw-LE-jS9">
-                                <rect key="frame" x="113" y="64" width="168" height="35"/>
+                                <rect key="frame" x="113" y="167" width="168" height="35"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="35" id="a0Y-YJ-Bcv"/>
                                     <constraint firstAttribute="width" constant="168" id="hwW-8X-OMG"/>
@@ -1328,7 +1347,7 @@
                                 <buttonConfiguration key="configuration" style="tinted" title="Affordable Options"/>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="_________________________________________" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qSH-6l-0Zj">
-                                <rect key="frame" x="16" y="92" width="393" height="21"/>
+                                <rect key="frame" x="16" y="195" width="393" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="393" id="AIh-rh-agc"/>
                                     <constraint firstAttribute="height" constant="21" id="uS6-AU-SqV"/>
@@ -1441,11 +1460,11 @@
             <objects>
                 <viewController title="Workouts" id="vlF-sI-XGK" customClass="WorkoutsController" customModule="VitalityBoost" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" ambiguous="YES" id="RzS-np-z4m">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="783"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jn6-aU-sAD">
-                                <rect key="frame" x="52" y="64" width="97" height="27"/>
+                                <rect key="frame" x="52" y="167" width="97" height="27"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="97" id="Lx9-7d-Zs2"/>
                                     <constraint firstAttribute="height" constant="27" id="ObJ-8u-Lz7"/>
@@ -1454,7 +1473,7 @@
                                 <buttonConfiguration key="configuration" style="tinted" title="Workouts"/>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="_________________________________________" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fac-nj-tUN">
-                                <rect key="frame" x="15" y="92" width="363" height="21"/>
+                                <rect key="frame" x="15" y="195" width="363" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="Ash-TV-shG"/>
                                     <constraint firstAttribute="width" constant="363" id="Ifr-Ee-zZ5"/>
@@ -1464,7 +1483,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z2r-Pz-OIg">
-                                <rect key="frame" x="217" y="64" width="125" height="27"/>
+                                <rect key="frame" x="217" y="167" width="125" height="27"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="125" id="4Dg-ib-GLs"/>
                                     <constraint firstAttribute="height" constant="27" id="agK-WK-f4U"/>
@@ -1568,18 +1587,18 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SRr-U1-A29" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3925.9541984732823" y="1684.5070422535211"/>
+            <point key="canvasLocation" x="5779.3893129770986" y="1684.5070422535211"/>
         </scene>
         <!--Supplements-->
         <scene sceneID="kxi-zH-P3H">
             <objects>
                 <viewController title="Supplements" id="Kke-xN-zFm" customClass="SupplementsController" customModule="VitalityBoost" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" ambiguous="YES" id="W6Q-o8-Dxw">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="783"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0H8-Tx-iUE">
-                                <rect key="frame" x="217" y="64" width="125" height="35"/>
+                                <rect key="frame" x="217" y="167" width="125" height="35"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="125" id="4kZ-qN-UsW"/>
                                     <constraint firstAttribute="height" constant="35" id="YRg-uS-FMt"/>
@@ -1588,7 +1607,7 @@
                                 <buttonConfiguration key="configuration" style="tinted" title="Supplements"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I5R-w3-QMw">
-                                <rect key="frame" x="52" y="64" width="97" height="35"/>
+                                <rect key="frame" x="52" y="167" width="97" height="35"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="97" id="ksq-Lr-O7g"/>
                                     <constraint firstAttribute="height" constant="35" id="mgu-P2-ceH"/>
@@ -1600,7 +1619,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="_________________________________________" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RYz-5u-mHh">
-                                <rect key="frame" x="15" y="92" width="363" height="21"/>
+                                <rect key="frame" x="15" y="195" width="363" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="363" id="rku-2j-ujA"/>
                                     <constraint firstAttribute="height" constant="21" id="v9T-zP-6ya"/>
@@ -1710,11 +1729,11 @@
             <objects>
                 <viewController title="Recipes" id="mEW-Z7-KrK" customClass="RecipesController" customModule="VitalityBoost" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" ambiguous="YES" id="9yB-0R-tjg">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="783"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GQu-dB-0q2">
-                                <rect key="frame" x="213" y="64" width="134" height="35"/>
+                                <rect key="frame" x="213" y="167" width="134" height="35"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="35" id="8Vz-Hm-enr"/>
                                     <constraint firstAttribute="width" constant="134" id="uKu-y3-JBb"/>
@@ -1726,7 +1745,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UTM-SJ-Dco">
-                                <rect key="frame" x="58" y="64" width="85" height="35"/>
+                                <rect key="frame" x="58" y="167" width="85" height="35"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="35" id="JpQ-te-3hR"/>
                                     <constraint firstAttribute="width" constant="85" id="Qih-iy-9kX"/>
@@ -1735,7 +1754,7 @@
                                 <buttonConfiguration key="configuration" style="tinted" title="Recipes"/>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="_________________________________________" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uwg-RA-QRk">
-                                <rect key="frame" x="15" y="92" width="363" height="21"/>
+                                <rect key="frame" x="15" y="195" width="363" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="363" id="V1I-AE-mrX"/>
                                     <constraint firstAttribute="height" constant="21" id="zna-LR-yt9"/>
@@ -1836,18 +1855,18 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0Ne-QY-hB0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5184" y="1685"/>
+            <point key="canvasLocation" x="7035.8778625954192" y="1684.5070422535211"/>
         </scene>
         <!--Recipes Search-->
         <scene sceneID="iQU-Vt-wAn">
             <objects>
                 <viewController title="Recipes Search" id="jb1-BG-J3A" customClass="RecipesSearchController" customModule="VitalityBoost" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" ambiguous="YES" id="0Ln-zv-yDf">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="783"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q4G-E3-xNr">
-                                <rect key="frame" x="213" y="64" width="134" height="35"/>
+                                <rect key="frame" x="213" y="167" width="134" height="35"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="35" id="Zvr-i4-wM5"/>
                                     <constraint firstAttribute="width" constant="134" id="ghk-iC-eTY"/>
@@ -1856,7 +1875,7 @@
                                 <buttonConfiguration key="configuration" style="tinted" title="Recipe Search"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xic-Ec-5qR">
-                                <rect key="frame" x="58" y="64" width="85" height="35"/>
+                                <rect key="frame" x="58" y="167" width="85" height="35"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="35" id="5gr-bQ-2lu"/>
                                     <constraint firstAttribute="width" constant="85" id="rxU-6W-8Us"/>
@@ -1868,7 +1887,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="_________________________________________" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FVP-GR-O6g">
-                                <rect key="frame" x="15" y="92" width="363" height="21"/>
+                                <rect key="frame" x="15" y="195" width="363" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="JDb-MW-Kw2"/>
                                     <constraint firstAttribute="width" constant="363" id="c0Q-n9-WYE"/>
@@ -1959,11 +1978,11 @@
             <objects>
                 <viewController title="Calendar" id="BCz-m1-V4c" customClass="CalendarController" customModule="VitalityBoost" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ekx-Ms-v9m">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="783"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uf5-nP-5jD">
-                                <rect key="frame" x="156" y="64" width="208" height="35"/>
+                                <rect key="frame" x="156" y="167" width="208" height="35"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="208" id="Kke-PV-F9g"/>
                                     <constraint firstAttribute="height" constant="35" id="d4Z-Ly-SO4"/>
@@ -1975,7 +1994,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wMF-Ki-959">
-                                <rect key="frame" x="35" y="64" width="93" height="35"/>
+                                <rect key="frame" x="35" y="167" width="93" height="35"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="35" id="fmT-ne-Pws"/>
                                     <constraint firstAttribute="width" constant="93" id="o4u-eZ-AqY"/>
@@ -1984,7 +2003,7 @@
                                 <buttonConfiguration key="configuration" style="tinted" title="Calendar"/>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="_________________________________________" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Amz-C3-IPM">
-                                <rect key="frame" x="16" y="92" width="363" height="21"/>
+                                <rect key="frame" x="16" y="195" width="363" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="363" id="PEE-dN-VCm"/>
                                     <constraint firstAttribute="height" constant="21" id="jti-DN-mvJ"/>
@@ -1994,7 +2013,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Z4W-tB-g4a">
-                                <rect key="frame" x="16" y="121" width="361" height="300"/>
+                                <rect key="frame" x="16" y="224" width="361" height="300"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="300" id="vXX-nw-wnj"/>
@@ -2066,18 +2085,18 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XO4-IX-1DC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6301.5267175572517" y="1684.5070422535211"/>
+            <point key="canvasLocation" x="8154.961832061068" y="1684.5070422535211"/>
         </scene>
         <!--Organization Assistance-->
         <scene sceneID="4aL-D6-Wug">
             <objects>
                 <viewController title="Organization Assistance" id="PIe-pf-bMv" customClass="OrganizationAssistanceController" customModule="VitalityBoost" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" ambiguous="YES" id="ZK9-XV-Ooz">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="783"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1ro-pn-50Z">
-                                <rect key="frame" x="156" y="64" width="208" height="35"/>
+                                <rect key="frame" x="156" y="167" width="208" height="35"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="208" id="Pf8-ue-qD4"/>
                                     <constraint firstAttribute="height" constant="35" id="hDD-LK-XRJ"/>
@@ -2086,7 +2105,7 @@
                                 <buttonConfiguration key="configuration" style="tinted" title="Organization Assistance"/>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="_________________________________________" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Hd-ry-TXB">
-                                <rect key="frame" x="16" y="92" width="363" height="21"/>
+                                <rect key="frame" x="16" y="195" width="363" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="363" id="6k3-6H-2pX"/>
                                     <constraint firstAttribute="height" constant="21" id="7lu-kh-2cw"/>
@@ -2096,7 +2115,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="91Q-1B-oyj">
-                                <rect key="frame" x="35" y="64" width="93" height="35"/>
+                                <rect key="frame" x="35" y="167" width="93" height="35"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="35" id="Dcq-zr-Tge"/>
                                     <constraint firstAttribute="width" constant="93" id="Dcr-KB-Ydz"/>
@@ -2208,7 +2227,7 @@
             <objects>
                 <viewController title="Journal" id="ikE-pL-l31" customClass="JournalController" customModule="VitalityBoost" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="KT2-Ho-qht">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="783"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y2T-ju-63k">
@@ -2280,6 +2299,9 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="gray" title="Discard"/>
+                                <connections>
+                                    <action selector="deleteEntry:" destination="ikE-pL-l31" eventType="touchUpInside" id="tRo-Oz-Ohl"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g5m-RQ-AhL">
                                 <rect key="frame" x="165" y="101" width="214" height="35"/>
@@ -2345,14 +2367,14 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yY6-oP-RwU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7731" y="1685"/>
+            <point key="canvasLocation" x="9582.442748091602" y="1684.5070422535211"/>
         </scene>
         <!--Journal Entries-->
         <scene sceneID="opz-T2-ds3">
             <objects>
                 <viewController storyboardIdentifier="Main" title="Journal Entries" id="IwD-tx-Q6B" customClass="JournalEntriesController" customModule="VitalityBoost" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="jrN-DL-8vA">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="783"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="735"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CfE-Hs-0p1">
@@ -2489,36 +2511,58 @@
             <objects>
                 <viewController storyboardIdentifier="journalEntries" title="Entry Details" id="kKP-D4-LzX" customClass="JournalEntryCellDetailController" customModule="VitalityBoost" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="of1-Zb-kEd">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="783"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="735"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BY5-3t-oLh">
-                                <rect key="frame" x="36" y="201" width="321" height="46"/>
+                                <rect key="frame" x="151" y="201" width="206" height="46"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Entry" lineBreakMode="tailTruncation" numberOfLines="300" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jhc-Bt-KiQ">
-                                <rect key="frame" x="36" y="255" width="321" height="423"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Entry Date:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="44X-tR-kvf">
+                                <rect key="frame" x="36" y="147" width="107" height="46"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Entry Title:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aif-IL-KC5">
+                                <rect key="frame" x="36" y="201" width="107" height="46"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tvC-68-rjr">
-                                <rect key="frame" x="137" y="714" width="118" height="35"/>
+                                <rect key="frame" x="36" y="714" width="118" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="gray" title="Delete Entry"/>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vcn-dG-WSg">
-                                <rect key="frame" x="36" y="147" width="321" height="46"/>
+                                <rect key="frame" x="151" y="147" width="206" height="46"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ENX-6c-KCf">
+                                <rect key="frame" x="36" y="255" width="321" height="437"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KQt-OR-oon">
+                                <rect key="frame" x="236" y="714" width="125" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="gray" title="Update Entry"/>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="n2p-iY-hMB"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -2526,7 +2570,7 @@
                     <navigationItem key="navigationItem" id="cj5-dV-5fL"/>
                     <connections>
                         <outlet property="dateLabel" destination="Vcn-dG-WSg" id="Ur4-dE-UZi"/>
-                        <outlet property="entryLabel" destination="jhc-Bt-KiQ" id="Xau-m0-xrZ"/>
+                        <outlet property="entryLabel" destination="ENX-6c-KCf" id="boe-7o-45a"/>
                         <outlet property="titleLabel" destination="BY5-3t-oLh" id="vgO-NV-apb"/>
                     </connections>
                 </viewController>
@@ -2539,11 +2583,11 @@
             <objects>
                 <viewController title="Mental Health Resources" id="owF-n1-hys" customClass="MentalHealthResourcesController" customModule="VitalityBoost" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" ambiguous="YES" id="mGp-Uo-PE1">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="783"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="735"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xtH-KT-M5o">
-                                <rect key="frame" x="92" y="64" width="77" height="35"/>
+                                <rect key="frame" x="92" y="167" width="77" height="35"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="77" id="Tk0-dT-XEZ"/>
                                     <constraint firstAttribute="height" constant="35" id="n5N-Bw-qbL"/>
@@ -2555,7 +2599,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yWG-QK-weK">
-                                <rect key="frame" x="16" y="64" width="81" height="35"/>
+                                <rect key="frame" x="16" y="167" width="81" height="35"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="35" id="PKC-u7-B3g"/>
                                     <constraint firstAttribute="width" constant="81" id="oMJ-Ig-XQb"/>
@@ -2567,7 +2611,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="_________________________________________" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Zj-SK-w0g">
-                                <rect key="frame" x="16" y="92" width="363" height="21"/>
+                                <rect key="frame" x="16" y="195" width="363" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="0NA-qu-k4j"/>
                                     <constraint firstAttribute="width" constant="363" id="cya-cg-K6i"/>
@@ -2577,7 +2621,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o6o-jB-sZ4">
-                                <rect key="frame" x="165" y="64" width="214" height="35"/>
+                                <rect key="frame" x="165" y="167" width="214" height="35"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="214" id="Cx3-NW-Eff"/>
                                     <constraint firstAttribute="height" constant="35" id="ptC-3W-0QC"/>
@@ -2719,10 +2763,10 @@
             </objects>
             <point key="canvasLocation" x="1153" y="793"/>
         </scene>
-        <!--Account Nav Controller-->
+        <!--Login Nav Controller-->
         <scene sceneID="N4F-s1-ePB">
             <objects>
-                <navigationController title="Account Nav Controller" automaticallyAdjustsScrollViewInsets="NO" id="TYO-px-tBt" sceneMemberID="viewController">
+                <navigationController title="Login Nav Controller" automaticallyAdjustsScrollViewInsets="NO" id="TYO-px-tBt" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Account" image="person.crop.circle" catalog="system" id="t5Q-6n-ShL"/>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="uQ0-YQ-KXj">
@@ -3002,24 +3046,41 @@
             </objects>
             <point key="canvasLocation" x="8105" y="3320"/>
         </scene>
+        <!--Account Nav Controller-->
+        <scene sceneID="McR-zK-1Uz">
+            <objects>
+                <navigationController title="Account Nav Controller" automaticallyAdjustsScrollViewInsets="NO" id="uiG-0c-acM" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Zf1-c4-9yi">
+                        <rect key="frame" x="0.0" y="118" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="cWD-XT-nTa" kind="relationship" relationship="rootViewController" id="9d3-fI-uix"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FFt-Xd-b8t" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1016.030534351145" y="1684.5070422535211"/>
+        </scene>
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="EZK-2f-cox"/>
-        <segue reference="Q6b-VM-vE5"/>
-        <segue reference="uoq-v3-am0"/>
+        <segue reference="XVa-VG-8kb"/>
+        <segue reference="ryd-zH-Ils"/>
         <segue reference="cSX-nM-wRz"/>
-        <segue reference="lmA-Zg-Nch"/>
+        <segue reference="Qrc-O6-1S3"/>
         <segue reference="Hx1-DI-RVH"/>
-        <segue reference="byY-aQ-Ieg"/>
+        <segue reference="2bw-0K-ppP"/>
         <segue reference="tjS-gq-cbq"/>
-        <segue reference="cOt-LV-IU8"/>
+        <segue reference="ZhN-Lg-eK9"/>
         <segue reference="2IW-06-4Wa"/>
         <segue reference="niP-Cx-dMk"/>
-        <segue reference="jaR-Nx-dcq"/>
-        <segue reference="Lv7-nY-HiS"/>
-        <segue reference="FUm-qA-H58"/>
-        <segue reference="8ap-dD-8Ar"/>
-        <segue reference="d2O-3k-59l"/>
+        <segue reference="7Ev-Tn-Dfw"/>
+        <segue reference="KQb-Jx-NuV"/>
+        <segue reference="FGL-eC-noL"/>
+        <segue reference="0Y3-4i-1Ml"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="ai-generated-8266786_1280" width="1280" height="717"/>
@@ -3040,7 +3101,6 @@
         <image name="magnifyingglass" catalog="system" width="128" height="117"/>
         <image name="note.text" catalog="system" width="128" height="107"/>
         <image name="note.text.badge.plus" catalog="system" width="128" height="109"/>
-        <image name="person.circle" catalog="system" width="128" height="123"/>
         <image name="person.crop.circle" catalog="system" width="128" height="123"/>
         <image name="person.crop.circle.badge.plus" catalog="system" width="128" height="114"/>
         <image name="pill.fill" catalog="system" width="128" height="123"/>

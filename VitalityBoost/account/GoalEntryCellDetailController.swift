@@ -18,7 +18,8 @@ class GoalEntryCellDetailController: UIViewController {
     
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var entryLabel: UILabel!
+    @IBOutlet weak var entryLabel: UITextView!
+    //@IBOutlet weak var entryLabel: UILabel!
     
     
     var localCollection: LocalCollection<Goals>!

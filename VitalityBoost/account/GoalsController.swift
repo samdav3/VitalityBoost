@@ -74,6 +74,7 @@ class GoalsController: UIViewController, UITableViewDelegate, UITableViewDataSou
     fileprivate func baseQuery() -> Query {
       return Firestore.firestore().collection("users").document(rcvdUsername).collection("goals").limit(to: 50)
     }
+    
         
     override func viewDidLoad() {
         

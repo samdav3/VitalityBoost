@@ -64,7 +64,7 @@ class CreateAccountController: UIViewController {
                 
                 let updateAlert = UIAlertController(title: "Username already Exists", message: "Please use a different Username or Login to existing Account.", preferredStyle: .alert)
                 updateAlert.addAction(UIAlertAction(title: "Dismiss", style: .default, handler: {_ in 
-                    updateAlert.dismiss(animated: true, completion: nil)
+                    self.navigationController?.popViewController(animated: true)
                     
                 }))
                 self.present(updateAlert, animated: true, completion: nil)
@@ -81,6 +81,7 @@ class CreateAccountController: UIViewController {
         Task {
             await createAccount()
         }
+
     }
     
     
@@ -98,8 +99,12 @@ class CreateAccountController: UIViewController {
             
             let docID = db.collection("users").document(userUsername.text!).documentID
             print("Document added/updated with ID: \(docID)")
-            let updateAlert = UIAlertController(title: "Account Info Saved", message: "Document added.updated with ID: \(docID)", preferredStyle: .alert)
-            updateAlert.addAction(UIAlertAction(title: "Dismiss", style: .default, handler: nil))
+            let updateAlert = UIAlertController(title: "Account Info Saved", message: "Your Account has been Created. Visit the Account Page to View or Update your Account Information.", preferredStyle: .alert)
+            updateAlert.addAction(UIAlertAction(title: "Go To Account", style: .default, handler: {_ in
+                let controller = AccountController.fromStoryboard()
+                controller.rcvdUsername = self.userUsername.text!
+                self.navigationController?.pushViewController(controller, animated: true)
+            }))
             self.present(updateAlert, animated: true, completion: nil)
         }
         catch {

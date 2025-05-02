@@ -75,6 +75,11 @@ class JournalEntriesController: UIViewController, UITableViewDelegate, UITableVi
       return Firestore.firestore().collection("users").document(rcvdUsername).collection("journal").limit(to: 50)
     }
     
+    static func fromStoryboard(_ storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)) -> JournalEntriesController {
+        let controller = storyboard.instantiateViewController(withIdentifier: "Main") as! JournalEntriesController
+        return controller
+    }
+    
     override func viewDidLoad() {
         
         super.viewDidLoad()
@@ -135,6 +140,8 @@ class JournalEntriesController: UIViewController, UITableViewDelegate, UITableVi
         
         return cell
         }
+    
+    
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
       tableView.deselectRow(at: indexPath, animated: true)

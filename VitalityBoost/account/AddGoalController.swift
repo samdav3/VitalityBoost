@@ -56,6 +56,7 @@ class AddGoalController: UIViewController {
             Task{
                 await saveGoal()
             }
+            
         }
     }
     
@@ -73,8 +74,11 @@ class AddGoalController: UIViewController {
             print("Document added with ID \(docID)")
             
             let updateAlert = UIAlertController(title: "Goal Added", message: "Your Goal has been added to your Accounts Goal Entries!", preferredStyle: .alert)
-                updateAlert.addAction(UIAlertAction(title: "Dismiss", style: .default, handler: nil))
+            updateAlert.addAction(UIAlertAction(title: "Dismiss", style: .default, handler: {_ in
+                self.navigationController?.popViewController(animated: true)
+                }))
                 self.present(updateAlert, animated: true, completion: nil)
+            
         }
         catch{
             print("Error saving Entry")
@@ -175,5 +179,10 @@ class AddGoalController: UIViewController {
             addGoalVC.rcvdUsername = rcvdUsername
             addGoalVC.navigationItem.title = "Add Goal"
         }
+//        else if segue.identifier == "backToGoals"{
+//            let goalsAgainVC = segue.destination as! GoalsController
+//            goalsAgainVC.rcvdUsername = rcvdUsername
+//            goalsAgainVC.navigationItem.title = "Goals"
+//        }
     }
     }

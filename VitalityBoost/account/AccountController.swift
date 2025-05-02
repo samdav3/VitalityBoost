@@ -38,6 +38,11 @@ class AccountController: UIViewController {
     var userPhoneEntry = ""
     var userAddressEntry = ""
     
+    static func fromStoryboard(_ storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)) -> AccountController {
+        let controller = storyboard.instantiateViewController(withIdentifier: "Account") as! AccountController
+        return controller
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         if (rcvdUsername == ""){

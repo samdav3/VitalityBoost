@@ -51,15 +51,24 @@ class JournalController: UIViewController {
             let updateAlert = UIAlertController(title: "Unable to Save Entry", message: "You must be logged in to Save your Journal Entries.", preferredStyle: .alert)
             updateAlert.addAction(UIAlertAction(title: "Dismiss", style: .default, handler: nil))
             self.present(updateAlert, animated: true, completion: nil)
+            
         }else {
             
             Task{
                 await saveEntry()
             }
+            
         }
         
         
     }
+    
+    @IBAction func discardEntry(_ sender: UIButton) {
+        entryTitle.text = ""
+        journalEntry.text = ""
+        entryDate.date = Date.now
+    }
+    
     
     func saveEntry() async {
         let date = dateFormatter.string(from: entryDate.date)
@@ -75,12 +84,19 @@ class JournalController: UIViewController {
             print("Document added with ID \(docID)")
             
             let updateAlert = UIAlertController(title: "Entry Saved", message: "Your Entry has been added to your Accounts Journal Entries!", preferredStyle: .alert)
-                updateAlert.addAction(UIAlertAction(title: "Dismiss", style: .default, handler: nil))
+            updateAlert.addAction(UIAlertAction(title: "Dismiss", style: .default, handler: {_ in
+                let controller = JournalEntriesController.fromStoryboard()
+                controller.rcvdUsername = self.rcvdUsername
+                self.navigationController?.pushViewController(controller, animated: true)
+            }))
                 self.present(updateAlert, animated: true, completion: nil)
         }
         catch{
             print("Error saving Entry")
         }
+        entryTitle.text = ""
+        journalEntry.text = ""
+        entryDate.date = Date.now
     }
     
     /*MARK: - Navigation*/

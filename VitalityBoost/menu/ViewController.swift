@@ -51,6 +51,7 @@ class ViewController: UIViewController {
         performSegue(withIdentifier: "addGoal", sender: UIButton.self)
         performSegue(withIdentifier: "createAccount", sender: UIButton.self)
         performSegue(withIdentifier: "entryDetails", sender: UIButton.self)
+        performSegue(withIdentifier: "backToGoals", sender: UIButton.self)
         
         
         
@@ -153,6 +154,15 @@ class ViewController: UIViewController {
             let entryDetailsVC = segue.destination as! JournalEntryCellDetailController
             entryDetailsVC.rcvdUsername = rcvdUsername
             entryDetailsVC.navigationItem.title = "Entry Details"
+        }
+        else if segue.identifier == "toAccount"{
+            let toAccountVC = segue.destination as! AccountController
+            toAccountVC.rcvdUsername = rcvdUsername
+            toAccountVC.navigationItem.title = "Account"
+        }
+        else if segue.identifier == "backToLogin"{
+            let loginAgainVC = segue.destination as! LoginController
+            loginAgainVC.navigationItem.title = "Login"
         }
     }
     
