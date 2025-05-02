@@ -53,14 +53,7 @@ class GoalsController: UIViewController, UITableViewDelegate, UITableViewDataSou
             }
           }
           self.goalTableArray = models
-          self.documents = snapshot.documents
-
-//          if self.documents.count > 0 {
-//              self.tableView.backgroundView = nil
-//          } else {
-//            self.tableView.backgroundView = self.backgroundView
-//          }
-            
+          self.documents = snapshot.documents            
             self.tableView.reloadData()
         }
 

@@ -69,7 +69,10 @@ class JournalEntryCellDetailController: UIViewController {
       //ACTIONS FOR DELETE BUTTON HERE
   }
 
-
+    @IBAction func updateEntry(_ sender: Any) {
+        //ACTIONS FOR UPDATING ENTRY HERE
+    }
+    
 }
 
 

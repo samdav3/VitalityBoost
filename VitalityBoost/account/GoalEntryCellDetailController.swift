@@ -15,11 +15,12 @@ class GoalEntryCellDetailController: UIViewController {
     let db = Firestore.firestore()
     var entries: Goals?
     var goalReference: DocumentReference?
+    var dateFormatter = DateFormatter()
     
-    @IBOutlet weak var dateLabel: UILabel!
+
+    @IBOutlet weak var dateLabel: UITextField!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var entryLabel: UITextView!
-    //@IBOutlet weak var entryLabel: UILabel!
     
     
     var localCollection: LocalCollection<Goals>!
@@ -51,11 +52,19 @@ class GoalEntryCellDetailController: UIViewController {
     deinit {
         localCollection.stopListening()
     }
+    func getDate() async{
+        do{
+            let date = try await goalReference?.getDocument().get("date")
+        }
+        catch{
+            print("Error fetching Date")
+
+        }
+    }
     
-    override func viewWillAppear(_ animated: Bool) {
+    func viewWillAppear(_ animated: Bool) async {
         super.viewWillAppear(animated)
         localCollection.listen()
-        //titleView.populate(entries: entries!)
         dateLabel.text = entries?.date
         titleLabel.text = entries?.title
         entryLabel.text = entries?.description
@@ -65,10 +74,59 @@ class GoalEntryCellDetailController: UIViewController {
         super.viewWillDisappear(animated)
     }
     
-    @IBAction func didTapAddButton(_ sender: Any) {
-        //ACTIONS FOR DELETING GOAL HERE
+    @IBAction func deleteEntry(_ sender: Any) {
+        Task {
+            await deleteGoal()
+        }
     }
     
+    func deleteGoal() async {
+        
+        do{
+            let deleteEntry: Void = try await db.collection("users").document(rcvdUsername).collection("goals").document(titleLabel.text!).delete()
+            
+            let updateAlert = UIAlertController(title: "Are you sure you want to Delete this Entry?", message: "This cannot be undone.", preferredStyle: .alert)
+            let deleteAction = UIAlertAction(title: "Delete", style: .destructive, handler:  { _ in
+                deleteEntry
+                self.navigationController?.popViewController(animated: true)
+            })
+            let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+            updateAlert.addAction(deleteAction)
+            updateAlert.addAction(cancelAction)
+            self.present(updateAlert, animated: true, completion: nil)
+            
+        }
+        catch{
+            print("Error Deleting Entry")
+        }
+    }
+    
+    @IBAction func updateEntry(_ sender: Any) {
+        Task {
+            await updateGoal()
+        }
+    }
+    
+    func updateGoal() async {
+        do{
+            
+            let date = dateLabel.text!
+            let title = titleLabel.text!
+            let description = entryLabel.text!
+            
+            _ = try await db.collection("users").document(rcvdUsername).collection("goals").document(titleLabel.text!).setData(["description": description,
+                                                                                                                                                   "date": date,
+                                                                                                                "title": title])
+            
+            let updateAlert = UIAlertController(title: "Updates Saved", message: "Your Entry \(titleLabel.text!) has been Updated.", preferredStyle: .alert)
+            let dismiss = UIAlertAction(title: "Dismiss", style: .cancel, handler: nil)
+            updateAlert.addAction(dismiss)
+            self.present(updateAlert, animated: true, completion: nil)
+        }
+        catch {
+            print("Error Updating Entry")
+        }
+    }
     
     
 }

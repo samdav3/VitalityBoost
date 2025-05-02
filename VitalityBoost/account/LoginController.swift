@@ -31,9 +31,6 @@ class LoginController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         if segue.identifier == "login"{
-            //                Task{
-            //                    await loginDBCheck()
-            //                }
             let accountVC = segue.destination as! AccountController
             username = userUsername.text ?? ""
             accountVC.rcvdUsername = username
@@ -49,7 +46,6 @@ class LoginController: UIViewController {
                 username = userUsername.text ?? ""
                 createAccountVC.rcvdUsername = username
                 createAccountVC.navigationItem.title = "Create Account"
-                //                    }
             }
         }
     }

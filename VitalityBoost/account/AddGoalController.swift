@@ -179,10 +179,5 @@ class AddGoalController: UIViewController {
             addGoalVC.rcvdUsername = rcvdUsername
             addGoalVC.navigationItem.title = "Add Goal"
         }
-//        else if segue.identifier == "backToGoals"{
-//            let goalsAgainVC = segue.destination as! GoalsController
-//            goalsAgainVC.rcvdUsername = rcvdUsername
-//            goalsAgainVC.navigationItem.title = "Goals"
-//        }
     }
     }
