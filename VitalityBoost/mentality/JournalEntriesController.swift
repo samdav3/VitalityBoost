@@ -34,29 +34,44 @@ class JournalEntriesController: UIViewController, UITableViewDelegate, UITableVi
     }
 
     private var listener: ListenerRegistration?
+    
 
     fileprivate func observeQuery() {
-      guard let query = query else { return }
-      stopObserving()
-
-        listener = query.addSnapshotListener { [unowned self] (snapshot, error) in
-          guard let snapshot = snapshot else {
-            print("Error fetching snapshot results: \(error!)")
-            return
-          }
-          let models = snapshot.documents.map { (document) -> Journal in
-            if let model = Journal(dictionary: document.data()) {
-              return model
-            } else {
-              fatalError("Unable to initialize type \(String.self) with dictionary \(document.data())")
+            guard let query = query else { return }
+            stopObserving()
+            
+            listener = query.addSnapshotListener { [unowned self] (snapshot, error) in
+                guard let snapshot = snapshot else {
+                    print("Error fetching snapshot results: \(error!)")
+                    self.cancelAndGoBack()
+                    return
+                }
+                let models = snapshot.documents.map { (document) -> Journal in
+                    if let model = Journal(dictionary: document.data()) {
+                        return model
+                    } else {
+                        fatalError("Unable to initialize type \(String.self) with dictionary \(document.data())")
+                    }
+                }
+                self.mentTableArray = models
+                self.documents = snapshot.documents
+                self.table.reloadData()
             }
-          }
-          self.mentTableArray = models
-          self.documents = snapshot.documents
-          self.table.reloadData()
-        }
 
-
+    }
+    
+    func cancelAndGoBack() {
+        stopObserving()
+        
+        let updateAlert = UIAlertController(title: "Login Required", message: "You cannot view your Journal Entries unless you are Logged In. Please login to your Account and come back to view your Entries.", preferredStyle: .alert)
+        updateAlert.addAction(UIAlertAction(title: "Cancel", style: .default, handler: {_ in
+            self.navigationController?.popViewController(animated: true)
+            }))
+        updateAlert.addAction(UIAlertAction(title: "Login", style: .default, handler: {_ in
+            let controller = LoginController.fromStoryboard()
+            self.navigationController?.pushViewController(controller, animated: true)
+        }))
+            self.present(updateAlert, animated: true, completion: nil)
     }
 
     fileprivate func stopObserving() {
@@ -64,7 +79,8 @@ class JournalEntriesController: UIViewController, UITableViewDelegate, UITableVi
     }
 
     fileprivate func baseQuery() -> Query {
-      return Firestore.firestore().collection("users").document(rcvdUsername).collection("journal").limit(to: 50)
+            return Firestore.firestore().collection("users").document(rcvdUsername).collection("journal").limit(to: 50)
+        
     }
     
     static func fromStoryboard(_ storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)) -> JournalEntriesController {
@@ -82,7 +98,7 @@ class JournalEntriesController: UIViewController, UITableViewDelegate, UITableVi
         mainView.addSubview(subView)
         subView.addSubview(table)
         table.frame = subView.bounds
-        query = baseQuery()
+        //query = baseQuery()
         print("viewDidLoad")
         table.register(UITableViewCell.self, forCellReuseIdentifier: "TableViewCell")
     }
@@ -90,7 +106,7 @@ class JournalEntriesController: UIViewController, UITableViewDelegate, UITableVi
     override func viewWillAppear(_ animated: Bool) {
       super.viewWillAppear(animated)
         print("viewWillAppear")
-      observeQuery()
+        observeQuery()
     }
     
     override func viewDidAppear(_ animated: Bool){
@@ -98,6 +114,12 @@ class JournalEntriesController: UIViewController, UITableViewDelegate, UITableVi
         rcvdUsername = String(describing: tabBar.rcvdUsername)
         print(rcvdUsername)
         print("viewDidAppear")
+        if !rcvdUsername.isEmpty {
+                    query = baseQuery()
+                    observeQuery()
+                } else {
+                    cancelAndGoBack()
+                }
     }
     
     override func viewWillDisappear(_ animated: Bool) {

@@ -77,6 +77,28 @@ class CalendarController: UIViewController, FSCalendarDelegate, FSCalendarDataSo
         let navController = UINavigationController(rootViewController: eventViewController)
         present(navController, animated: true, completion: nil)
     }
+    
+    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        
+        let deleteAction = UIContextualAction(style: .destructive, title: "Delete") { [weak self] (_, _, completionHandler) in
+            guard let self = self else { return }
+            
+            let eventToDelete = self.events[indexPath.row]
+            
+            do {
+                try self.eventStore.remove(eventToDelete, span: .thisEvent)
+                self.events.remove(at: indexPath.row)
+                tableView.deleteRows(at: [indexPath], with: .automatic)
+                completionHandler(true)
+            } catch {
+                print("Failed to delete event: \(error.localizedDescription)")
+                completionHandler(false)
+            }
+        }
+        
+        let configuration = UISwipeActionsConfiguration(actions: [deleteAction])
+        return configuration
+    }
         
         func setupAddButton() {
             addButton.frame = CGRect(x: 20, y: 520, width: view.frame.width - 40, height: 40)

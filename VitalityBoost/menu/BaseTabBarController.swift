@@ -75,7 +75,7 @@ class BaseTabBarController: UITabBarController {
         }
         else if segue.title == "Journal Entries"{
             let journalEntryVC = JournalEntriesController()
-            journalEntryVC.rcvdUsername = rcvdUsername
+                journalEntryVC.rcvdUsername = rcvdUsername
         }
         else if segue.title == "Mental Health Resources"{
             let mentalHealthVC = MentalHealthResourcesController()

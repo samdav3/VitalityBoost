@@ -42,6 +42,7 @@ class GoalsController: UIViewController, UITableViewDelegate, UITableViewDataSou
         listener = query.addSnapshotListener { [unowned self] (snapshot, error) in
           guard let snapshot = snapshot else {
             print("Error fetching snapshot results: \(error!)")
+              self.cancelAndGoBack()
             return
           }
           let models = snapshot.documents.map { (document) -> Goals in
@@ -58,6 +59,20 @@ class GoalsController: UIViewController, UITableViewDelegate, UITableViewDataSou
         }
 
 
+    }
+    
+    func cancelAndGoBack() {
+        stopObserving()
+        
+        let updateAlert = UIAlertController(title: "Login Required", message: "You cannot view your Goals unless you are Logged In. Please login to your Account and come back to view your Goals.", preferredStyle: .alert)
+        updateAlert.addAction(UIAlertAction(title: "Cancel", style: .default, handler: {_ in
+            self.navigationController?.popViewController(animated: true)
+            }))
+        updateAlert.addAction(UIAlertAction(title: "Login", style: .default, handler: {_ in
+            let controller = LoginController.fromStoryboard()
+            self.navigationController?.pushViewController(controller, animated: true)
+        }))
+            self.present(updateAlert, animated: true, completion: nil)
     }
 
     fileprivate func stopObserving() {
@@ -79,7 +94,7 @@ class GoalsController: UIViewController, UITableViewDelegate, UITableViewDataSou
         mainView.addSubview(subView)
         subView.addSubview(tableView)
         tableView.frame = subView.bounds
-        query = baseQuery()
+        //query = baseQuery()
         print("viewDidLoad")
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "TableViewCell")
 
@@ -95,6 +110,12 @@ class GoalsController: UIViewController, UITableViewDelegate, UITableViewDataSou
         let tabBar = tabBarController as! BaseTabBarController
         rcvdUsername = String(describing: tabBar.rcvdUsername)
         print(rcvdUsername)
+        if !rcvdUsername.isEmpty {
+                    query = baseQuery()
+                    observeQuery()
+                } else {
+                    cancelAndGoBack()
+                }
     }
     
     override func viewWillDisappear(_ animated: Bool) {

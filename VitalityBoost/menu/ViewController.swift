@@ -142,8 +142,8 @@ class ViewController: UIViewController {
         }
         else if segue.identifier == "journalEntries" {
             let journalEntriesVC = segue.destination as! JournalEntriesController
-            journalEntriesVC.rcvdUsername = rcvdUsername
-            journalEntriesVC.navigationItem.title = "Journal Entries"
+                journalEntriesVC.rcvdUsername = rcvdUsername
+                journalEntriesVC.navigationItem.title = "Journal Entries"
         }
         else if segue.identifier == "mentalHealthResources" {
             let mentalHealthResourcesVC = segue.destination as! MentalHealthResourcesController
@@ -157,8 +157,8 @@ class ViewController: UIViewController {
         }
         else if segue.identifier == "entryDetails"{
             let entryDetailsVC = segue.destination as! JournalEntryCellDetailController
-            entryDetailsVC.rcvdUsername = rcvdUsername
-            entryDetailsVC.navigationItem.title = "Entry Details"
+                entryDetailsVC.rcvdUsername = rcvdUsername
+                entryDetailsVC.navigationItem.title = "Entry Details"
         }
         else if segue.identifier == "toAccount"{
             let toAccountVC = segue.destination as! AccountController

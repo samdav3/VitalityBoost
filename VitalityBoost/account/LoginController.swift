@@ -21,6 +21,11 @@ class LoginController: UIViewController {
     @IBOutlet weak var userPassword: UITextField!
     var username = ""
     
+    static func fromStoryboard(_ storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)) -> LoginController {
+        let controller = storyboard.instantiateViewController(withIdentifier: "Login") as! LoginController
+        return controller
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view
