@@ -15,11 +15,11 @@ class GoalEntryCellDetailController: UIViewController {
     let db = Firestore.firestore()
     var entries: Goals?
     var goalReference: DocumentReference?
-    var dateFormatter = DateFormatter()
     
-
+    
     @IBOutlet weak var dateLabel: UITextField!
-    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var titleLabel: UITextField!
+    
     @IBOutlet weak var entryLabel: UITextView!
     
     
@@ -52,17 +52,8 @@ class GoalEntryCellDetailController: UIViewController {
     deinit {
         localCollection.stopListening()
     }
-    func getDate() async{
-        do{
-            let date = try await goalReference?.getDocument().get("date")
-        }
-        catch{
-            print("Error fetching Date")
-
-        }
-    }
     
-    func viewWillAppear(_ animated: Bool) async {
+    override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         localCollection.listen()
         dateLabel.text = entries?.date

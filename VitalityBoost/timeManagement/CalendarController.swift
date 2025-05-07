@@ -7,10 +7,22 @@
 
 import UIKit
 import EventKit
+import EventKitUI
+import FSCalendar
 
-class CalendarController: UIViewController {
+class CalendarController: UIViewController, FSCalendarDelegate, FSCalendarDataSource, UITableViewDelegate, UITableViewDataSource, EKEventEditViewDelegate {
     
     var rcvdUsername = ""
+    
+    let calendarView = FSCalendar()
+    let tableView = UITableView()
+    let addButton = UIButton(type: .system)
+    
+    let eventStore = EKEventStore()
+    var events: [EKEvent] = []
+    var selectedDate: Date = Date()
+    
+    
     
     override func viewDidLoad() {
         
@@ -18,8 +30,14 @@ class CalendarController: UIViewController {
         // Do any additional setup after loading the view.
         print(rcvdUsername)
         
+        setupCalendar()
+        setupTableView()
+        setupAddButton()
+                
+        requestCalendarAccess()
 
     }
+    
     
     override func viewDidAppear(_ animated: Bool){
         let tabBar = tabBarController as! BaseTabBarController
@@ -32,6 +50,112 @@ class CalendarController: UIViewController {
         tabBar.rcvdUsername = String(rcvdUsername)
         
     }
+    
+    func setupCalendar() {
+            calendarView.frame = CGRect(x: 0, y: 150, width: view.frame.width, height: 420)
+            calendarView.delegate = self
+            calendarView.dataSource = self
+            view.addSubview(calendarView)
+        }
+        
+        func setupTableView() {
+            tableView.frame = CGRect(x: 0, y: 565, width: view.frame.width, height: view.frame.height - 450)
+            tableView.delegate = self
+            tableView.dataSource = self
+            view.addSubview(tableView)
+        }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let event = events[indexPath.row]
+        
+        let eventViewController = EKEventViewController()
+        eventViewController.event = event
+        eventViewController.allowsEditing = true   // Allow user to edit!
+        eventViewController.allowsCalendarPreview = true
+        eventViewController.delegate = self
+        
+        let navController = UINavigationController(rootViewController: eventViewController)
+        present(navController, animated: true, completion: nil)
+    }
+        
+        func setupAddButton() {
+            addButton.frame = CGRect(x: 20, y: 520, width: view.frame.width - 40, height: 40)
+            addButton.setTitle("➕ Add Event", for: .normal)
+            addButton.backgroundColor = .systemBlue
+            addButton.setTitleColor(.white, for: .normal)
+            addButton.layer.cornerRadius = 8
+            addButton.addTarget(self, action: #selector(addEventTapped), for: .touchUpInside)
+            view.addSubview(addButton)
+        }
+        
+        func requestCalendarAccess() {
+            eventStore.requestFullAccessToEvents() { (granted, error) in
+            //requestAccess(to: .event) { (granted, error) in
+                if granted {
+                    self.fetchEvents(for: self.selectedDate)
+                } else {
+                    print("Calendar access denied.")
+                }
+            }
+        }
+        
+        func fetchEvents(for date: Date) {
+            let calendars = eventStore.calendars(for: .event)
+            let startOfDay = Calendar.current.startOfDay(for: date)
+            let endOfDay = Calendar.current.date(byAdding: .day, value: 1, to: startOfDay)!
+            
+            let predicate = eventStore.predicateForEvents(withStart: startOfDay, end: endOfDay, calendars: calendars)
+            self.events = eventStore.events(matching: predicate)
+            
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+            }
+        }
+        
+        @objc func addEventTapped() {
+            let eventVC = EKEventEditViewController()
+            eventVC.eventStore = eventStore
+            
+            let newEvent = EKEvent(eventStore: eventStore)
+            newEvent.startDate = selectedDate
+            newEvent.endDate = selectedDate.addingTimeInterval(3600) // 1-hour event
+            eventVC.event = newEvent
+            
+            eventVC.editViewDelegate = self
+            present(eventVC, animated: true, completion: nil)
+        }
+        
+        // MARK: - FSCalendar Delegate
+        func calendar(_ calendar: FSCalendar, didSelect date: Date, at monthPosition: FSCalendarMonthPosition) {
+            selectedDate = date
+            fetchEvents(for: date)
+        }
+        
+        // MARK: - TableView DataSource
+        func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+            return events.count
+        }
+        
+        func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+
+            let event = events[indexPath.row]
+            let cell = UITableViewCell(style: .subtitle, reuseIdentifier: nil)
+            cell.textLabel?.text = event.title
+            let formatter = DateFormatter()
+            formatter.timeStyle = .short
+            formatter.dateStyle = .none
+            cell.detailTextLabel?.text = formatter.string(from: event.startDate)
+            
+            return cell
+        }
+        
+        // MARK: - EKEventEditViewDelegate
+        func eventEditViewController(_ controller: EKEventEditViewController, didCompleteWith action: EKEventEditViewAction) {
+            controller.dismiss(animated: true) {
+                self.fetchEvents(for: self.selectedDate)
+            }
+        }
+    
     
     /*MARK: - Navigation*/
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -128,3 +252,11 @@ class CalendarController: UIViewController {
         }
     }
     }
+
+extension CalendarController: EKEventViewDelegate {
+    func eventViewController(_ controller: EKEventViewController, didCompleteWith action: EKEventViewAction) {
+        controller.dismiss(animated: true) {
+            self.fetchEvents(for: self.selectedDate)
+        }
+    }
+}

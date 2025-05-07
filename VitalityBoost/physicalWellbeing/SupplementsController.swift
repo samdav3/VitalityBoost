@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SafariServices
 
 class SupplementsController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
@@ -15,6 +16,7 @@ class SupplementsController: UIViewController, UITableViewDelegate, UITableViewD
     @IBOutlet weak var subView: UIView!
     @IBOutlet weak var table: UITableView!
     let suppTableArray = ["", "", "", ""]
+    let suppDetailArray = ["", "", "", ""]
     let cellID = "cellID"
     
     override func viewDidLoad() {
@@ -49,12 +51,26 @@ class SupplementsController: UIViewController, UITableViewDelegate, UITableViewD
         var cell = tableView.dequeueReusableCell(withIdentifier: cellID)
         if (cell == nil){
             cell = UITableViewCell(
-                style: UITableViewCell.CellStyle.default,
+                style: UITableViewCell.CellStyle.subtitle,
                 reuseIdentifier: cellID
             )
         }
         cell?.textLabel?.text = suppTableArray[indexPath.row]
+        cell?.detailTextLabel?.text = suppDetailArray[indexPath.row]
         return cell!
+        }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+            tableView.deselectRow(at: indexPath, animated: true)
+
+            let urlString = suppDetailArray[indexPath.row]
+            
+            if let url = URL(string: urlString) {
+                let safariVC = SFSafariViewController(url: url)
+                present(safariVC, animated: true, completion: nil)
+            } else {
+                print("Invalid URL: \(urlString)")
+            }
         }
     
     

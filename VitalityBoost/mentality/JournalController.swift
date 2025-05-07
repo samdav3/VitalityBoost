@@ -28,7 +28,6 @@ class JournalController: UIViewController {
         super.viewDidLoad()
         print(rcvdUsername)
         dateFormatter.dateStyle = .medium
-        dateFormatter.timeStyle = .short
         
 
     }

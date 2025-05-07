@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SafariServices
 
 class MentalHealthResourcesController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
@@ -14,7 +15,8 @@ class MentalHealthResourcesController: UIViewController, UITableViewDelegate, UI
     @IBOutlet var mainView: UIView!
     @IBOutlet weak var subView: UIView!
     @IBOutlet weak var table: UITableView!
-    let mentTableArray = ["", "", "", ""]
+    let mentTableArray = ["988 Suicide & Crisis Lifeline", "NAMI HelpLine (National Alliance on Mental Illness)", "Crisis Text Line", "Mental Health America (MHA) Free Screening Tools", "Psychology Tools — Free Self-Help Resources", "SAMHSA (Substance Abuse and Mental Health Services Administration)", "The Trevor Project (LGBTQ+ Focused)", "Open Path Collective (Affordable Therapy — Very Low Cost)", "MindWise Innovations", "Anxiety and Depression Association of America (ADAA)", "OK2Talk (Mental Health Support for Young People)", "MedlinePlus: Mental Health", "Verywell Mind", "MentalHealth.gov", "National Child Traumatic Stress Network (NCTSN)"]
+    let mentDetailArray = ["https://988lifeline.org/", "https://nami.org/help", "https://crisistextline.org", "https://screening.mhanational.org", "https://psychologytools.com", "https://samhsa.gov/find-help/national-helpline", "https://thetrevorproject.org", "https://openpathcollective.org", "https://mindwise.org", "https://adaa.org", "https://ok2talk.org", "https://medlineplus.gov/mentalhealth.html", "https://verywellmind.com", "https://mentalhealth.gov", "https://ctsn.org"]
     let cellID = "cellID"
     
     override func viewDidLoad() {
@@ -49,12 +51,28 @@ class MentalHealthResourcesController: UIViewController, UITableViewDelegate, UI
         var cell = tableView.dequeueReusableCell(withIdentifier: cellID)
         if (cell == nil){
             cell = UITableViewCell(
-                style: UITableViewCell.CellStyle.default,
+                style: UITableViewCell.CellStyle.subtitle,
                 reuseIdentifier: cellID
             )
         }
         cell?.textLabel?.text = mentTableArray[indexPath.row]
+        cell?.textLabel?.showsExpansionTextWhenTruncated = true
+        cell?.detailTextLabel?.text = mentDetailArray[indexPath.row]
+        cell?.detailTextLabel?.showsExpansionTextWhenTruncated = true
         return cell!
+        }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+            tableView.deselectRow(at: indexPath, animated: true)
+
+            let urlString = mentDetailArray[indexPath.row]
+            
+            if let url = URL(string: urlString) {
+                let safariVC = SFSafariViewController(url: url)
+                present(safariVC, animated: true, completion: nil)
+            } else {
+                print("Invalid URL: \(urlString)")
+            }
         }
     
     /*MARK: - Navigation*/

@@ -28,8 +28,7 @@ class AddGoalController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         print(rcvdUsername)
-        dateFormatter.dateStyle = .medium
-        dateFormatter.timeStyle = .short
+        dateFormatter.dateStyle = .short
 
     }
     

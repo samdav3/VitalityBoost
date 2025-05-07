@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SafariServices
 
 class WorkoutsController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     var rcvdUsername = ""
@@ -13,6 +14,7 @@ class WorkoutsController: UIViewController, UITableViewDelegate, UITableViewData
     @IBOutlet weak var subView: UIView!
     @IBOutlet weak var table: UITableView!
     let workTableArray = ["", "", "", ""]
+    let workoutDetailArray = ["", "", "", ""]
     let cellID = "cellID"
     
     override func viewDidLoad() {
@@ -47,12 +49,26 @@ class WorkoutsController: UIViewController, UITableViewDelegate, UITableViewData
         var cell = tableView.dequeueReusableCell(withIdentifier: cellID)
         if (cell == nil){
             cell = UITableViewCell(
-                style: UITableViewCell.CellStyle.default,
+                style: UITableViewCell.CellStyle.subtitle,
                 reuseIdentifier: cellID
             )
         }
         cell?.textLabel?.text = workTableArray[indexPath.row]
+        cell?.detailTextLabel?.text = workoutDetailArray[indexPath.row]
         return cell!
+        }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+            tableView.deselectRow(at: indexPath, animated: true)
+
+            let urlString = workoutDetailArray[indexPath.row]
+            
+            if let url = URL(string: urlString) {
+                let safariVC = SFSafariViewController(url: url)
+                present(safariVC, animated: true, completion: nil)
+            } else {
+                print("Invalid URL: \(urlString)")
+            }
         }
     
     /*MARK: - Navigation*/

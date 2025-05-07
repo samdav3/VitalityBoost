@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SafariServices
 
 class RecipesController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     var rcvdUsername = ""
@@ -13,6 +14,7 @@ class RecipesController: UIViewController, UITableViewDelegate, UITableViewDataS
     @IBOutlet weak var subView: UIView!
     @IBOutlet weak var table: UITableView!
     let recTableArray = ["", "", "", ""]
+    let recDetailArray = ["", "", "", ""]
     let cellID = "cellID"
     
     override func viewDidLoad() {
@@ -47,12 +49,26 @@ class RecipesController: UIViewController, UITableViewDelegate, UITableViewDataS
         var cell = tableView.dequeueReusableCell(withIdentifier: cellID)
         if (cell == nil){
             cell = UITableViewCell(
-                style: UITableViewCell.CellStyle.default,
+                style: UITableViewCell.CellStyle.subtitle,
                 reuseIdentifier: cellID
             )
         }
         cell?.textLabel?.text = recTableArray[indexPath.row]
+        cell?.detailTextLabel?.text = recDetailArray[indexPath.row]
         return cell!
+        }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+            tableView.deselectRow(at: indexPath, animated: true)
+
+            let urlString = recDetailArray[indexPath.row]
+            
+            if let url = URL(string: urlString) {
+                let safariVC = SFSafariViewController(url: url)
+                present(safariVC, animated: true, completion: nil)
+            } else {
+                print("Invalid URL: \(urlString)")
+            }
         }
     
     /*MARK: - Navigation*/

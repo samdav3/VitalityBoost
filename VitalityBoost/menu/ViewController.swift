@@ -12,6 +12,11 @@ class ViewController: UIViewController {
     
     public var rcvdUsername = ""
     
+    static func fromStoryboard(_ storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)) -> ViewController {
+        let controller = storyboard.instantiateViewController(withIdentifier: "Home") as! ViewController
+        return controller
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.

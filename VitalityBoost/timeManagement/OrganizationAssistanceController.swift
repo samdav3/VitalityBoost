@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SafariServices
 
 class OrganizationAssistanceController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
@@ -15,6 +16,7 @@ class OrganizationAssistanceController: UIViewController, UITableViewDelegate, U
     @IBOutlet weak var subView: UIView!
     @IBOutlet weak var table: UITableView!
     let orgTableArray = ["", "", "", ""]
+    let orgDetailArray = ["", "", "", ""]
     let cellID = "cellID"
     
     override func viewDidLoad() {
@@ -49,12 +51,26 @@ class OrganizationAssistanceController: UIViewController, UITableViewDelegate, U
         var cell = tableView.dequeueReusableCell(withIdentifier: cellID)
         if (cell == nil){
             cell = UITableViewCell(
-                style: UITableViewCell.CellStyle.default,
+                style: UITableViewCell.CellStyle.subtitle,
                 reuseIdentifier: cellID
             )
         }
         cell?.textLabel?.text = orgTableArray[indexPath.row]
+        cell?.detailTextLabel?.text = orgDetailArray[indexPath.row]
         return cell!
+        }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+            tableView.deselectRow(at: indexPath, animated: true)
+
+            let urlString = orgDetailArray[indexPath.row]
+            
+            if let url = URL(string: urlString) {
+                let safariVC = SFSafariViewController(url: url)
+                present(safariVC, animated: true, completion: nil)
+            } else {
+                print("Invalid URL: \(urlString)")
+            }
         }
     
     /*MARK: - Navigation*/

@@ -17,7 +17,7 @@ class JournalEntryCellDetailController: UIViewController {
   var journalReference: DocumentReference?
     
     @IBOutlet weak var dateLabel: UILabel!
-    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var titleLabel: UITextField!
     @IBOutlet weak var entryLabel: UITextView!
     
   var localCollection: LocalCollection<Journal>!
@@ -65,12 +65,57 @@ class JournalEntryCellDetailController: UIViewController {
   }
 
 
-  @IBAction func didTapAddButton(_ sender: Any) {
-      //ACTIONS FOR DELETE BUTTON HERE
-  }
+    @IBAction func deleteEntry(_ sender: Any)  {
+        Task{
+            await deleteJournal()
+        }
+    }
+    
+    func deleteJournal() async {
+        do{
+            let deleteEntry: Void = try await db.collection("users").document(rcvdUsername).collection("journal").document(dateLabel.text!).delete()
+            
+            let updateAlert = UIAlertController(title: "Are you sure you want to Delete this Entry?", message: "This cannot be undone.", preferredStyle: .alert)
+            let deleteAction = UIAlertAction(title: "Delete", style: .destructive, handler:  { _ in
+                deleteEntry
+                self.navigationController?.popViewController(animated: true)
+            })
+            let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+            updateAlert.addAction(deleteAction)
+            updateAlert.addAction(cancelAction)
+            self.present(updateAlert, animated: true, completion: nil)
+            
+        }
+        catch{
+            print("Error Deleting Entry")
+        }
+    }
 
     @IBAction func updateEntry(_ sender: Any) {
-        //ACTIONS FOR UPDATING ENTRY HERE
+        Task {
+            await updateJournal()
+        }
+    }
+    
+    func updateJournal() async {
+        do{
+            
+            let date = dateLabel.text!
+            let title = titleLabel.text!
+            let description = entryLabel.text!
+            
+            _ = try await db.collection("users").document(rcvdUsername).collection("journal").document(dateLabel.text!).setData(["description": description,
+                                                                                                                                                   "date": date,
+                                                                                                                "title": title])
+            
+            let updateAlert = UIAlertController(title: "Updates Saved", message: "Your Entry \(titleLabel.text!) has been Updated.", preferredStyle: .alert)
+            let dismiss = UIAlertAction(title: "Dismiss", style: .cancel, handler: nil)
+            updateAlert.addAction(dismiss)
+            self.present(updateAlert, animated: true, completion: nil)
+        }
+        catch {
+            print("Error Updating Entry")
+        }
     }
     
 }
