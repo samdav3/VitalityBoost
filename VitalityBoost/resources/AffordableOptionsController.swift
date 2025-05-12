@@ -19,8 +19,8 @@ class AffordableOptionsController: UIViewController, UITableViewDelegate, UITabl
     @IBOutlet var mainView: UIView!
     @IBOutlet weak var subView: UIView!
     @IBOutlet weak var table: UITableView!
-    let affTitleArray = ["Free At Home Workouts", "Better Me", "Apple Fitness", "DAREBEE", "Planet Fitness", "The Edge Fitness Clubs", "MadFit YouTube Channel", "Tone & Tighten YouTube Channel", "growingannanas YouTube Channel", "Aldi", "Trader Joe's"]
-    let affDetailArray = ["https://www.muscleandstrength.com/workouts/home", "https://betterme.world/", "https://www.apple.com/apple-fitness-plus/", "https://darebee.com/workouts.html", "https://www.planetfitness.com/", "https://www.theedgefitnessclubs.com/", "https://www.youtube.com/@MadFit", "https://www.youtube.com/@toneandtighten", "https://www.youtube.com/@growingannanas", "https://www.aldi.com/", "https://www.traderjoes.com/home"]
+    let affTitleArray = ["Free At Home Workouts", "Better Me", "Apple Fitness", "DAREBEE", "Planet Fitness", "The Edge Fitness Clubs", "Aldi", "Trader Joe's", "USA.gov Benefits", "FindHelp.org", "United Way 211"]
+    let affDetailArray = ["https://www.muscleandstrength.com/workouts/home", "https://betterme.world/", "https://www.apple.com/apple-fitness-plus/", "https://darebee.com/workouts.html", "https://www.planetfitness.com/", "https://www.theedgefitnessclubs.com/", "https://www.aldi.com/", "https://www.traderjoes.com/home", "https://www.usa.gov/benefits", "https://www.findhelp.org/", "https://www.211.org/"]
     // add healthy food options that are cheap
     let cellID = "cellID"
     

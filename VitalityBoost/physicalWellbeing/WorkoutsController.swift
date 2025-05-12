@@ -13,8 +13,8 @@ class WorkoutsController: UIViewController, UITableViewDelegate, UITableViewData
     @IBOutlet var mainView: UIView!
     @IBOutlet weak var subView: UIView!
     @IBOutlet weak var table: UITableView!
-    let workTableArray = ["", "", "", ""]
-    let workoutDetailArray = ["", "", "", ""]
+    let workTableArray = ["Fitness Blender", "DAREBEE", "Muscle & Strength", "Asana Rebel", "@sydneycummingshoudyshell YouTube Channel", "MadFit YouTube Channel", "Tone & Tighten YouTube Channel", "growingannanas YouTube Channel", "SELF's Learn to Love Running Program", "Couch to Fitness", "YMCA at Home", "NHS Home Workout Videos"]
+    let workoutDetailArray = ["https://www.fitnessblender.com/videos", "https://darebee.com/", "https://www.muscleandstrength.com/workout-routines", "https://asanarebel.com/en/", "https://www.youtube.com/@sydneycummingshoudyshell/videos", "https://www.youtube.com/@MadFit", "https://www.youtube.com/@toneandtighten", "https://www.youtube.com/@growingannanas", "https://www.self.com/story/learn-to-love-running-program-newsletter-sign-up", "https://couchtofitness.com/", "https://www.ymcahome.ca/fitness", "https://www.nhs.uk/better-health/get-active/home-workout-videos/"]
     let cellID = "cellID"
     
     override func viewDidLoad() {
