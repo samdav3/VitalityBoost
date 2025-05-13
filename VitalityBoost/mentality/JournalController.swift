@@ -67,6 +67,7 @@ class JournalController: UIViewController {
         entryTitle.text = ""
         journalEntry.text = ""
         entryDate.date = Date.now
+        
     }
     
     

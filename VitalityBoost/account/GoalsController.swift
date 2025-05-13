@@ -95,6 +95,10 @@ class GoalsController: UIViewController, UITableViewDelegate, UITableViewDataSou
       return Firestore.firestore().collection("users").document(rcvdUsername).collection("goals").limit(to: 50)
     }
     
+    static func fromStoryboard(_ storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)) -> GoalsController {
+        let controller = storyboard.instantiateViewController(withIdentifier: "Goals") as! GoalsController
+        return controller
+    }
         
     override func viewDidLoad() {
         

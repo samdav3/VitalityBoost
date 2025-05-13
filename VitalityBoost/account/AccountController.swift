@@ -136,31 +136,38 @@ class AccountController: UIViewController {
     }
     
     @IBAction func deleteAccount(_ sender: Any) {
+        
         Task {
             await deleteAcct()
         }
     }
     
     func deleteAcct() async {
-        do{
-            let deleteEntry: Void = try await db.collection("users").document(rcvdUsername).delete()
             
             let updateAlert = UIAlertController(title: "Are you sure you want to Delete your Account?", message: "This cannot be undone. All of your Account Data, including Goals and Journal Entries, will be Deleted.", preferredStyle: .alert)
-            let deleteAction = UIAlertAction(title: "Delete", style: .destructive, handler:  { _ in
-                deleteEntry
-                let controller = ViewController.fromStoryboard()
-                controller.rcvdUsername = ""
-                self.navigationController?.pushViewController(controller, animated: true)
-            })
-            let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+            
+            let deleteAction = UIAlertAction(title: "Delete", style: .destructive, handler: { _ in
+                    Task {
+                        do {
+                            try await self.db.collection("users").document(self.rcvdUsername).delete()
+
+                            let controller = ViewController.fromStoryboard()
+                            controller.rcvdUsername = ""
+                            self.navigationController?.pushViewController(controller, animated: true)
+                        } catch {
+                            print("Error deleting account: \(error)")
+                        }
+                    }
+                })
+
+                let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+            
             updateAlert.addAction(deleteAction)
             updateAlert.addAction(cancelAction)
-            self.present(updateAlert, animated: true, completion: nil)
             
-        }
-        catch{
-            print("Error Deleting Entry")
-        }
+            
+            self.present(updateAlert, animated: true, completion: nil)
+        
     }
     
     /*MARK: Navigation*/

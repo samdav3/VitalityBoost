@@ -72,23 +72,30 @@ class JournalEntryCellDetailController: UIViewController {
     }
     
     func deleteJournal() async {
-        do{
-            let deleteEntry: Void = try await db.collection("users").document(rcvdUsername).collection("journal").document(entries!.date).delete()
-            
-            let updateAlert = UIAlertController(title: "Are you sure you want to Delete this Entry?", message: "This cannot be undone.", preferredStyle: .alert)
-            let deleteAction = UIAlertAction(title: "Delete", style: .destructive, handler:  { _ in
-                deleteEntry
-                self.navigationController?.popViewController(animated: true)
+        
+        let updateAlert = UIAlertController(title: "Are you sure you want to Delete this Journal Entry?", message: "This cannot be undone.", preferredStyle: .alert)
+        
+        let deleteAction = UIAlertAction(title: "Delete", style: .destructive, handler: { _ in
+                Task {
+                    do {
+                        try await self.db.collection("users").document(self.rcvdUsername).collection("journal").document(self.dateLabel.text!).delete()
+
+                        let controller = JournalEntriesController.fromStoryboard()
+                        controller.rcvdUsername = self.rcvdUsername
+                        self.navigationController?.pushViewController(controller, animated: true)
+                    } catch {
+                        print("Error deleting entry: \(error)")
+                    }
+                }
             })
+
             let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
-            updateAlert.addAction(deleteAction)
-            updateAlert.addAction(cancelAction)
-            self.present(updateAlert, animated: true, completion: nil)
-            
-        }
-        catch{
-            print("Error Deleting Entry")
-        }
+        
+        updateAlert.addAction(deleteAction)
+        updateAlert.addAction(cancelAction)
+        
+        
+        self.present(updateAlert, animated: true, completion: nil)
     }
 
     @IBAction func updateEntry(_ sender: Any) {

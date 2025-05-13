@@ -2307,7 +2307,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="gray" title="Discard"/>
                                 <connections>
-                                    <action selector="deleteEntry:" destination="ikE-pL-l31" eventType="touchUpInside" id="tRo-Oz-Ohl"/>
+                                    <action selector="discardEntry:" destination="ikE-pL-l31" eventType="touchUpInside" id="qdh-PI-3nV"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g5m-RQ-AhL">
@@ -3083,21 +3083,21 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="EM0-Rl-PdI"/>
-        <segue reference="N45-HY-67v"/>
-        <segue reference="xSW-4U-BkK"/>
+        <segue reference="Q6b-VM-vE5"/>
+        <segue reference="uoq-v3-am0"/>
         <segue reference="cSX-nM-wRz"/>
-        <segue reference="NBU-9w-ikc"/>
+        <segue reference="lmA-Zg-Nch"/>
         <segue reference="Hx1-DI-RVH"/>
-        <segue reference="viN-ue-4XX"/>
+        <segue reference="byY-aQ-Ieg"/>
         <segue reference="tjS-gq-cbq"/>
-        <segue reference="bvD-mg-hgJ"/>
+        <segue reference="cOt-LV-IU8"/>
         <segue reference="2IW-06-4Wa"/>
         <segue reference="niP-Cx-dMk"/>
-        <segue reference="5SR-DC-x5t"/>
+        <segue reference="jaR-Nx-dcq"/>
         <segue reference="KQb-Jx-NuV"/>
         <segue reference="igl-dp-QO3"/>
-        <segue reference="yl7-gD-q4Q"/>
-        <segue reference="1hw-jt-DAO"/>
+        <segue reference="8ap-dD-8Ar"/>
+        <segue reference="d2O-3k-59l"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="ai-generated-8266786_1280" width="1280" height="717"/>

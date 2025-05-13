@@ -73,23 +73,29 @@ class GoalEntryCellDetailController: UIViewController {
     
     func deleteGoal() async {
         
-        do{
-            let deleteEntry: Void = try await db.collection("users").document(rcvdUsername).collection("goals").document(titleLabel.text!).delete()
-            
-            let updateAlert = UIAlertController(title: "Are you sure you want to Delete this Entry?", message: "This cannot be undone.", preferredStyle: .alert)
-            let deleteAction = UIAlertAction(title: "Delete", style: .destructive, handler:  { _ in
-                deleteEntry
-                self.navigationController?.popViewController(animated: true)
+        let updateAlert = UIAlertController(title: "Are you sure you want to Delete this Goal?", message: "This cannot be undone.", preferredStyle: .alert)
+        
+        let deleteAction = UIAlertAction(title: "Delete", style: .destructive, handler: { _ in
+                Task {
+                    do {
+                        try await self.db.collection("users").document(self.rcvdUsername).collection("goals").document(self.titleLabel.text!).delete()
+
+                        let controller = GoalsController.fromStoryboard()
+                        controller.rcvdUsername = self.rcvdUsername
+                        self.navigationController?.pushViewController(controller, animated: true)
+                    } catch {
+                        print("Error deleting goal: \(error)")
+                    }
+                }
             })
+
             let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
-            updateAlert.addAction(deleteAction)
-            updateAlert.addAction(cancelAction)
-            self.present(updateAlert, animated: true, completion: nil)
-            
-        }
-        catch{
-            print("Error Deleting Entry")
-        }
+        
+        updateAlert.addAction(deleteAction)
+        updateAlert.addAction(cancelAction)
+        
+        
+        self.present(updateAlert, animated: true, completion: nil)
     }
     
     @IBAction func updateEntry(_ sender: Any) {
