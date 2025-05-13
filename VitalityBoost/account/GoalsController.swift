@@ -18,6 +18,16 @@ class GoalsController: UIViewController, UITableViewDelegate, UITableViewDataSou
     let db = Firestore.firestore()
     var rcvdUsername = ""
     
+    private let emptyLabel: UILabel = {
+        let label = UILabel()
+        label.text = "No goals found. Tap '+' to add one!"
+        label.textAlignment = .center
+        label.font = UIFont.systemFont(ofSize: 16)
+        label.textColor = .gray
+        label.isHidden = true
+        return label
+    }()
+    
     @IBOutlet var mainView: UIView!
     @IBOutlet weak var subView: UIView!
     @IBOutlet weak var tableView: UITableView!
@@ -45,17 +55,19 @@ class GoalsController: UIViewController, UITableViewDelegate, UITableViewDataSou
               self.cancelAndGoBack()
             return
           }
-          let models = snapshot.documents.map { (document) -> Goals in
-            if let model = Goals(dictionary: document.data()) {
-              return model
-            } else {
-              // Don't use fatalError here in a real app.
-              fatalError("Unable to initialize type \(String.self) with dictionary \(document.data())")
-            }
-          }
-          self.goalTableArray = models
-          self.documents = snapshot.documents            
-            self.tableView.reloadData()
+            
+            let models = snapshot.documents.compactMap { Goals(dictionary: $0.data()) }
+
+                    self.goalTableArray = models
+                    self.documents = snapshot.documents
+                    self.tableView.reloadData()
+
+                    if models.isEmpty {
+                        print("No goals found.")
+                        showEmptyStateMessage()
+                    } else {
+                        hideEmptyStateMessage()
+                    }
         }
 
 
@@ -94,10 +106,22 @@ class GoalsController: UIViewController, UITableViewDelegate, UITableViewDataSou
         mainView.addSubview(subView)
         subView.addSubview(tableView)
         tableView.frame = subView.bounds
+        subView.addSubview(emptyLabel)
+        emptyLabel.frame = subView.bounds
         //query = baseQuery()
         print("viewDidLoad")
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "TableViewCell")
 
+    }
+    
+    private func showEmptyStateMessage() {
+        emptyLabel.isHidden = false
+        tableView.isHidden = true
+    }
+
+    private func hideEmptyStateMessage() {
+        emptyLabel.isHidden = true
+        tableView.isHidden = false
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -134,11 +158,10 @@ class GoalsController: UIViewController, UITableViewDelegate, UITableViewDataSou
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     
-        let cell = tableView.dequeueReusableCell(withIdentifier: "TableViewCell", for: indexPath)
+        var cell = tableView.dequeueReusableCell(withIdentifier: "TableViewCell", for: indexPath)
         let date = goalTableArray[indexPath.row].date
         let title = goalTableArray[indexPath.row].title
-        print(title)
-        print(date)
+        cell = UITableViewCell(style: UITableViewCell.CellStyle.subtitle, reuseIdentifier: "TableViewCell")
         cell.textLabel?.text = title
         cell.detailTextLabel?.text = date
         

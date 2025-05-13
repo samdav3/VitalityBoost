@@ -18,6 +18,16 @@ class JournalEntriesController: UIViewController, UITableViewDelegate, UITableVi
     let db = Firestore.firestore()
     var rcvdUsername = ""
     
+    private let emptyLabel: UILabel = {
+        let label = UILabel()
+        label.text = "No Journal Entries found."
+        label.textAlignment = .center
+        label.font = UIFont.systemFont(ofSize: 16)
+        label.textColor = .gray
+        label.isHidden = true
+        return label
+    }()
+    
     @IBOutlet var mainView: UIView!
     @IBOutlet weak var subView: UIView!
     @IBOutlet weak var table: UITableView!
@@ -46,16 +56,29 @@ class JournalEntriesController: UIViewController, UITableViewDelegate, UITableVi
                     self.cancelAndGoBack()
                     return
                 }
-                let models = snapshot.documents.map { (document) -> Journal in
-                    if let model = Journal(dictionary: document.data()) {
-                        return model
-                    } else {
-                        fatalError("Unable to initialize type \(String.self) with dictionary \(document.data())")
-                    }
-                }
-                self.mentTableArray = models
-                self.documents = snapshot.documents
-                self.table.reloadData()
+                
+                let models = snapshot.documents.compactMap { Journal(dictionary: $0.data()) }
+
+                        self.mentTableArray = models
+                        self.documents = snapshot.documents
+                        self.table.reloadData()
+
+                        if models.isEmpty {
+                            print("No entries found.")
+                            showEmptyStateMessage()
+                        } else {
+                            hideEmptyStateMessage()
+                        }
+//                let models = snapshot.documents.map { (document) -> Journal in
+//                    if let model = Journal(dictionary: document.data()) {
+//                        return model
+//                    } else {
+//                        fatalError("Unable to initialize type \(String.self) with dictionary \(document.data())")
+//                    }
+//                }
+//                self.mentTableArray = models
+//                self.documents = snapshot.documents
+//                self.table.reloadData()
             }
 
     }
@@ -98,9 +121,21 @@ class JournalEntriesController: UIViewController, UITableViewDelegate, UITableVi
         mainView.addSubview(subView)
         subView.addSubview(table)
         table.frame = subView.bounds
+        subView.addSubview(emptyLabel)
+        emptyLabel.frame = subView.bounds
         //query = baseQuery()
         print("viewDidLoad")
         table.register(UITableViewCell.self, forCellReuseIdentifier: "TableViewCell")
+    }
+    
+    private func showEmptyStateMessage() {
+        emptyLabel.isHidden = false
+        table.isHidden = true
+    }
+
+    private func hideEmptyStateMessage() {
+        emptyLabel.isHidden = true
+        table.isHidden = false
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -139,10 +174,10 @@ class JournalEntriesController: UIViewController, UITableViewDelegate, UITableVi
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "TableViewCell", for: indexPath)
+        var cell = tableView.dequeueReusableCell(withIdentifier: "TableViewCell", for: indexPath)
         let date = mentTableArray[indexPath.row].date
         let title = mentTableArray[indexPath.row].title
-        
+        cell = UITableViewCell(style: UITableViewCell.CellStyle.subtitle, reuseIdentifier: "TableViewCell")
         cell.textLabel?.text = title
         cell.detailTextLabel?.text = date
         
@@ -156,6 +191,7 @@ class JournalEntriesController: UIViewController, UITableViewDelegate, UITableVi
       let controller = JournalEntryCellDetailController.fromStoryboard()
       controller.entries = mentTableArray[indexPath.row]
       controller.journalReference = documents[indexPath.row].reference
+        controller.rcvdUsername = rcvdUsername
       self.navigationController?.pushViewController(controller, animated: true)
     }
     

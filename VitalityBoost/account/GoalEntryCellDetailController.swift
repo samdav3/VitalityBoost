@@ -35,7 +35,7 @@ class GoalEntryCellDetailController: UIViewController {
         super.viewDidLoad()
         
         self.title = "Goal Details"
-        
+        print(rcvdUsername)
         let query = goalReference!.collection("goals")
         localCollection = LocalCollection(query: query) { [unowned self] (changes) in
             var indexPaths: [IndexPath] = []

@@ -30,7 +30,7 @@ class JournalEntryCellDetailController: UIViewController {
 
   override func viewDidLoad() {
     super.viewDidLoad()
-
+      print(rcvdUsername)
       self.title = "Journal Entry Details"
 
     let query = journalReference!.collection("journal")
@@ -73,7 +73,7 @@ class JournalEntryCellDetailController: UIViewController {
     
     func deleteJournal() async {
         do{
-            let deleteEntry: Void = try await db.collection("users").document(rcvdUsername).collection("journal").document(dateLabel.text!).delete()
+            let deleteEntry: Void = try await db.collection("users").document(rcvdUsername).collection("journal").document(entries!.date).delete()
             
             let updateAlert = UIAlertController(title: "Are you sure you want to Delete this Entry?", message: "This cannot be undone.", preferredStyle: .alert)
             let deleteAction = UIAlertAction(title: "Delete", style: .destructive, handler:  { _ in
